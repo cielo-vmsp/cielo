@@ -2627,6 +2627,47 @@ html.x49nogd #gd{display:none!important}
 .x29rail{z-index:9}
 .x29.x50rs .x29bot{display:none!important}
 .x29.x50rs .x29tour{top:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+/* v51 · cabina espacial */
+.x29.x51{--x51c:66px}
+.x51 .x29top{top:calc(10px + env(safe-area-inset-top,0px));left:16px;right:12px;align-items:center}
+.x51 .x29top small{font-size:.56rem}.x51 .x29top b{font-size:1.08rem}
+.x51 .x29x{width:38px;height:38px}
+.x51 .x29clk{top:calc(56px + env(safe-area-inset-top,0px));left:18px;display:flex;align-items:baseline;gap:10px}
+.x51 .x29clk b{font-size:.92rem}.x51 .x29clk span{font-size:.6rem}
+.x51 .x29leg{top:calc(84px + env(safe-area-inset-top,0px))!important;left:18px!important;right:auto!important;gap:10px!important;font-size:.56rem}
+.x51 .x29clk br{display:none}
+.x51hud{position:absolute;left:8px;right:8px;top:90px;height:60vh;pointer-events:none;z-index:1;border-radius:28px;border:1px solid rgba(127,233,255,.16);background:radial-gradient(ellipse at 50% 45%,rgba(127,233,255,.05),transparent 70%);box-shadow:inset 0 0 40px rgba(127,233,255,.06);transition:top .25s,height .25s}
+.x51hud i{position:absolute;width:22px;height:22px;border:2px solid rgba(127,233,255,.6)}
+.x51hud .a{left:-1px;top:-1px;border-right:0;border-bottom:0;border-top-left-radius:28px}
+.x51hud .b{right:-1px;top:-1px;border-left:0;border-bottom:0;border-top-right-radius:28px}
+.x51hud .c{left:-1px;bottom:-1px;border-right:0;border-top:0;border-bottom-left-radius:28px}
+.x51hud .d{right:-1px;bottom:-1px;border-left:0;border-top:0;border-bottom-right-radius:28px}
+.x51hud .t{position:absolute;left:50%;top:-1px;width:64px;height:3px;margin-left:-32px;border-radius:3px;background:linear-gradient(90deg,transparent,rgba(127,233,255,.8),transparent)}
+.x51hud .r{position:absolute;left:50%;bottom:-1px;width:64px;height:3px;margin-left:-32px;border-radius:3px;background:linear-gradient(90deg,transparent,rgba(127,233,255,.8),transparent)}
+.x51 .x29frame{display:none}
+.x51con{position:absolute;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom,0px));z-index:9;max-width:640px;margin:0 auto;padding:5px;border-radius:22px;background:rgba(8,14,32,.55);border:1px solid rgba(127,233,255,.25);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 0 0 1px rgba(127,233,255,.05),0 10px 30px rgba(0,0,0,.35)}
+.x51 .x29rail{position:static!important;left:auto!important;top:auto!important;right:auto!important;transform:none!important;display:block;z-index:auto}
+.x51 .x29rt,.x51 .x50grip{display:none!important}
+.x51 .x29rail .x29tabs{flex-direction:row!important;justify-content:space-between;gap:2px;padding:0!important;background:transparent!important;border:0!important;-webkit-backdrop-filter:none;backdrop-filter:none;opacity:1!important;transform:none!important;pointer-events:auto!important}
+.x51 .x29rail .x29tabs button{flex:1 1 0;width:auto!important;min-width:0;padding:6px 0!important}
+.x51 .x29rail .x29tabs button b{font-size:1.05rem}
+.x51 .x29rail .x29tabs button small{font-size:.56rem!important;white-space:nowrap}
+.x51 .x29pw{left:8px!important;right:8px!important;top:auto!important;bottom:calc(var(--x51c) + 16px + env(safe-area-inset-bottom,0px));width:auto;max-width:640px;margin:0 auto;max-height:42vh;background:rgba(8,14,32,.8);transition:transform .2s,opacity .2s}
+.x51 .x29bot{bottom:calc(var(--x51c) + 16px + env(safe-area-inset-bottom,0px));background:rgba(8,14,32,.8);transition:transform .2s,opacity .2s}
+.x51 .x29bot.min{display:none!important}
+.x51 .x42bb{max-height:min(38vh,340px)}
+.x51 .x29tour,.x51.x50rs .x29tour{top:calc(92px + env(safe-area-inset-top,0px));bottom:auto}
+.x51.zen:not(.x45ui) .x51con{display:none}
+.x29.lite .x51con{background:rgba(255,255,255,.7);border-color:rgba(11,111,138,.25)}
+.x29.lite .x51hud{border-color:rgba(11,111,138,.2);background:radial-gradient(ellipse at 50% 45%,rgba(11,111,138,.05),transparent 70%)}
+.x29.lite .x51hud i{border-color:rgba(11,111,138,.55)}
+.x29.lite .x51 .x29pw,.x29.lite.x51 .x29pw,.x29.lite.x51 .x29bot{background:rgba(255,255,255,.9)}
+@media (min-width:821px){.x51 .x29pw{left:auto!important;right:24px!important;width:360px;bottom:calc(var(--x51c) + 20px)}.x51 .x29bot{left:auto;right:24px;width:420px;margin:0}}
+.x51tip{position:fixed;z-index:30;padding:10px 12px;border-radius:14px;background:rgba(6,12,30,.94);border:1px solid rgba(127,233,255,.55);color:#e6f2ff;box-shadow:0 0 0 3px rgba(127,233,255,.12),0 12px 30px rgba(0,0,0,.5);pointer-events:none;opacity:0;transform:translateY(6px) scale(.97);transition:opacity .15s,transform .15s;font-size:.86rem;line-height:1.45}
+.x51tip.on{opacity:1;transform:none}
+.x51tip b{display:block;font-size:1rem;color:#fff}.x51tip small{display:block;color:#7fe9ff;font-size:.72rem;margin-top:2px}
+.x51tip p{margin:6px 0 0}.x51tip .m{color:#f3e3bd}
+.x29.lite .x51tip{background:rgba(255,255,255,.97);color:#16213a;border-color:rgba(11,111,138,.45)}.x29.lite .x51tip b{color:#0b2a3a}.x29.lite .x51tip small{color:#0b6f8a}.x29.lite .x51tip .m{color:#8a5a00}
 
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 /* ===== Cielo de Cabecera: perfiles ===== */
@@ -9021,7 +9062,7 @@ const X29={on:false,T:new Date(),play:0,spd:1,yaw:.35,pitch:.78,D:19,F:1,W:0,H:0
 function x29Asc(){try{return N.Ascendente!=null?N.Ascendente:0}catch(e){return 0}}
 function x29Pt(lon,r,y=0){const a=(180+lon-x29Asc())*Math.PI/180;return[r*Math.cos(a),y,-r*Math.sin(a)]}
 function x29Proj(p){const{yaw:f,pitch:b,D,F,W,H}=X29,x1=p[0]*Math.cos(f)-p[2]*Math.sin(f),z1=p[0]*Math.sin(f)+p[2]*Math.cos(f),y=p[1];
- const dep=D-(y*Math.sin(b)+z1*Math.cos(b)),sy=y*Math.cos(b)-z1*Math.sin(b);if(dep<.5)return null;const k=F/dep;return{x:W/2+x1*k,y:H*.4-sy*k,k,d:dep}}
+ const dep=D-(y*Math.sin(b)+z1*Math.cos(b)),sy=y*Math.cos(b)-z1*Math.sin(b);if(dep<.5)return null;const k=F/dep;return{x:W/2+x1*k,y:(X29.CY||H*.4)-sy*k,k,d:dep}}
 function x29House(l){const c=(window.DATA&&DATA.cusps)||null;if(!c||PF.noTime)return 0;for(let i=0;i<12;i++){const a=c[i],b=c[(i+1)%12],w=X29_N3(b-a);if(X29_N3(l-a)<w)return i+1}return 1}
 function x29Aspect(a,b,orb=3){let d=Math.abs(X29_N3(a-b));if(d>180)d=360-d;for(const A of X29_ASP)if(Math.abs(d-A[0])<=orb)return[A,Math.abs(d-A[0])];return null}
 function x29Retro(k,T){if(k==='Sol'||k==='Luna')return false;const a=planets(new Date(T.getTime()-432e5))[k],b=planets(new Date(T.getTime()+432e5))[k];let d=b-a;if(d>180)d-=360;if(d<-180)d+=360;return d<0}
@@ -9047,7 +9088,7 @@ let X29_ST=null;function x29Stars(){if(X29_ST)return X29_ST;X29_ST=Array.from({l
 /* ---------- dibujo ---------- */
 function x29Sphere(c,x,y,r,col,sh,lx,ly,glow){if(glow){const g=c.createRadialGradient(x,y,0,x,y,r*4.2);g.addColorStop(0,'rgba(255,230,160,.55)');g.addColorStop(.3,'rgba(255,170,60,.22)');g.addColorStop(1,'rgba(255,140,40,0)');c.fillStyle=g;c.beginPath();c.arc(x,y,r*4.2,0,7);c.fill()}
  const g=c.createRadialGradient(x+lx*r*.55,y+ly*r*.55,r*.08,x,y,r*1.05);g.addColorStop(0,'#fff');g.addColorStop(.25,col);g.addColorStop(1,glow?col:sh);c.fillStyle=g;c.beginPath();c.arc(x,y,Math.max(1.5,r),0,7);c.fill()}
-function x29Draw(){const c=X29.cx,{W,H}=X29;if(!c)return;const bt=Math.max(0,Math.min(1,X29.boot));c.clearRect(0,0,W,H);
+function x29Draw(){const c=X29.cx,{W,H}=X29;if(!c)return;X29.hit=[];const bt=Math.max(0,Math.min(1,X29.boot));c.clearRect(0,0,W,H);
  const bg=c.createRadialGradient(W/2,H*.4,0,W/2,H*.4,Math.max(W,H)*.8);bg.addColorStop(0,'#0b1430');bg.addColorStop(.6,'#050816');bg.addColorStop(1,'#02030a');c.fillStyle=bg;c.fillRect(0,0,W,H);
  if(X29.show.est)for(const s of x29Stars()){const q=x29Proj(s.p);if(!q)continue;const tw=.55+.45*Math.sin(X29.last/700+s.m*40);c.fillStyle=`rgba(${s.c},${(.25+s.m*.6)*tw})`;c.fillRect(q.x,q.y,s.m>.93?2:1.1,s.m>.93?2:1.1)}
  const T=X29.T,P=x29PX(T),NN=x29N();X29.top=x29Top(T,P,NN);const TOPS=new Set(X29.top.slice(0,3).map(t=>t.tp+'|'+t.np));const ring=(r,st,lw,dash,y=0)=>{c.strokeStyle=st;c.lineWidth=lw;c.setLineDash(dash||[]);c.beginPath();for(let i=0;i<=96;i++){const q=x29Proj(x29Pt(i*3.75,r,y));if(!q)continue;i?c.lineTo(q.x,q.y):c.moveTo(q.x,q.y)}c.stroke();c.setLineDash([])};
@@ -9055,11 +9096,11 @@ function x29Draw(){const c=X29.cx,{W,H}=X29;if(!c)return;const bt=Math.max(0,Mat
  /* zodiaco */
  if(X29.show.zod){ring(X29_ZR,'rgba(232,206,150,.55)',1.2);ring(X29_ZR+.75,'rgba(232,206,150,.35)',1);
   for(let i=0;i<12;i++){const a=x29Proj(x29Pt(i*30,X29_ZR)),b=x29Proj(x29Pt(i*30,X29_ZR+.75)),g=x29Proj(x29Pt(i*30+15,X29_ZR+.38));if(a&&b){c.strokeStyle='rgba(232,206,150,.45)';c.lineWidth=1;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.stroke()}
-   if(g){c.fillStyle=`rgba(243,227,189,${.55+.45*Math.min(1,g.k/ (X29.F/X29.D))})`;c.font=`${Math.max(10,Math.round(g.k*.42))}px 'DejaVu Sans','Segoe UI Symbol',sans-serif`;c.textAlign='center';c.textBaseline='middle';c.fillText(SG[i],g.x,g.y)}}}
+   if(g){c.fillStyle=`rgba(243,227,189,${.55+.45*Math.min(1,g.k/ (X29.F/X29.D))})`;c.font=`${Math.max(10,Math.round(g.k*.42))}px 'DejaVu Sans','Segoe UI Symbol',sans-serif`;c.textAlign='center';c.textBaseline='middle';c.fillText(SG[i],g.x,g.y);(X29.hit=X29.hit||[]).push({t:'sg',i,x:g.x,y:g.y});if(X29.show.nom!==0){const gf=Math.max(10,Math.round(g.k*.42)),fs=Math.max(7,Math.round(g.k*.17)),up=g.y<(X29.CY||X29.H*.4);c.fillStyle='rgba(243,227,189,.72)';c.font=`600 ${fs}px ui-monospace,monospace`;c.fillText(X51_SG[i][0].toUpperCase(),g.x,g.y+(up?-1:1)*(gf*.5+fs*.75))}}}}
  /* casas */
  const cu=(window.DATA&&DATA.cusps&&!PF.noTime)?DATA.cusps:null;
  if(X29.show.cas&&cu)cu.forEach((l,i)=>{const a=x29Proj(x29Pt(l,.6)),b=x29Proj(x29Pt(l,X29_ZR)),m=x29Proj(x29Pt(l+X29_N3(cu[(i+1)%12]-l)/2,X29_ZR-.35));const ax=i%3===0;if(a&&b){c.strokeStyle=ax?'rgba(127,233,255,.5)':'rgba(127,233,255,.16)';c.lineWidth=ax?1.2:.8;c.setLineDash(ax?[]:[3,5]);c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.stroke();c.setLineDash([])}
-  if(m){c.fillStyle='rgba(127,233,255,.6)';c.font=`${Math.max(9,Math.round(m.k*.26))}px ui-monospace,monospace`;c.fillText(String(i+1),m.x,m.y)}});
+  if(m){c.fillStyle='rgba(127,233,255,.6)';c.font=`${Math.max(9,Math.round(m.k*.26))}px ui-monospace,monospace`;c.fillText(String(i+1),m.x,m.y);(X29.hit=X29.hit||[]).push({t:'cs',i,x:m.x,y:m.y});{const nf=Math.max(9,Math.round(m.k*.26)),cf=Math.max(6,Math.round(m.k*.12));c.fillStyle='rgba(127,233,255,.45)';c.font=`600 ${cf}px ui-monospace,monospace`;c.fillText('CASA',m.x,m.y-nf*.5-cf*.7)}}});
  /* órbitas */
  if(X29.show.orb)for(const[k,b]of x29Bods())if(!X29.hide[k]&&!k.startsWith('Nodo'))ring(b[0],k==='Sol'?'rgba(255,200,110,.35)':'rgba(140,170,255,.18)',k==='Sol'?1.1:.8,k==='Luna'?[2,4]:[]);
  /* anillo natal */
@@ -9160,7 +9201,7 @@ function x29Bind(el){const cv=$('#x29cv');let pts=new Map(),p0=null,pd=0,moved=0
  cv.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;const pr=pts.get(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);X29.idle=performance.now();
   if(pts.size===2){const[a,b]=[...pts.values()],d=Math.hypot(a[0]-b[0],a[1]-b[1]);if(pd)X29.Dt=X29.D=Math.max(8,Math.min(42,X29.D*pd/d));pd=d;moved=9;return}
   const dx=e.clientX-pr[0],dy=e.clientY-pr[1];moved+=Math.abs(dx)+Math.abs(dy);X29.yaw+=dx*.008;X29.pitch=Math.max(.05,Math.min(1.5,X29.pitch+dy*.006))});
- const up=e=>{pts.delete(e.pointerId);if(!pts.size){X29.drag=0;pd=0;if(moved<8&&p0){const h=(X29.hits||[]).filter(o=>Math.hypot(o.x-p0[0],o.y-p0[1])<o.r).sort((a,b)=>Math.hypot(a.x-p0[0],a.y-p0[1])-Math.hypot(b.x-p0[0],b.y-p0[1]))[0];let hr=null;if(!h){const P=p0;let bd=14;for(const r of (X29.rays||[])){const dx=r.x2-r.x1,dy=r.y2-r.y1,L=dx*dx+dy*dy||1;let t=((P[0]-r.x1)*dx+(P[1]-r.y1)*dy)/L;t=Math.max(0,Math.min(1,t));const d=Math.hypot(r.x1+dx*t-P[0],r.y1+dy*t-P[1]);if(d<bd){bd=d;hr=r}}}
+ const up=e=>{pts.delete(e.pointerId);if(!pts.size){X29.drag=0;pd=0;if(moved<8&&p0&&!X29.hold){const h=(X29.hits||[]).filter(o=>Math.hypot(o.x-p0[0],o.y-p0[1])<o.r).sort((a,b)=>Math.hypot(a.x-p0[0],a.y-p0[1])-Math.hypot(b.x-p0[0],b.y-p0[1]))[0];let hr=null;if(!h){const P=p0;let bd=14;for(const r of (X29.rays||[])){const dx=r.x2-r.x1,dy=r.y2-r.y1,L=dx*dx+dy*dy||1;let t=((P[0]-r.x1)*dx+(P[1]-r.y1)*dy)/L;t=Math.max(0,Math.min(1,t));const d=Math.hypot(r.x1+dx*t-P[0],r.y1+dy*t-P[1]);if(d<bd){bd=d;hr=r}}}
    x29Info(h?{k:h.k,nat:h.nat}:hr?{k:hr.tp,nat:0,np:hr.np}:null);if(h||hr)try{SND.fx('tab')}catch(x){}}}};
  cv.addEventListener('pointerup',up);cv.addEventListener('pointercancel',up);
  cv.addEventListener('wheel',e=>{e.preventDefault();X29.Dt=X29.D=Math.max(8,Math.min(42,X29.D*(1+e.deltaY*.001)));X29.idle=performance.now()},{passive:false});
@@ -9462,6 +9503,80 @@ function x50Neg(x,seed){const S=X50_SH[x.tp];if(!S)return '';const sh=S[0][Math.
  return x.k==='h'?`Aunque este tránsito te ayuda, también tiene su sombra porque toca ${w}. ${sh} Para liberarte, ${S[1].charAt(0).toLowerCase()+S[1].slice(1)}`
   :`Esto toca ${w}. ${sh}${fear} Para liberarte, ${S[1].charAt(0).toLowerCase()+S[1].slice(1)}`}
 function x43SpHtml(x,seed){const t=x43Sp(x,seed),n=x50Neg(x,seed);return (t||n)?`<div class="x43sp x50neg"><b>🖤 Horóscopo negro</b>${t?`<div class="x50p">${esc(t)}</div>`:''}${n?`<div class="x50p">${esc(n)}</div>`:''}</div>`:''}
+/* v51 · cabina espacial: el 3D en su propio marco, comandos abajo en una consola y nada encima del plano */
+function x51Mount(el){if(!el||el.dataset.x51m)return;el.dataset.x51m='1';el.classList.add('x51');
+ const hud=document.createElement('div');hud.className='x51hud';hud.id='x51hud';hud.setAttribute('aria-hidden','true');hud.innerHTML='<i class="a"></i><i class="b"></i><i class="c"></i><i class="d"></i><span class="t"></span><span class="r"></span>';el.prepend(hud);
+ const con=document.createElement('div');con.className='x51con';con.id='x51con';el.append(con);
+ const rail=$('#x29rail');if(rail){rail.classList.remove('off');con.append(rail);const tb=rail.querySelector('.x29tabs');
+  if(tb&&!tb.querySelector('[data-x51]'))tb.insertAdjacentHTML('afterbegin','<button data-x51="tr" aria-pressed="false"><b>✦</b><small>Tránsitos</small></button>')}
+ const bot=$('#x29bot');if(bot&&!bot.classList.contains('min'))x42Bot();
+ /* deslizar hacia abajo cierra el cuadro, en el panel y en los tránsitos */
+ for(const id of ['x29pw','x29bot']){const p=document.getElementById(id);if(!p)continue;let y0=null,x0=0;
+  p.addEventListener('pointerdown',e=>{const sc=e.target.closest('.x42bb,.x29pan');if(sc&&sc.scrollTop>0){y0=null;return}y0=e.clientY;x0=e.clientX},{passive:true});
+  p.addEventListener('pointermove',e=>{if(y0==null)return;const dy=e.clientY-y0;if(dy>0&&Math.abs(e.clientX-x0)<dy){p.style.transform=`translateY(${Math.min(dy,200)}px)`;p.style.opacity=String(Math.max(.4,1-dy/300))}},{passive:true});
+  const end=e=>{if(y0==null)return;const dy=(e.clientY||y0)-y0;y0=null;p.style.transform='';p.style.opacity='';if(dy>60)x51Close(id)};
+  p.addEventListener('pointerup',end);p.addEventListener('pointercancel',()=>{y0=null;p.style.transform='';p.style.opacity=''})}
+ /* girar el cielo con el dedo también esconde el cuadro abierto */
+ const cv=$('#x29cv');if(cv){let s=null;cv.addEventListener('pointerdown',e=>{s=[e.clientX,e.clientY]});cv.addEventListener('pointermove',e=>{if(s&&Math.abs(e.clientX-s[0])+Math.abs(e.clientY-s[1])>24){s=null;const pw=$('#x29pw');if(pw&&!pw.hidden)x51Close('x29pw')}});cv.addEventListener('pointerup',()=>{s=null})}
+ x51Sync();if(!X51.raf)X51.raf=requestAnimationFrame(x51Loop)}
+var X51={raf:0,cy:0,f:0};
+function x51Close(id){if(id==='x29pw')x42PanShow(false);else{const b=$('#x29bot');if(b&&!b.classList.contains('min'))x42Bot()}x51Sync()}
+function x51Sync(){const b=$('#x29bot'),on=b&&!b.classList.contains('min');const t=document.querySelector('[data-x51="tr"]');if(t)t.setAttribute('aria-pressed',!!on);const el=$('#x29');if(el)el.classList.toggle('x51tr',!!on)}
+/* el plano se acomoda solo en el espacio libre entre el encabezado y la consola (o el cuadro abierto) */
+function x51Loop(){const el=$('#x29');if(!el||!X29.on){X51.raf=0;X29.CY=0;return}
+ const H=innerHeight,W=innerWidth;let top=0,bot=H;
+ for(const s of ['.x29top','.x29clk','.x29leg']){const n=el.querySelector(s);if(n&&n.offsetParent){const r=n.getBoundingClientRect();if(r.height)top=Math.max(top,r.bottom)}}
+ for(const s of (W>820?['#x51con']:['#x51con','#x29pw','#x29bot'])){const n=el.querySelector(s);if(n&&!n.hidden&&n.offsetParent&&getComputedStyle(n).display!=='none'){const r=n.getBoundingClientRect();if(r.height>4)bot=Math.min(bot,r.top)}}
+ top+=8;bot-=8;const sh=Math.max(120,bot-top);
+ const hud=$('#x51hud');if(hud){hud.style.top=top+'px';hud.style.height=sh+'px'}
+ const tcy=top+sh*.5,tf=Math.min(W*.98,sh*.95)*.9;
+ X51.cy=X51.cy?X51.cy+(tcy-X51.cy)*.18:tcy;X51.f=X51.f?X51.f+(tf-X51.f)*.18:tf;X29.CY=X51.cy;X29.F=X51.f;
+ if(window.__x51t)window.__x51hits=(X29.hit||[]).filter(h=>h.t==='sg'||h.t==='cs').map(h=>({t:h.t,i:h.i,x:h.x,y:h.y}));
+ x51Sync();X51.raf=requestAnimationFrame(x51Loop)}
+document.addEventListener('click',e=>{const b=e.target.closest('button[data-x51]');if(b){e.stopPropagation();const pw=$('#x29pw');if(pw&&!pw.hidden)x42PanShow(false);x42Bot();x51Sync();try{SND.fx('tab')}catch(x){}return}
+ const tb=e.target.closest('#x29 [data-x29tab]');if(tb){setTimeout(()=>{const pw=$('#x29pw');if(pw&&!pw.hidden){const bo=$('#x29bot');if(bo&&!bo.classList.contains('min'))x42Bot()}x51Sync()},0)}
+ if(e.target.closest('#x29 .x29bh'))setTimeout(x51Sync,0)},true);
+new MutationObserver(()=>{const el=$('#x29');if(el&&!el.dataset.x51m&&$('#x29rail'))try{x51Mount(el)}catch(e){}}).observe(document.body,{childList:true});
+/* v51 · aprende a leer la carta: nombres de signos y casas, y una explicación mientras mantienes presionado */
+const X51_SG=[['Aries','Fuego','cardinal','Marte','Es el impulso de partir. Iniciativa, coraje y ganas de ser el primero.'],
+ ['Tauro','Tierra','fijo','Venus','Es la calma que construye. Placer, estabilidad, cuerpo y lo que se puede tocar.'],
+ ['Géminis','Aire','mutable','Mercurio','Es la curiosidad. Palabras, ideas, preguntas y conexiones rápidas.'],
+ ['Cáncer','Agua','cardinal','la Luna','Es el refugio. Familia, hogar, memoria y cuidado de los tuyos.'],
+ ['Leo','Fuego','fijo','el Sol','Es el corazón que brilla. Creatividad, orgullo, juego y ganas de ser visto.'],
+ ['Virgo','Tierra','mutable','Mercurio','Es el detalle que sana. Orden, servicio, salud y mejorar lo que existe.'],
+ ['Libra','Aire','cardinal','Venus','Es la balanza. Pareja, acuerdos, belleza y sentido de justicia.'],
+ ['Escorpio','Agua','fijo','Plutón y Marte','Es la profundidad. Pasión, crisis, transformación y lo que se esconde.'],
+ ['Sagitario','Fuego','mutable','Júpiter','Es la flecha que apunta lejos. Viajes, fe, estudios y sentido de la vida.'],
+ ['Capricornio','Tierra','cardinal','Saturno','Es la montaña. Metas, esfuerzo, responsabilidad y logros que duran.'],
+ ['Acuario','Aire','fijo','Urano y Saturno','Es lo distinto. Amistades, grupos, libertad y el futuro.'],
+ ['Piscis','Agua','mutable','Neptuno y Júpiter','Es el océano. Intuición, compasión, sueños y lo espiritual.']];
+const X51_CS=[['Casa 1','Tú y tu imagen','Cómo te presentas, tu cuerpo y la primera impresión que dejas. Empieza en tu Ascendente.'],
+ ['Casa 2','Tu dinero y tu valor','Lo que ganas, lo que tienes y cuánto te valoras.'],
+ ['Casa 3','Tu mente y tu entorno','Cómo hablas y aprendes, tus hermanos, vecinos y trayectos cortos.'],
+ ['Casa 4','Tu hogar y tus raíces','Tu familia, tu casa y la base emocional desde la que vives.'],
+ ['Casa 5','Lo que te da alegría','El amor que se disfruta, la creatividad, los hijos y el juego.'],
+ ['Casa 6','Tu día a día','La rutina, el trabajo diario, los hábitos y la salud.'],
+ ['Casa 7','Tus relaciones','La pareja, los socios y también quienes se te oponen.'],
+ ['Casa 8','Lo profundo','Las crisis, la intimidad, las herencias y el dinero compartido.'],
+ ['Casa 9','Tu horizonte','Viajes largos, estudios superiores, creencias y sentido de la vida.'],
+ ['Casa 10','Tu lugar en el mundo','La carrera, la vocación y cómo te ve la sociedad. Empieza en tu Medio Cielo.'],
+ ['Casa 11','Tu gente y tus sueños','Amistades, grupos, comunidad y proyectos a futuro.'],
+ ['Casa 12','Tu mundo interior','Lo que no se ve, el descanso, el inconsciente y lo que estás soltando.']];
+function x51Tip(h){let t=$('#x51tip');const el=$('#x29');if(!el)return;if(!t){t=document.createElement('div');t.id='x51tip';t.className='x51tip';t.setAttribute('role','tooltip');el.append(t)}
+ let html='';try{const NN=x29N(),here=[];
+  if(h.t==='sg'){const S=X51_SG[h.i];for(const k in NN){const l=NN[k];if(l==null||!GL[k])continue;if(Math.floor(((l%360)+360)%360/30)===h.i)here.push(k)}
+   html=`<b>${SG[h.i]} ${S[0]}</b><small>Signo de ${S[1]}, ${S[2]}, regido por ${S[3]}</small><p>${S[4]}</p>${here.length?`<p class="m">En tu carta aquí tienes ${here.join(', ')}.</p>`:''}`}
+  else{const C=X51_CS[h.i];for(const k in NN){const l=NN[k];if(l==null||!GL[k]||k==='Ascendente'||k==='Medio Cielo')continue;if(x29House(l)===h.i+1)here.push(k)}
+   html=`<b>${C[0]} · ${C[1]}</b><p>${C[2]}</p>${here.length?`<p class="m">En tu carta aquí tienes ${here.join(', ')}.</p>`:'<p class="m">En tu carta esta casa está vacía, y eso no es malo. Su tema se lee por el signo que la ocupa.</p>'}`}}catch(e){return}
+ t.innerHTML=html;t.hidden=false;const W=innerWidth;const w=Math.min(280,W-24);t.style.width=w+'px';t.style.left=Math.max(12,Math.min(W-w-12,h.x-w/2))+'px';
+ const r=t.getBoundingClientRect();t.style.top=(h.y-r.height-26>70?h.y-r.height-26:h.y+28)+'px';t.classList.add('on');try{navigator.vibrate&&navigator.vibrate(8)}catch(e){}}
+function x51TipHide(){const t=$('#x51tip');if(t){t.classList.remove('on');t.hidden=true}}
+(function(){let tm=0,p0=null;
+ document.addEventListener('pointerdown',e=>{if(e.target.id!=='x29cv')return;const H=X29.hit||[];let best=null,bd=26;for(const h of H){const d=Math.hypot(h.x-e.clientX,h.y-e.clientY);if(d<bd){bd=d;best=h}}
+  if(!best)return;p0=[e.clientX,e.clientY];clearTimeout(tm);tm=setTimeout(()=>{x51Tip(best);X29.hold=1},260)},true);
+ document.addEventListener('pointermove',e=>{if(p0&&Math.hypot(e.clientX-p0[0],e.clientY-p0[1])>10){clearTimeout(tm);p0=null;if(X29.hold){X29.hold=0;x51TipHide()}}},true);
+ const up=()=>{clearTimeout(tm);p0=null;if(X29.hold){setTimeout(()=>{X29.hold=0},50)}x51TipHide()};
+ document.addEventListener('pointerup',up,true);document.addEventListener('pointercancel',up,true)})();
 
 /* ---------- RESPALDO DE DATOS LOCALES ---------- */
 const BKP=PF.key.startsWith('cc-')?'cc-':PF.key+'-';
