@@ -2669,6 +2669,28 @@ html.x49nogd #gd{display:none!important}
 .x51tip p{margin:6px 0 0}.x51tip .m{color:#f3e3bd}
 .x29.lite .x51tip{background:rgba(255,255,255,.97);color:#16213a;border-color:rgba(11,111,138,.45)}.x29.lite .x51tip b{color:#0b2a3a}.x29.lite .x51tip small{color:#0b6f8a}.x29.lite .x51tip .m{color:#8a5a00}
 
+/* v52 · informes completos */
+.x52doc{line-height:1.66}
+.x52doc p{margin:8px 0}
+.x52note{padding:10px 14px;border-radius:14px;background:color-mix(in srgb,var(--panel2) 70%,transparent);margin:10px 0}
+.x52ch{margin:26px 0 8px;padding-top:6px;border-top:1px solid color-mix(in srgb,var(--fg) 10%,transparent)}
+.x52ch h2{font-size:1.18rem;margin:10px 0 6px;display:flex;flex-direction:column;gap:2px}
+.x52ch h2 span{font-family:ui-monospace,monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--brass) 85%,var(--fg))}
+.x52in{font-style:italic;opacity:.85}
+.x52h2{font-size:1.1rem;margin:24px 0 6px}
+.x52pt{margin:14px 0;padding:12px 14px;border-radius:16px;background:color-mix(in srgb,var(--panel2) 55%,transparent);border:1px solid color-mix(in srgb,var(--fg) 7%,transparent)}
+.x52h{font-size:1.02rem;margin:0 0 6px}.x52h small{font-family:ui-monospace,monospace;font-weight:400;opacity:.7;font-size:.78rem;margin-left:4px}
+.x52sub{font-family:ui-monospace,monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7;margin-top:14px!important}
+.x52asp{margin:8px 0 4px;padding-left:10px;border-left:2px solid color-mix(in srgb,var(--brass) 55%,transparent)}
+.x52asp h4{margin:0;font-size:.92rem}
+.x52prac{font-size:.92rem;padding:8px 12px;border-radius:12px;background:color-mix(in srgb,var(--brass) 10%,transparent)}
+.x52dates{font-size:.86rem;opacity:.8}
+.x52tech{margin:12px 0;padding:10px 12px;border-radius:14px;border:1px solid color-mix(in srgb,var(--fg) 10%,transparent)}
+.x52tech summary{cursor:pointer;font-weight:600}
+.x52tech table{font-size:.84rem}
+.x52bal{margin:10px 0}.x52bar{display:grid;grid-template-columns:64px 1fr 42px;align-items:center;gap:8px;margin:4px 0;font-size:.86rem}
+.x52bar i{display:block;height:8px;border-radius:6px;background:color-mix(in srgb,var(--brass) 70%,transparent)}.x52bar b{font-family:ui-monospace,monospace;font-weight:400;font-size:.78rem}
+
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 /* ===== Cielo de Cabecera: perfiles ===== */
 .cx{position:fixed;inset:0;z-index:99;overflow-y:auto;display:grid;place-items:start center;padding:max(24px,env(safe-area-inset-top,0px)) 16px 40px;background:radial-gradient(120% 80% at 20% 0%,color-mix(in srgb,var(--violet) 30%,var(--bg)),var(--bg) 60%),var(--bg)}
@@ -9577,6 +9599,433 @@ function x51TipHide(){const t=$('#x51tip');if(t){t.classList.remove('on');t.hidd
  document.addEventListener('pointermove',e=>{if(p0&&Math.hypot(e.clientX-p0[0],e.clientY-p0[1])>10){clearTimeout(tm);p0=null;if(X29.hold){X29.hold=0;x51TipHide()}}},true);
  const up=()=>{clearTimeout(tm);p0=null;if(X29.hold){setTimeout(()=>{X29.hold=0},50)}x51TipHide()};
  document.addEventListener('pointerup',up,true);document.addEventListener('pointercancel',up,true)})();
+
+/* v52 · textos de los informes completos de la carta natal (originales de Cielo) */
+/* cada signo: esencia, luz, sombra, en el amor, en el trabajo, cómo crecer */
+const X52S={
+Aries:['Aries es el primer impulso del zodiaco, la chispa que enciende el fuego y sale a abrir camino sin esperar permiso. Es energía cardinal de Fuego, regida por Marte, y vive en tiempo presente. Donde aparece en tu carta hay ganas de empezar, de probarte y de ganarle al miedo con acción.',
+ 'Su luz es el coraje, la franqueza y la capacidad de arrancar cuando nadie se atreve. Contagia entusiasmo, defiende a los suyos y no guarda rencor por mucho tiempo.',
+ 'Su sombra es la impaciencia, el enojo rápido y la tendencia a abandonar lo que ya no tiene la emoción del comienzo. Cuando se siente frenado puede atropellar sin darse cuenta.',
+ 'En el amor busca pasión, conquista y una pareja que no le tenga miedo a su fuego. Se enamora rápido y necesita sentir que la relación está viva y en movimiento.',
+ 'En el trabajo rinde donde hay desafíos, metas claras y libertad para decidir. Es excelente para iniciar proyectos, liderar equipos chicos y resolver crisis.',
+ 'Crece cuando aprende a terminar lo que empieza, a escuchar antes de responder y a usar su fuerza para proteger y no para imponerse.'],
+Tauro:['Tauro es la tierra fértil que recibe la semilla y la deja crecer con paciencia. Es energía fija de Tierra, regida por Venus, y busca lo concreto, lo bello y lo que dura. Donde aparece en tu carta hay necesidad de seguridad, de disfrute y de construir algo que se pueda tocar.',
+ 'Su luz es la constancia, la lealtad y un sentido práctico que convierte las ideas en realidad. Tiene buen gusto, sabe cuidar los recursos y transmite calma.',
+ 'Su sombra es la terquedad, el apego a lo conocido y el miedo a perder lo que ya tiene. Puede quedarse demasiado tiempo en situaciones cómodas que ya no lo hacen crecer.',
+ 'En el amor es fiel, sensual y tierno. Demuestra cariño con presencia, comida rica, abrazos y estabilidad, y necesita una pareja que le dé confianza a largo plazo.',
+ 'En el trabajo rinde con rutinas claras, metas concretas y buena remuneración. Tiene talento para las finanzas, la cocina, el arte, la tierra, el diseño y todo lo que requiera paciencia.',
+ 'Crece cuando se atreve a soltar lo que ya cumplió su ciclo y descubre que su verdadera seguridad está en su propio valor y no en lo que posee.'],
+'Géminis':['Géminis es el aire en movimiento, la mente curiosa que quiere saberlo todo y conectar a todos. Es energía mutable de Aire, regida por Mercurio, y vive de preguntas, palabras e intercambios. Donde aparece en tu carta hay inquietud intelectual, humor y ganas de aprender.',
+ 'Su luz es la agilidad mental, la facilidad para comunicar y la capacidad de adaptarse a cualquier ambiente. Es juvenil, ingenioso y sabe tender puentes entre personas e ideas.',
+ 'Su sombra es la dispersión, la ansiedad y la tendencia a quedarse en la superficie para no tocar lo que duele. Puede empezar muchas cosas y dejar varias a medio camino.',
+ 'En el amor necesita conversación, risa y una pareja que sea también su amiga. Se enamora por la mente y se aburre si la relación se vuelve rutinaria o silenciosa.',
+ 'En el trabajo rinde en la comunicación, la enseñanza, la escritura, las ventas, el comercio, la tecnología y todo lo que tenga variedad y contacto con gente.',
+ 'Crece cuando elige una dirección y la sostiene, cuando escucha con el cuerpo y no solo con la cabeza, y cuando transforma la información en sabiduría.'],
+'Cáncer':['Cáncer es el agua que contiene, la casa, la madre y la memoria. Es energía cardinal de Agua, regida por la Luna, y siente todo con intensidad aunque no siempre lo muestre. Donde aparece en tu carta hay sensibilidad, instinto protector y necesidad de pertenecer.',
+ 'Su luz es la ternura, la intuición y la capacidad de cuidar y hacer que otros se sientan en casa. Tiene buena memoria emocional y una fuerza enorme cuando defiende a los suyos.',
+ 'Su sombra es la susceptibilidad, los cambios de ánimo y la tendencia a encerrarse en su caparazón o a manipular desde la culpa cuando se siente inseguro.',
+ 'En el amor busca refugio, compromiso y una familia propia. Cuida con detalles y necesita sentirse necesitado, pero también que lo cuiden a él.',
+ 'En el trabajo rinde donde hay un clima humano cálido. Tiene talento para la salud, la educación, la cocina, los bienes raíces, la historia y todo lo que nutra a otros.',
+ 'Crece cuando aprende a darse a sí mismo el cuidado que ofrece, a decir lo que siente sin rodeos y a soltar el pasado que ya no lo alimenta.'],
+Leo:['Leo es el fuego en su máximo esplendor, el sol del verano que da vida y quiere ser visto. Es energía fija de Fuego, regida por el Sol, y vive desde el corazón. Donde aparece en tu carta hay creatividad, orgullo y ganas de dejar una huella propia.',
+ 'Su luz es la generosidad, la calidez y el carisma. Sabe animar a otros, liderar con alegría y transformar lo cotidiano en una celebración.',
+ 'Su sombra es el orgullo herido, la necesidad excesiva de aprobación y la dificultad para reconocer errores. Si no lo aplauden, puede apagarse o volverse dramático.',
+ 'En el amor es apasionado, leal y romántico. Le gusta conquistar y ser admirado, y necesita una pareja que lo celebre y con quien pueda jugar.',
+ 'En el trabajo rinde donde puede brillar y tomar decisiones. Tiene talento para el arte, el espectáculo, la dirección, la educación de niños y todo lo que inspire.',
+ 'Crece cuando descubre que su valor no depende del aplauso y pone su luz al servicio de algo más grande que su ego.'],
+Virgo:['Virgo es la tierra cosechada y ordenada, la mente que analiza para mejorar. Es energía mutable de Tierra, regida por Mercurio, y vive atenta al detalle y a lo útil. Donde aparece en tu carta hay deseo de perfeccionar, servir y entender cómo funcionan las cosas.',
+ 'Su luz es la eficiencia, la humildad y la capacidad de resolver problemas concretos. Es confiable, observador y tiene un don natural para sanar y organizar.',
+ 'Su sombra es la autocrítica, la preocupación constante y la exigencia de perfección hacia sí mismo y hacia los demás. Puede perderse en los detalles y olvidar el sentido.',
+ 'En el amor demuestra cariño con hechos, ayuda y atención. Es reservado al principio y necesita confianza antes de abrir su corazón.',
+ 'En el trabajo rinde con orden, método y tareas bien definidas. Tiene talento para la salud, la investigación, la edición, la contabilidad, la nutrición y los oficios de precisión.',
+ 'Crece cuando aprende que lo suficientemente bueno también está bien, y cuando trata su propio cuerpo y su mente con la misma paciencia que ofrece a otros.'],
+Libra:['Libra es el aire que busca equilibrio, la balanza que pesa y compara para encontrar lo justo. Es energía cardinal de Aire, regida por Venus, y vive en relación con otros. Donde aparece en tu carta hay sensibilidad estética, diplomacia y necesidad de armonía.',
+ 'Su luz es la amabilidad, el sentido de justicia y el talento para unir personas. Tiene buen gusto, sabe escuchar y encuentra soluciones donde todos ganan.',
+ 'Su sombra es la indecisión, el miedo al conflicto y la tendencia a complacer para no quedarse solo. Puede postergar lo que siente para mantener la paz.',
+ 'En el amor es romántico y cuidadoso. Busca una pareja con quien formar un equipo de iguales y sufre mucho con la vulgaridad o las peleas.',
+ 'En el trabajo rinde en equipo y en ambientes agradables. Tiene talento para el derecho, la mediación, el diseño, la moda, el arte, las relaciones públicas y la asesoría.',
+ 'Crece cuando se atreve a decir que no, a tomar posición y a encontrar dentro de sí el equilibrio que busca afuera.'],
+Escorpio:['Escorpio es el agua profunda, el lugar donde las cosas mueren y renacen. Es energía fija de Agua, regida por Plutón y Marte, y vive con intensidad todo lo que toca. Donde aparece en tu carta hay pasión, olfato para lo oculto y capacidad de transformación.',
+ 'Su luz es la lealtad, la valentía emocional y un poder de regeneración enorme. No le teme a las crisis y sabe acompañar a otros en sus momentos más oscuros.',
+ 'Su sombra es el control, los celos, la desconfianza y la dificultad para perdonar. Cuando se siente herido puede cerrarse por completo o atacar donde más duele.',
+ 'En el amor es todo o nada. Busca fusión, intimidad verdadera y una pareja que no le tenga miedo a su profundidad.',
+ 'En el trabajo rinde en lo que exige investigar, transformar o manejar recursos ajenos. Tiene talento para la psicología, la medicina, las finanzas, la investigación y las terapias.',
+ 'Crece cuando aprende a soltar el control, a confiar y a usar su poder para sanar y no para defenderse.'],
+Sagitario:['Sagitario es el fuego que viaja, la flecha que apunta más allá del horizonte. Es energía mutable de Fuego, regida por Júpiter, y vive buscando sentido. Donde aparece en tu carta hay optimismo, sed de aventura y amor por el conocimiento.',
+ 'Su luz es la fe, el humor y la generosidad. Inspira a otros, ve el lado bueno de las cosas y tiene una mente amplia que conecta culturas e ideas.',
+ 'Su sombra es la exageración, la impaciencia con los detalles y prometer más de lo que puede cumplir. Puede huir cuando algo lo compromete demasiado.',
+ 'En el amor necesita libertad, risa y una pareja que sea compañera de aventuras. Se apaga si se siente encerrado o vigilado.',
+ 'En el trabajo rinde en lo que tiene horizonte y propósito. Tiene talento para la docencia, los viajes, el deporte, la filosofía, la edición, el derecho y el comercio exterior.',
+ 'Crece cuando aterriza sus ideales en compromisos concretos y descubre que la aventura más grande también puede estar en profundizar.'],
+Capricornio:['Capricornio es la tierra que se eleva en montaña, la paciencia que construye con el tiempo. Es energía cardinal de Tierra, regida por Saturno, y vive con la mirada puesta en metas de largo plazo. Donde aparece en tu carta hay responsabilidad, ambición y sentido del deber.',
+ 'Su luz es la disciplina, la seriedad y la capacidad de sostener lo que otros abandonan. Es confiable, estratégico y mejora con los años.',
+ 'Su sombra es la rigidez, el pesimismo y la tendencia a medir su valor solo por lo que logra. Puede cargar demasiado peso y olvidarse de disfrutar.',
+ 'En el amor es reservado pero muy leal. Demuestra cariño cumpliendo, cuidando y construyendo un futuro, y necesita respeto y tiempo para abrirse.',
+ 'En el trabajo rinde en estructuras claras donde pueda ascender. Tiene talento para la administración, la ingeniería, la política, la arquitectura y la gestión.',
+ 'Crece cuando se permite ser vulnerable, descansar sin culpa y recordar que el camino también es parte de la cumbre.'],
+Acuario:['Acuario es el aire que sopla hacia el futuro, la mente que imagina otra forma de vivir juntos. Es energía fija de Aire, regida por Urano y Saturno, y vive pensando en el grupo y en la libertad. Donde aparece en tu carta hay originalidad, rebeldía y sentido de comunidad.',
+ 'Su luz es la creatividad, la mente abierta y el compromiso con causas más grandes. Es un buen amigo, respeta la diferencia y se adelanta a su tiempo.',
+ 'Su sombra es la distancia emocional, la terquedad con sus ideas y la dificultad para mostrar vulnerabilidad. Puede ser muy cercano con todos y lejano con quien lo ama.',
+ 'En el amor necesita amistad, espacio y una pareja que respete su independencia. Le atrae lo distinto y se enamora de mentes libres.',
+ 'En el trabajo rinde donde hay innovación y libertad. Tiene talento para la tecnología, la ciencia, la astrología, las causas sociales y el trabajo en redes.',
+ 'Crece cuando une su cabeza con su corazón y se permite necesitar a otros sin sentir que pierde su libertad.'],
+Piscis:['Piscis es el océano donde todo se disuelve y se une, el final del zodiaco que contiene a todos los signos. Es energía mutable de Agua, regida por Neptuno y Júpiter, y vive desde la sensibilidad. Donde aparece en tu carta hay intuición, compasión e imaginación.',
+ 'Su luz es la empatía, la inspiración artística y una fe profunda en algo más grande. Sabe acompañar sin juzgar y percibe lo que otros no dicen.',
+ 'Su sombra es la evasión, la confusión y la tendencia a sacrificarse o a perderse en los problemas ajenos. Cuando la realidad duele puede refugiarse en fantasías.',
+ 'En el amor es tierno, romántico y entregado. Busca una conexión casi mágica y necesita aprender a ver a la pareja real y no solo la idealizada.',
+ 'En el trabajo rinde en lo que tiene sentido y toca el alma. Tiene talento para el arte, la música, la sanación, la espiritualidad, la ayuda social y el cine.',
+ 'Crece cuando pone límites amorosos, cuida su energía y aterriza sus sueños en pasos concretos.']};
+
+/* qué representa cada punto de la carta, con más detalle */
+const X52P={
+Sol:'El Sol es el centro de tu carta, tu identidad más profunda y el propósito que te da vida. Habla de lo que necesitas expresar para sentirte tú, de tu vitalidad y de la imagen que tienes de ti cuando estás en tu mejor momento. Con los años se vuelve más evidente, porque aprendemos a brillar a nuestra manera.',
+Luna:'La Luna es tu mundo emocional, tus necesidades más íntimas y la forma en que reaccionas cuando te sientes inseguro. Habla de tu infancia, de tu relación con la madre o con quien te cuidó, y de lo que necesitas para sentirte en casa. Es la parte de ti que solo conocen quienes están cerca.',
+Mercurio:'Mercurio es tu mente, tu manera de aprender, de pensar, de hablar y de escribir. Muestra cómo procesas la información, qué te despierta curiosidad y cómo te comunicas con los demás, desde una conversación de sobremesa hasta un contrato importante.',
+Venus:'Venus es tu forma de amar y de disfrutar. Muestra lo que te atrae, cómo das y recibes cariño, tu sentido de la belleza y tu relación con el dinero y el placer. También habla de lo que valoras y de cómo te valoras a ti mismo.',
+Marte:'Marte es tu motor, tu deseo y tu forma de pelear por lo que quieres. Muestra cómo enfrentas los obstáculos, cómo expresas la rabia y la pasión, y dónde pones tu energía física. Es el valor que necesitas para pasar de la idea a la acción.',
+'Júpiter':'Júpiter es tu expansión, tu fe y tu buena estrella. Muestra dónde tienes facilidades, qué te da optimismo y en qué áreas creces casi sin esfuerzo. También habla de tus creencias y de tu manera de buscar sentido, y advierte dónde puedes exagerar.',
+Saturno:'Saturno es tu maestro interior. Muestra tus responsabilidades, tus miedos y las áreas donde la vida te pide paciencia y esfuerzo. Lo que hoy cuesta, con los años se convierte en tu mayor maestría, porque Saturno premia a quien no se rinde.',
+Urano:'Urano es tu necesidad de libertad, de originalidad y de romper moldes. Su signo lo compartes con toda tu generación, pero la casa donde cae muestra en qué área de tu vida llegan los cambios repentinos y dónde necesitas hacer las cosas a tu manera.',
+Neptuno:'Neptuno es tu sensibilidad, tus sueños, tu inspiración y tu búsqueda espiritual. Su signo es generacional, y su casa indica dónde idealizas, dónde puedes confundirte y dónde, a la vez, tienes una puerta abierta a la intuición y al arte.',
+'Plutón':'Plutón es tu poder de transformación. Su signo marca a toda una generación, y su casa muestra el área donde vives crisis profundas, pérdidas y renacimientos, y donde descubres una fuerza interior que no sabías que tenías.',
+Ascendente:'El Ascendente es el signo que salía por el horizonte en el momento exacto en que naciste. Es tu puerta de entrada al mundo, tu primera impresión, tu estilo espontáneo y la forma en que enfrentas lo nuevo. Muchas veces la gente te conoce primero por tu Ascendente y solo después descubre tu Sol.',
+'Medio Cielo':'El Medio Cielo es el punto más alto de tu carta. Habla de tu vocación, de tus metas profesionales, de tu reputación y de lo que quieres que el mundo reconozca en ti. Es la cumbre hacia la que caminas a lo largo de la vida.',
+'Quirón':'Quirón es el sanador herido. Muestra una herida antigua que quizás nunca se cierra del todo, pero que te vuelve sabio y compasivo con quienes sufren lo mismo. Donde está Quirón está también tu don para acompañar a otros.',
+Nodo:'Los Nodos Lunares muestran tu camino de evolución. El Nodo Sur es lo que ya sabes hacer, tu zona cómoda y quizás un exceso de otras vidas o de tu historia familiar. El Nodo Norte es hacia donde tu alma quiere crecer, lo que al principio cuesta pero te llena de sentido.'};
+
+/* v52 · cada punto en cada signo (textos originales de Cielo) */
+const X52D={
+Sol:{Aries:'Tu identidad se enciende cuando tomas la iniciativa. Naciste para abrir caminos, decidir rápido y ser el primero en atreverte, y te sientes vivo cuando tienes un desafío por delante. Tu aprendizaje es no confundir valentía con apuro.',
+ Tauro:'Tu identidad se apoya en la estabilidad y en lo que puedes construir con tus manos. Eres de los que avanzan lento pero no retroceden, y te sientes en tu centro cuando tu vida tiene raíces, belleza y tiempo para disfrutar.',
+ 'Géminis':'Tu identidad se alimenta de ideas, conversaciones y experiencias distintas. Eres curioso por naturaleza y necesitas aprender algo nuevo casi todos los días. Brillas cuando comunicas, conectas personas y le pones humor a la vida.',
+ 'Cáncer':'Tu identidad está ligada a tus raíces, a tu familia y a la gente que sientes como propia. Tienes una sensibilidad enorme y una intuición que pocas veces falla. Brillas cuando cuidas, cuando creas un hogar y cuando te permites sentir.',
+ Leo:'Tu identidad pide expresarse con creatividad y corazón. Tienes una presencia que se nota y una generosidad natural, y te sientes pleno cuando puedes crear algo propio y compartirlo con orgullo.',
+ Virgo:'Tu identidad se fortalece cuando eres útil y haces las cosas bien. Tienes ojo para el detalle y una mente práctica que sabe ordenar el caos. Brillas cuando pones tu talento al servicio de algo concreto.',
+ Libra:'Tu identidad se construye en el encuentro con otros. Buscas armonía, belleza y justicia, y tienes un talento especial para ver los dos lados de cada historia. Brillas cuando unes, acuerdas y embelleces.',
+ Escorpio:'Tu identidad es intensa y profunda. No te conformas con la superficie y necesitas vivir las cosas de verdad, aunque eso implique atravesar crisis. Brillas cuando te transformas y ayudas a otros a renacer.',
+ Sagitario:'Tu identidad necesita horizonte, libertad y sentido. Eres optimista, buscador y te encanta descubrir otras culturas e ideas. Brillas cuando enseñas, viajas o inspiras a otros a creer.',
+ Capricornio:'Tu identidad se forja con esfuerzo y metas de largo plazo. Eres responsable, maduro y capaz de sostener lo que otros sueltan. Brillas cuando alcanzas una cumbre que construiste paso a paso.',
+ Acuario:'Tu identidad es original y libre. No te gusta seguir moldes y te importa el bien del grupo y del futuro. Brillas cuando aportas una idea distinta y cuando defiendes la libertad propia y ajena.',
+ Piscis:'Tu identidad es sensible, compasiva e intuitiva. Captas el ambiente como una esponja y tienes una imaginación sin límites. Brillas cuando creas, sanas o conectas con lo espiritual.'},
+Luna:{Aries:'Tus emociones son rápidas y directas. Reaccionas en el momento y se te pasa pronto. Te sientes seguro cuando tienes autonomía y puedes actuar, y te angustia sentirte atrapado o sin opciones.',
+ Tauro:'Tus emociones son estables y necesitan tiempo. Te calma el contacto físico, la naturaleza, la buena comida y la rutina conocida. Cuando algo te desestabiliza, necesitas volver a tierra firme antes de decidir.',
+ 'Géminis':'Tus emociones pasan por la cabeza. Necesitas hablar lo que sientes para entenderlo, y te calma conversar, leer o escribir. Tu ánimo cambia rápido y te ayuda tener variedad y gente con quien compartir ideas.',
+ 'Cáncer':'Tus emociones son profundas y muy ligadas a tu historia familiar. Necesitas un hogar que sea refugio y personas que te hagan sentir parte. Recuerdas todo lo que sientes, lo bueno y lo que dolió.',
+ Leo:'Tus emociones son cálidas y expresivas. Necesitas sentirte querido, valorado y visto, y te calma crear, jugar y recibir cariño explícito. Cuando te hieren el orgullo, te cuesta mostrar que te dolió.',
+ Virgo:'Tus emociones buscan orden. Te calma sentirte útil, tener tu espacio organizado y resolver lo pendiente. Cuando estás inquieto tiendes a preocuparte de más o a exigirte demasiado.',
+ Libra:'Tus emociones necesitan armonía y compañía. Te afectan mucho los ambientes tensos y te calma la belleza, la buena conversación y sentirte en equilibrio con quien quieres.',
+ Escorpio:'Tus emociones son intensas y muy privadas. Sientes todo hasta el fondo y necesitas confiar plenamente antes de abrirte. Tu ánimo se regenera después de cada crisis, y tienes un olfato emocional muy agudo.',
+ Sagitario:'Tus emociones necesitan libertad y sentido. Te calma moverte, viajar, aprender o reírte, y te asfixia sentirte controlado. Tu optimismo te ayuda a levantarte rápido.',
+ Capricornio:'Tus emociones son contenidas y responsables. Aprendiste temprano a ser fuerte y a no mostrar debilidad. Te calma tener las cosas bajo control y sentir que avanzas, y necesitas permitirte recibir ayuda.',
+ Acuario:'Tus emociones pasan por la mente y la amistad. Necesitas espacio, independencia y gente con quien compartir ideas. A veces te distancias de lo que sientes para observarlo, y eso puede parecer frialdad aunque no lo sea.',
+ Piscis:'Tus emociones son como el mar, cambiantes y profundas. Absorbes lo que sienten los demás y necesitas momentos de silencio, música o naturaleza para recuperar tu centro.'},
+Mercurio:{Aries:'Piensas rápido y hablas sin rodeos. Tomas decisiones en segundos y te gustan los debates. Tu reto es escuchar hasta el final antes de responder.',
+ Tauro:'Piensas con calma y sentido práctico. Aprendes mejor haciendo y con ejemplos concretos, y cuando llegas a una conclusión es difícil que cambies de opinión. Tu palabra tiene peso porque la cumples.',
+ 'Géminis':'Tu mente es ágil, curiosa y versátil. Aprendes rápido, hablas con gracia y puedes estar en varias conversaciones a la vez. Tu reto es profundizar y terminar lo que empiezas.',
+ 'Cáncer':'Piensas con el corazón y recuerdas a través de las emociones. Tu memoria es excelente y tus palabras saben consolar. Tu reto es no tomar como personal lo que no lo es.',
+ Leo:'Hablas con convicción y te gusta que te escuchen. Tienes talento para contar historias y para convencer, y tu reto es dejar espacio para las ideas ajenas.',
+ Virgo:'Tu mente es analítica, precisa y ordenada. Detectas errores que otros no ven y explicas con claridad. Tu reto es que la crítica no se vuelva contra ti.',
+ Libra:'Piensas buscando equilibrio y ves los distintos puntos de vista. Eres diplomático al hablar y tienes talento para negociar. Tu reto es decidir sin esperar el acuerdo de todos.',
+ Escorpio:'Tu mente es investigadora y penetrante. Te interesan los misterios, lo oculto y la psicología, y sabes leer entre líneas. Tu reto es no guardarte todo lo que piensas.',
+ Sagitario:'Piensas en grande y te interesan la filosofía, los viajes y el sentido de las cosas. Hablas con entusiasmo y franqueza. Tu reto es cuidar los detalles y no exagerar.',
+ Capricornio:'Piensas de forma estructurada y práctica. Planificas a largo plazo y hablas poco pero con peso. Tu reto es abrirte a ideas nuevas sin descartarlas por poco realistas.',
+ Acuario:'Tu mente es original e innovadora. Te interesan la ciencia, la tecnología y las ideas que cambian el mundo. Tu reto es no aferrarte a tus teorías cuando la realidad dice otra cosa.',
+ Piscis:'Piensas con imágenes, intuiciones y sensaciones. Tienes una mente poética y receptiva, ideal para el arte. Tu reto es aterrizar las ideas y no perderte en la distracción.'},
+Venus:{Aries:'Amas con pasión y te gusta conquistar. Te atrae lo directo, lo vital y lo que te desafía. Tu aprendizaje es sostener el amor cuando pasa la emoción del comienzo.',
+ Tauro:'Amas con lealtad, ternura y sensualidad. Te atrae la estabilidad, la belleza simple y los placeres del cuerpo. Disfrutas el dinero como seguridad y sabes hacerlo crecer con paciencia.',
+ 'Géminis':'Amas con la palabra y la complicidad. Te enamora una buena conversación, el humor y la inteligencia. Necesitas variedad y que la relación sea también una amistad.',
+ 'Cáncer':'Amas cuidando y protegiendo. Buscas una pareja que sea hogar y familia. Eres muy tierno y necesitas sentir seguridad emocional para entregarte.',
+ Leo:'Amas con generosidad y dramatismo. Te gusta el romance, los gestos grandes y sentirte admirado. Das mucho y necesitas que te lo reconozcan.',
+ Virgo:'Amas con detalles prácticos y atención. Demuestras cariño ayudando y cuidando. Tu aprendizaje es no criticar a quien quieres y aceptar la imperfección.',
+ Libra:'Amas con elegancia y buscas una relación equilibrada. Valoras la belleza, el buen trato y la armonía. Tienes un don natural para el arte y para hacer agradable la vida.',
+ Escorpio:'Amas con intensidad total. Buscas fusión, lealtad y verdad, y no soportas lo superficial. Tu aprendizaje es confiar sin controlar.',
+ Sagitario:'Amas con libertad y entusiasmo. Te atraen las personas distintas, con mundo y con historias. Necesitas que el amor sea una aventura compartida.',
+ Capricornio:'Amas con seriedad y compromiso. Te tomas tu tiempo para entregarte, pero cuando lo haces eres muy leal. Te atrae la madurez y la estabilidad.',
+ Acuario:'Amas con libertad y amistad. Te atraen las mentes originales y necesitas una relación que respete tu espacio. Eres leal a tu manera, sin posesividad.',
+ Piscis:'Amas con devoción y sensibilidad. Eres romántico y compasivo, y puedes idealizar a quien quieres. Tu aprendizaje es ver a la persona real y cuidar tus límites.'},
+Marte:{Aries:'Tu energía es directa, valiente y explosiva. Actúas rápido, te encantan los desafíos y no le temes a la competencia. Tu aprendizaje es dosificar tu fuerza para no quemarte.',
+ Tauro:'Tu energía es lenta pero imparable. Te cuesta arrancar, pero cuando lo haces llegas lejos. Eres perseverante y muy resistente, y te enojas poco pero fuerte.',
+ 'Géminis':'Tu energía es mental y versátil. Actúas a través de la palabra, las ideas y los contactos. Haces muchas cosas a la vez y necesitas no dispersarte.',
+ 'Cáncer':'Tu energía se mueve por emociones. Peleas con fuerza por tu familia y tu hogar, aunque a veces lo haces de forma indirecta. Tu aprendizaje es decir de frente lo que te molesta.',
+ Leo:'Tu energía es orgullosa y creativa. Actúas con pasión y te gusta liderar. Te motivan los proyectos que te permiten brillar y dejar una huella.',
+ Virgo:'Tu energía es metódica y eficiente. Trabajas con precisión y te gusta hacer las cosas bien. Tu aprendizaje es no gastar tu fuerza en preocupaciones.',
+ Libra:'Tu energía busca acuerdos. Prefieres negociar antes que pelear, y actúas mejor en pareja o en equipo. Tu aprendizaje es defender lo tuyo sin miedo a desagradar.',
+ Escorpio:'Tu energía es intensa, estratégica y profunda. Tienes una fuerza de voluntad enorme y no abandonas. Tu aprendizaje es no usar tu poder para controlar o vengarte.',
+ Sagitario:'Tu energía es entusiasta y aventurera. Te motiva lo que tiene sentido y horizonte. Actúas con optimismo y necesitas libertad para moverte.',
+ Capricornio:'Tu energía es disciplinada, ambiciosa y constante. Sabes trabajar duro y esperar resultados. Es una de las mejores posiciones para lograr metas de largo plazo.',
+ Acuario:'Tu energía es rebelde e independiente. Actúas a tu manera y te motivan las causas colectivas. Tu aprendizaje es colaborar sin sentir que pierdes libertad.',
+ Piscis:'Tu energía es sutil, intuitiva y cambiante. Actúas mejor cuando algo te inspira o tiene sentido para el alma. Tu aprendizaje es cuidar tu vitalidad y poner límites.'},
+'Júpiter':{Aries:'Creces cuando te atreves a empezar. Tu suerte aparece cuando tomas la iniciativa y confías en tu impulso.',
+ Tauro:'Creces construyendo estabilidad y disfrutando. Tienes facilidad para generar recursos y para hacer crecer lo que siembras con paciencia.',
+ 'Géminis':'Creces aprendiendo, conversando y moviéndote. Tu suerte llega a través de contactos, estudios, escritura y viajes cortos.',
+ 'Cáncer':'Creces cuidando y creando un hogar. Tu buena estrella está ligada a la familia, a las raíces y a la capacidad de proteger. Es una posición muy favorable para Júpiter.',
+ Leo:'Creces cuando te expresas y te muestras con generosidad. Tu suerte aparece en la creatividad, el liderazgo y la alegría.',
+ Virgo:'Creces mejorando, sirviendo y perfeccionando. Tu suerte está en el trabajo bien hecho y en el cuidado de la salud.',
+ Libra:'Creces a través de las relaciones y los acuerdos. Tu suerte llega por la pareja, los socios y la diplomacia.',
+ Escorpio:'Creces atravesando crisis y transformándote. Tu suerte aparece en la investigación, los recursos compartidos y la profundidad.',
+ Sagitario:'Creces buscando sentido, viajando y aprendiendo. Tu fe es fuerte y la vida suele abrirte puertas cuando te atreves a ir más lejos.',
+ Capricornio:'Creces con esfuerzo, estructura y paciencia. Tu suerte se construye paso a paso y se consolida con los años.',
+ Acuario:'Creces a través de la amistad, los grupos y las ideas nuevas. Tu suerte está en la innovación y en las redes.',
+ Piscis:'Creces cuando confías en tu intuición y en lo espiritual. Tu suerte aparece cuando ayudas, creas y te dejas guiar.'},
+Saturno:{Aries:'La vida te pide aprender a actuar con valentía y paciencia a la vez. Puedes haber dudado de tu fuerza, y con los años te vuelves un líder sereno.',
+ Tauro:'La vida te pide construir seguridad material con esfuerzo. Puedes temer la escasez, y con el tiempo aprendes a confiar en tu propio valor.',
+ 'Géminis':'La vida te pide disciplina mental. Puedes haber dudado de tu inteligencia o de tu forma de hablar, y con los años tu palabra se vuelve sólida y respetada.',
+ 'Cáncer':'La vida te pide madurar en lo emocional. Puedes haber sentido frío o exigencia en tu hogar, y con el tiempo aprendes a cuidarte y a cuidar con límites sanos.',
+ Leo:'La vida te pide confiar en tu brillo sin depender del aplauso. Puedes temer al ridículo, y con los años te vuelves un creador seguro de sí.',
+ Virgo:'La vida te pide orden y servicio, sin caer en la autoexigencia. Puedes temer equivocarte, y con el tiempo te vuelves un maestro del método.',
+ Libra:'La vida te pide madurez en las relaciones. Puedes temer al compromiso o al rechazo, y con los años aprendes a construir vínculos justos y duraderos.',
+ Escorpio:'La vida te pide enfrentar tus miedos más profundos. Puedes temer perder el control, y con el tiempo te vuelves alguien capaz de acompañar crisis ajenas.',
+ Sagitario:'La vida te pide construir tus propias creencias. Puedes haber dudado de tu fe, y con los años desarrollas una sabiduría práctica y sólida.',
+ Capricornio:'Saturno está en su propio signo y te da una gran capacidad de esfuerzo y estructura. La vida te pide aprender a soltar el control y a disfrutar de lo que logras.',
+ Acuario:'La vida te pide equilibrar libertad y responsabilidad. Puedes sentirte distinto o fuera de lugar, y con el tiempo ese sello se vuelve tu aporte.',
+ Piscis:'La vida te pide dar forma a tu sensibilidad. Puedes temer al caos o a perderte, y con los años aprendes a canalizar tu intuición con disciplina.'},
+Ascendente:{Aries:'Entras al mundo con energía y decisión. La gente te ve directo, valiente y a veces impulsivo. Tu primera reacción es actuar.',
+ Tauro:'Entras al mundo con calma y seguridad. La gente te ve tranquilo, confiable y con buen gusto. Te tomas tu tiempo antes de moverte.',
+ 'Géminis':'Entras al mundo con curiosidad y simpatía. La gente te ve conversador, rápido y juvenil. Tu primera reacción es preguntar y comentar.',
+ 'Cáncer':'Entras al mundo con sensibilidad y prudencia. La gente te ve cercano, protector y un poco reservado al principio.',
+ Leo:'Entras al mundo con presencia y calidez. La gente te nota de inmediato y te ve seguro, alegre y generoso.',
+ Virgo:'Entras al mundo con observación y discreción. La gente te ve ordenado, servicial y atento a los detalles.',
+ Libra:'Entras al mundo con amabilidad y encanto. La gente te ve elegante, diplomático y agradable.',
+ Escorpio:'Entras al mundo con intensidad y misterio. La gente siente tu fuerza aunque no hables mucho, y te ve profundo y magnético.',
+ Sagitario:'Entras al mundo con entusiasmo y franqueza. La gente te ve optimista, aventurero y divertido.',
+ Capricornio:'Entras al mundo con seriedad y control. La gente te ve maduro, responsable y confiable desde muy joven.',
+ Acuario:'Entras al mundo de forma original y amistosa. La gente te ve distinto, libre y con ideas propias.',
+ Piscis:'Entras al mundo con suavidad y sensibilidad. La gente te ve soñador, empático y fácil de querer.'},
+'Medio Cielo':{Aries:'Tu vocación pide independencia, liderazgo y desafíos. Te realizas donde puedes iniciar y tomar decisiones propias.',
+ Tauro:'Tu vocación pide estabilidad, belleza y resultados concretos. Te realizas en lo que construye valor con el tiempo.',
+ 'Géminis':'Tu vocación pide comunicación, variedad y aprendizaje. Te realizas hablando, escribiendo, enseñando o conectando.',
+ 'Cáncer':'Tu vocación pide cuidar y nutrir. Te realizas en lo que protege a otros, en la familia o en lo que tiene sentido emocional.',
+ Leo:'Tu vocación pide brillar y crear. Te realizas donde puedes liderar, actuar o expresar tu talento.',
+ Virgo:'Tu vocación pide servicio y precisión. Te realizas mejorando procesos, cuidando la salud o resolviendo problemas.',
+ Libra:'Tu vocación pide armonía y relaciones. Te realizas en la mediación, el arte, el diseño o el trabajo con público.',
+ Escorpio:'Tu vocación pide profundidad y transformación. Te realizas investigando, sanando o manejando lo que otros no se atreven.',
+ Sagitario:'Tu vocación pide sentido y horizonte. Te realizas enseñando, viajando o compartiendo conocimiento.',
+ Capricornio:'Tu vocación pide estructura y ambición. Te realizas escalando posiciones y construyendo algo sólido.',
+ Acuario:'Tu vocación pide innovación y libertad. Te realizas en lo colectivo, lo tecnológico o lo que cambia las reglas.',
+ Piscis:'Tu vocación pide inspiración y compasión. Te realizas en el arte, la sanación o lo espiritual.'}};
+
+/* planetas lentos por signo: el sello de tu generación */
+const X52G={
+Urano:{Aries:'Tu generación rompe moldes con valentía y lidera cambios individuales.',Tauro:'Tu generación revoluciona el dinero, la tierra y la forma de producir.','Géminis':'Tu generación revoluciona la comunicación y la información.','Cáncer':'Tu generación cambia la idea de familia y de hogar.',Leo:'Tu generación revoluciona la creatividad y la expresión personal.',Virgo:'Tu generación innova en el trabajo, la salud y la tecnología cotidiana.',Libra:'Tu generación cambia las reglas de la pareja y de las relaciones.',Escorpio:'Tu generación rompe tabúes sobre la sexualidad, la muerte y el poder.',Sagitario:'Tu generación revoluciona las creencias, los viajes y la educación.',Capricornio:'Tu generación cambia las estructuras de poder, las instituciones y el trabajo.',Acuario:'Tu generación impulsa la tecnología, las redes y la vida comunitaria.',Piscis:'Tu generación abre caminos en la espiritualidad, el arte y la conciencia.'},
+Neptuno:{Aries:'Tu generación sueña con un nuevo comienzo y con el coraje espiritual.',Tauro:'Tu generación idealiza la naturaleza y la abundancia simple.','Géminis':'Tu generación sueña a través de las palabras y la información.','Cáncer':'Tu generación idealiza la familia y la patria.',Leo:'Tu generación idealiza el amor romántico y el arte.',Virgo:'Tu generación busca lo sagrado en el servicio y en la salud.',Libra:'Tu generación sueña con la paz y la armonía en las relaciones.',Escorpio:'Tu generación explora lo oculto, lo psicológico y lo profundo.',Sagitario:'Tu generación busca la espiritualidad en los viajes y en otras culturas.',Capricornio:'Tu generación sueña con estructuras más justas y desconfía de las autoridades que prometen y no cumplen.',Acuario:'Tu generación idealiza la tecnología y la conexión global.',Piscis:'Tu generación vive una sensibilidad espiritual y artística muy amplia.'},
+'Plutón':{'Cáncer':'Tu generación transforma la idea de familia y de nación.',Leo:'Tu generación transforma la expresión personal, el arte y la juventud.',Virgo:'Tu generación transforma el trabajo, la salud y la técnica.',Libra:'Tu generación transforma la pareja, el matrimonio y la justicia.',Escorpio:'Tu generación vive con intensidad los temas de poder, sexualidad, crisis y renacimiento, y tiene un don para sanar lo que otros esconden.',Sagitario:'Tu generación transforma las creencias, la educación y la forma de viajar.',Capricornio:'Tu generación transforma las estructuras de poder, la economía y las instituciones.',Acuario:'Tu generación transforma la tecnología, las comunidades y la idea de libertad.',Aries:'Tu generación transforma la idea de individuo.',Tauro:'Tu generación transforma la relación con los recursos.','Géminis':'Tu generación transforma la comunicación.',Piscis:'Tu generación transforma la espiritualidad.'}};
+
+/* v52 · casas, aspectos y tránsitos (textos originales de Cielo) */
+/* casa: nombre corto, qué abarca, cómo se vive con planetas ahí */
+const X52C={
+1:['tu imagen y tu presencia','La casa 1 es tu cuerpo, tu imagen y la forma en que te presentas. Lo que cae aquí se nota a simple vista, forma parte de tu carácter visible y marca cómo partes las cosas.'],
+2:['tu dinero y tu autoestima','La casa 2 habla de tus recursos, de cómo ganas y gastas, y también de cuánto te valoras. Lo que cae aquí se juega en tu bolsillo, en tus talentos y en tu sensación de seguridad.'],
+3:['tu mente y tu entorno cercano','La casa 3 es la comunicación cotidiana, los estudios, los hermanos, los vecinos y los trayectos cortos. Lo que cae aquí se expresa hablando, escribiendo, aprendiendo y moviéndote.'],
+4:['tu hogar y tus raíces','La casa 4 es la base de tu carta. Habla de tu familia de origen, de tu casa, de tu historia y de tu mundo íntimo. Lo que cae aquí vive puertas adentro y también marca la última etapa de la vida.'],
+5:['tu alegría y tu creatividad','La casa 5 es el placer, el romance, el juego, los hijos y todo lo que creas con el corazón. Lo que cae aquí necesita expresarse con alegría y sin miedo al qué dirán.'],
+6:['tu rutina, tu trabajo diario y tu salud','La casa 6 habla de las tareas de cada día, del ambiente de trabajo, de los hábitos y del cuidado del cuerpo. Lo que cae aquí se ordena con disciplina y se nota en tu rutina.'],
+7:['tus relaciones y tus socios','La casa 7 es la pareja, los socios, los contratos y también quienes se te oponen. Lo que cae aquí lo vives a través de otros, y muchas veces lo proyectas en quienes eliges.'],
+8:['lo profundo y lo compartido','La casa 8 habla de las crisis, la intimidad, la sexualidad, las herencias y el dinero de otros. Lo que cae aquí se vive con intensidad y te transforma.'],
+9:['tu horizonte y tus creencias','La casa 9 es la filosofía, los estudios superiores, los viajes largos, el extranjero y la búsqueda de sentido. Lo que cae aquí te invita a ir más lejos.'],
+10:['tu carrera y tu lugar en el mundo','La casa 10 es la vocación, la reputación, la autoridad y lo que logras a la vista de todos. Lo que cae aquí se nota en tu vida pública.'],
+11:['tus amigos y tus proyectos','La casa 11 habla de los amigos, los grupos, las redes, las causas colectivas y los sueños a futuro. Lo que cae aquí florece en comunidad.'],
+12:['tu mundo interior','La casa 12 es lo invisible, el inconsciente, el descanso, los retiros y lo que haces por otros sin que se note. Lo que cae aquí trabaja en silencio y te conecta con lo espiritual.']};
+/* cómo se mueve cada planeta en una casa */
+const X52PH={Sol:'tu identidad busca brillar en',Luna:'tus emociones y tu sensación de hogar se juegan en',Mercurio:'tu mente se ocupa sobre todo de',Venus:'tu forma de amar y de disfrutar florece en',Marte:'tu energía y tu deseo se concentran en','Júpiter':'la vida te da facilidades y crecimiento en',Saturno:'la vida te pide esfuerzo y madurez en',Urano:'llegan cambios repentinos y necesidad de libertad en',Neptuno:'tu sensibilidad y tus sueños se mezclan con',Plutón:'vives transformaciones profundas en','Quirón':'tu herida y tu don sanador aparecen en'};
+const X52HX={Sol:'Es un área donde necesitas sentirte protagonista.',Luna:'Tu ánimo depende mucho de cómo esté esta área.',Mercurio:'Aquí piensas, conversas y aprendes más que en ninguna otra parte.',Venus:'Aquí encuentras placer, belleza y personas que te quieren.',Marte:'Aquí peleas, compites y te mueves con fuerza.','Júpiter':'Aquí la suerte te acompaña cuando eres generoso y confías.',Saturno:'Aquí los logros llegan tarde pero llegan para quedarse.',Urano:'Aquí nada dura igual mucho tiempo, y eso también es libertad.',Neptuno:'Aquí conviene mirar con claridad para no idealizar ni confundirte.',Plutón:'Aquí descubres un poder que nace de cada crisis.','Quirón':'Aquí lo que te dolió se convierte en sabiduría para acompañar a otros.'};
+
+/* tema de cada par de planetas */
+const X52PR={
+'Sol|Luna':'lo que quieres y lo que necesitas','Sol|Mercurio':'tu identidad y tu forma de pensar','Sol|Venus':'tu identidad y tu forma de amar','Sol|Marte':'tu identidad y tu fuerza de acción','Sol|Júpiter':'tu identidad y tu optimismo','Sol|Saturno':'tu identidad y tu sentido del deber','Sol|Urano':'tu identidad y tu necesidad de libertad','Sol|Neptuno':'tu identidad y tu sensibilidad espiritual','Sol|Plutón':'tu identidad y tu poder de transformación','Sol|Ascendente':'tu esencia y tu manera de mostrarte','Sol|Medio Cielo':'tu esencia y tu vocación',
+'Luna|Mercurio':'lo que sientes y lo que piensas','Luna|Venus':'tus emociones y tu forma de amar','Luna|Marte':'tus emociones y tu impulso','Luna|Júpiter':'tus emociones y tu generosidad','Luna|Saturno':'tus emociones y tu autoexigencia','Luna|Urano':'tus emociones y tu necesidad de espacio','Luna|Neptuno':'tus emociones y tu intuición','Luna|Plutón':'tus emociones y tu intensidad','Luna|Ascendente':'lo que sientes y lo que muestras','Luna|Medio Cielo':'tu vida íntima y tu vida pública',
+'Mercurio|Venus':'tu mente y tu sentido de la belleza','Mercurio|Marte':'tu mente y tu impulso','Mercurio|Júpiter':'tu mente y tu visión amplia','Mercurio|Saturno':'tu mente y tu disciplina','Mercurio|Urano':'tu mente y tu originalidad','Mercurio|Neptuno':'tu mente y tu imaginación','Mercurio|Plutón':'tu mente y tu capacidad de investigar','Mercurio|Ascendente':'tu forma de pensar y tu forma de presentarte','Mercurio|Medio Cielo':'tu mente y tu carrera',
+'Venus|Marte':'el amor y el deseo','Venus|Júpiter':'el amor y la abundancia','Venus|Saturno':'el amor y el compromiso','Venus|Urano':'el amor y la libertad','Venus|Neptuno':'el amor y el ideal','Venus|Plutón':'el amor y la pasión profunda','Venus|Ascendente':'tu encanto y tu imagen','Venus|Medio Cielo':'tu encanto y tu carrera',
+'Marte|Júpiter':'tu energía y tus ganas de crecer','Marte|Saturno':'tu energía y tus límites','Marte|Urano':'tu energía y tu rebeldía','Marte|Neptuno':'tu energía y tus ideales','Marte|Plutón':'tu energía y tu voluntad de poder','Marte|Ascendente':'tu fuerza y tu forma de presentarte','Marte|Medio Cielo':'tu fuerza y tu ambición profesional',
+'Júpiter|Saturno':'la expansión y la prudencia','Júpiter|Urano':'el crecimiento y la libertad','Júpiter|Neptuno':'la fe y la imaginación','Júpiter|Plutón':'el crecimiento y el poder','Júpiter|Ascendente':'tu optimismo y tu imagen','Júpiter|Medio Cielo':'tu suerte y tu carrera',
+'Saturno|Urano':'lo establecido y lo nuevo','Saturno|Neptuno':'la realidad y los sueños','Saturno|Plutón':'la estructura y la transformación','Saturno|Ascendente':'tu seriedad y tu imagen','Saturno|Medio Cielo':'tu esfuerzo y tu carrera',
+'Urano|Neptuno':'el cambio y la inspiración colectiva','Urano|Plutón':'la revolución y la transformación colectiva','Neptuno|Plutón':'los sueños y el poder colectivo','Urano|Ascendente':'tu originalidad y tu imagen','Urano|Medio Cielo':'tu originalidad y tu vocación','Neptuno|Ascendente':'tu sensibilidad y tu imagen','Neptuno|Medio Cielo':'tus sueños y tu vocación','Plutón|Ascendente':'tu intensidad y tu imagen','Plutón|Medio Cielo':'tu poder y tu vocación'};
+/* naturaleza de cada aspecto natal */
+const X52AN={
+'conjunción':['Están unidos','Estas dos fuerzas funcionan como una sola. Se potencian mutuamente y marcan con fuerza tu carácter, para bien y para mal. El trabajo es aprender a usarlas juntas con conciencia.'],
+'trígono':['Fluyen en armonía','Este es un talento natural que tienes casi sin esfuerzo. Lo bueno es que te facilita la vida; el riesgo es darlo por hecho y no desarrollarlo. Úsalo a propósito y se convierte en un regalo para otros.'],
+'sextil':['Se apoyan','Es una oportunidad que se activa cuando haces algo. No llega sola, pero basta un pequeño empujón tuyo para que estas dos energías colaboren y te abran puertas.'],
+'cuadratura':['Se presionan','Aquí hay una tensión que te empuja a crecer. Puede sentirse como un conflicto interno o como obstáculos externos que se repiten. Cuando lo trabajas, esta fricción se vuelve tu motor y tu mayor fuente de logros.'],
+'oposición':['Tiran para lados opuestos','Sientes que tienes que elegir entre dos cosas que te importan, y a veces proyectas una de ellas en otras personas. El camino no es elegir, sino integrar y encontrar un punto medio.'],
+'quincuncio':['Hablan idiomas distintos','Estas dos partes de ti no se entienden fácilmente y piden ajustes constantes. Funciona mejor con pequeños cambios de hábito que con grandes decisiones.']};
+
+/* tránsitos de planetas lentos: cómo actúa cada uno según el tipo de aspecto */
+const X52T={
+'Júpiter':{n:'Júpiter',dur:'unas semanas',con:'Júpiter llega a {P} y lo agranda todo. Es un período de optimismo, oportunidades y ganas de crecer en {A}. Las puertas se abren con más facilidad, y conviene aprovechar el impulso para sembrar algo que dure. Cuida solo el exceso de confianza o de gasto.',arm:'Júpiter apoya {P} y trae un viento a favor en {A}. Las cosas fluyen, aparecen personas o ideas que te ayudan y te sientes con más fe. Es buen momento para pedir, proponer, estudiar o viajar.',ten:'Júpiter presiona {P} y puede llevarte a exagerar o a prometer de más en {A}. Hay ganas de crecer, pero también riesgo de abarcar demasiado. Antes de lanzarte, revisa los detalles y mide tus fuerzas.'},
+Saturno:{n:'Saturno',dur:'varios meses',con:'Saturno se posa sobre {P} y te pide madurez en {A}. Es un tiempo de responsabilidad, de poner orden y de ver con realismo lo que funciona y lo que no. Puede sentirse pesado, pero lo que construyas ahora será sólido por años.',arm:'Saturno apoya {P} y te ayuda a consolidar lo que vienes haciendo en {A}. Es un período estable, bueno para planificar, comprometerte y recoger frutos del esfuerzo.',ten:'Saturno presiona {P} y pone a prueba {A}. Pueden aparecer obstáculos, retrasos o exigencias que te obligan a revisar tus bases. No es castigo, es un ajuste. Con paciencia y método, sales más fuerte.'},
+Urano:{n:'Urano',dur:'meses, con idas y vueltas',con:'Urano activa {P} y trae cambios inesperados en {A}. Sientes ganas de liberarte de lo que te limita y de probar algo distinto. Lo que ya no corresponde puede caerse de golpe para dejar espacio a lo nuevo.',arm:'Urano apoya {P} y te regala ideas frescas y libertad en {A}. Es un período estimulante para innovar, aprender algo nuevo o cambiar una rutina sin grandes sobresaltos.',ten:'Urano presiona {P} y sacude {A}. Puede haber sorpresas, nerviosismo o rupturas. La clave es no reaccionar por impulso y ver qué parte de ti pide más libertad.'},
+Neptuno:{n:'Neptuno',dur:'casi un año, con varias pasadas',con:'Neptuno envuelve {P} y vuelve más sensible y difuso {A}. Puedes sentirte inspirado, intuitivo y conectado con algo mayor, pero también confundido o con poca energía. Es buen tiempo para el arte y lo espiritual, y no tanto para firmar sin leer.',arm:'Neptuno apoya {P} y abre tu intuición y tu creatividad en {A}. Te sientes más compasivo y receptivo. Es un período bonito para crear, meditar y soñar en grande.',ten:'Neptuno presiona {P} y puede traer confusión, desilusión o cansancio en {A}. Conviene confirmar la información, no idealizar y cuidar tu energía. Detrás de la niebla suele aparecer una verdad más honesta.'},
+'Plutón':{n:'Plutón',dur:'más de un año, con varias pasadas',con:'Plutón se instala sobre {P} y transforma {A} desde la raíz. Es un proceso profundo y lento, donde algo termina para que nazca otra versión de ti. Puede haber crisis, pero también un poder personal que no conocías.',arm:'Plutón apoya {P} y te da fuerza para transformar {A} de manera sana. Puedes profundizar, sanar y tomar el control de tu vida con mucha determinación.',ten:'Plutón presiona {P} y saca a la luz luchas de poder, miedos o patrones antiguos en {A}. Es intenso, pero te obliga a soltar lo que ya no sirve. Lo que sobrevive a este tránsito queda más fuerte.'}};
+/* qué área de vida representa cada punto natal en un tránsito */
+const X52TA={Sol:['tu Sol','tu identidad, tu vitalidad y tu rumbo'],Luna:['tu Luna','tus emociones, tu hogar y tu familia'],Mercurio:['tu Mercurio','tu mente, tus estudios y tus conversaciones'],Venus:['tu Venus','el amor, tus gustos y tu dinero'],Marte:['tu Marte','tu energía, tus proyectos y tu forma de actuar'],'Júpiter':['tu Júpiter','tus creencias, tus oportunidades y tu crecimiento'],Saturno:['tu Saturno','tus responsabilidades, tus metas y tus estructuras'],Urano:['tu Urano','tu libertad y tu necesidad de cambio'],Neptuno:['tu Neptuno','tus sueños y tu vida espiritual'],'Plutón':['tu Plutón','tu poder personal y tus procesos profundos'],Ascendente:['tu Ascendente','tu imagen, tu cuerpo y tu forma de presentarte'],'Medio Cielo':['tu Medio Cielo','tu carrera, tu vocación y tu reputación'],Nodo:['tu Nodo Norte','tu camino de evolución y los encuentros importantes']};
+/* tránsito de un planeta lento por una casa */
+const X52TH={'Júpiter':'Durante cerca de un año Júpiter recorre {H}. Es el área donde más vas a crecer y donde llegan oportunidades, siempre que te muevas para tomarlas.',Saturno:'Durante dos a tres años Saturno recorre {H}. Es el área donde la vida te pide orden, compromiso y trabajo constante, y donde construyes algo duradero.',Urano:'Durante varios años Urano recorre {H}. Es el área donde llegan cambios inesperados y donde necesitas renovarte y ganar libertad.',Neptuno:'Durante muchos años Neptuno recorre {H}. Es el área donde la vida se vuelve más sensible, inspirada y también más difusa, y donde conviene mirar con claridad.','Plutón':'Durante muchos años Plutón recorre {H}. Es el área de tu vida que se transforma a fondo, donde terminan etapas y nace una versión más auténtica de ti.'};
+
+/* decanatos: cada signo tiene tres tramos de 10°, con el matiz de los signos de su mismo elemento */
+const X52DEC=['El primer decanato es el más puro del signo: sus cualidades aparecen claras y sin mezcla.','El segundo decanato suma el matiz del siguiente signo de su mismo elemento, y eso le da otro color a tu manera de vivirlo.','El tercer decanato suma el matiz del último signo de su elemento, y lo vuelve más maduro y completo.'];
+/* prácticas para trabajar cada tipo de aspecto en el camino espiritual */
+const X52ESP={
+'conjunción':'Medita sobre cómo estas dos fuerzas pueden servir a un mismo propósito. Elige un día a la semana para observar cuándo te dominan y cuándo las diriges tú.',
+'trígono':'Agradece este don y ponlo al servicio de alguien. Los talentos que se comparten crecen y los que se guardan se oxidan.',
+'sextil':'Haz algo concreto esta semana que active esta oportunidad. Una conversación, un curso o un pequeño gesto basta para encenderla.',
+'cuadratura':'Cuando sientas esta tensión, respira y pregúntate qué quiere enseñarte. Escribe sobre ella. Lo que hoy es roce, mañana será maestría.',
+'oposición':'Busca el punto medio. Observa a quién le entregas la parte de ti que no reconoces, y recupérala con amor.',
+'quincuncio':'Haz pequeños ajustes en tu rutina, en tu cuerpo y en tu descanso. Aquí no sirven las grandes decisiones sino la constancia.'};
+/* luz y sombra de cada punto, para leer cada aspecto en concreto */
+const X52LS={Sol:['confianza en ti','el orgullo'],Luna:['sensibilidad','los cambios de ánimo'],Mercurio:['claridad mental','la sobrecarga de pensamientos'],Venus:['encanto y capacidad de disfrutar','la complacencia'],Marte:['valentía','la impaciencia'],'Júpiter':['fe y generosidad','el exceso'],Saturno:['constancia','el miedo a fallar'],Urano:['originalidad','la rebeldía sin pausa'],Neptuno:['intuición','la confusión'],'Plutón':['fuerza interior','el control'],Ascendente:['presencia','la máscara'],'Medio Cielo':['vocación','la presión por lograr'],'Quirón':['compasión','la herida abierta']};
+/* qué hacer durante cada tránsito */
+const X52TQ={'Júpiter':{con:'Qué te conviene ahora. Di que sí a las invitaciones, estudia algo que te entusiasme y pide lo que necesitas. Es tiempo de sembrar en grande, con un ojo puesto en no gastar de más.',arm:'Qué te conviene ahora. Aprovecha el buen clima para avanzar en lo que venías postergando, conversar con personas que te pueden abrir puertas y celebrar lo que ya tienes.',ten:'Qué te conviene ahora. Antes de comprometerte, haz números y pregunta a alguien de confianza. El entusiasmo es bueno, pero hoy necesita un poco de freno.'},
+Saturno:{con:'Qué te conviene ahora. Ordena, simplifica y toma decisiones maduras. Haz una lista de prioridades y suelta lo que ya no puedes sostener. Descansa bien, porque este tránsito pide energía.',arm:'Qué te conviene ahora. Es un excelente momento para firmar compromisos, ordenar tus finanzas y planificar a largo plazo. Lo que construyas hoy tendrá bases firmes.',ten:'Qué te conviene ahora. No te rindas ante el primer obstáculo. Divide las metas en pasos pequeños, pide ayuda cuando la necesites y recuerda que la paciencia también es una forma de avanzar.'},
+Urano:{con:'Qué te conviene ahora. Date permiso para cambiar, pero sin quemar puentes. Prueba lo nuevo en pequeño antes de dar un salto total, y deja espacio para lo inesperado.',arm:'Qué te conviene ahora. Aprende una habilidad nueva, cambia un hábito, conoce gente distinta. Es un buen momento para modernizar tu vida sin sobresaltos.',ten:'Qué te conviene ahora. Cuando algo se mueva de golpe, respira antes de reaccionar. Pregúntate qué parte de tu vida te está pidiendo más libertad y escúchala con calma.'},
+Neptuno:{con:'Qué te conviene ahora. Medita, crea, escucha música y escribe tus sueños. En lo práctico, lee bien la letra chica y no tomes decisiones grandes si te sientes confundido.',arm:'Qué te conviene ahora. Dedica tiempo al arte, a la espiritualidad y a ayudar a otros. Tu intuición está especialmente clara.',ten:'Qué te conviene ahora. Verifica la información, cuida tu energía y evita las promesas que suenan demasiado buenas. Rodéate de personas que te digan la verdad.'},
+'Plutón':{con:'Qué te conviene ahora. Deja ir lo que terminó, aunque duela. Busca apoyo si lo necesitas, como terapia o una persona sabia, y confía en que de este proceso sales con una fuerza nueva.',arm:'Qué te conviene ahora. Es un tiempo poderoso para sanar, investigar, transformar hábitos y tomar las riendas. Lo que decidas cambiar ahora puede cambiar de verdad.',ten:'Qué te conviene ahora. Observa dónde quieres controlar o dónde te sientes controlado. No entres en luchas de poder. Suelta lo que ya no sirve y deja que la crisis haga su trabajo.'}};
+
+/* v52 · informes de carta natal mucho más completos: capítulos, aspectos uno por uno, pronóstico de 18 meses y lectura espiritual */
+const X52_ORD=['Sol','Luna','Mercurio','Venus','Marte','Júpiter','Saturno','Urano','Neptuno','Plutón','Ascendente','Medio Cielo'];
+const X52_GLY={Sol:'☉',Luna:'☽',Mercurio:'☿',Venus:'♀',Marte:'♂','Júpiter':'♃',Saturno:'♄',Urano:'♅',Neptuno:'♆','Plutón':'♇',Ascendente:'AC','Medio Cielo':'MC','Quirón':'⚷',Nodo:'☊'};
+const X52_SIGNS=['Aries','Tauro','Géminis','Cáncer','Leo','Virgo','Libra','Escorpio','Sagitario','Capricornio','Acuario','Piscis'];
+const X52_RULER={Aries:'Marte',Tauro:'Venus','Géminis':'Mercurio','Cáncer':'Luna',Leo:'Sol',Virgo:'Mercurio',Libra:'Venus',Escorpio:'Plutón',Sagitario:'Júpiter',Capricornio:'Saturno',Acuario:'Urano',Piscis:'Neptuno'};
+const X52_EL={Fuego:['Aries','Leo','Sagitario'],Tierra:['Tauro','Virgo','Capricornio'],Aire:['Géminis','Libra','Acuario'],Agua:['Cáncer','Escorpio','Piscis']};
+function x52lc(t){return /^(El|La|Los|Las|Su|Tu) /.test(t)?t.charAt(0).toLowerCase()+t.slice(1):t}
+function x52n3(x){return((x%360)+360)%360}
+function x52sg(l){return X52_SIGNS[Math.floor(x52n3(l)/30)]}
+function x52deg(l){l=x52n3(l);const d=Math.floor(l%30);let m=Math.round((l%1)*60);if(m===60)m=59;return `${d}°${String(m).padStart(2,'0')}'`}
+function x52T(s){/* femenino cuando el perfil lo indica */
+ if(typeof PF==='undefined'||PF.g!=='f')return s;
+ const M={seguro:'segura',inseguro:'insegura',cercano:'cercana',protector:'protectora',reservado:'reservada',tranquilo:'tranquila',conversador:'conversadora',rápido:'rápida',ordenado:'ordenada',atento:'atenta',diplomático:'diplomática',profundo:'profunda',magnético:'magnética',aventurero:'aventurera',divertido:'divertida',maduro:'madura',distinto:'distinta',soñador:'soñadora',empático:'empática',curioso:'curiosa',vivo:'viva',pleno:'plena',querido:'querida',valorado:'valorada',visto:'vista',admirado:'admirada',encerrado:'encerrada',vigilado:'vigilada',controlado:'controlada',atrapado:'atrapada',necesitado:'necesitada',herido:'herida',inspirado:'inspirada',confundido:'confundida',sereno:'serena',creador:'creadora',generoso:'generosa',optimista:'optimista',buscador:'buscadora',responsable:'responsable',tierno:'tierna',romántico:'romántica',apasionado:'apasionada',entregado:'entregada',compasivo:'compasiva',receptivo:'receptiva',intuitivo:'intuitiva',solo:'sola'};
+ return s.replace(/\b(un líder sereno)\b/g,'una líder serena').replace(/[A-Za-zÁÉÍÓÚáéíóúñÑ]+/g,w=>M[w]&&!/^(solo)$/.test(w)?M[w]:w)}
+function x52P(t){return `<p>${esc(x52T(t))}</p>`}
+function x52H(k){if(PF.noTime&&(k==='Ascendente'||k==='Medio Cielo'))return null;const h=(DATA.houses||{})[k];return PF.noTime||!h?null:h}
+function x52Asp(k){return(DATA.aspects||[]).filter(a=>a[0]===k||a[1]===k).sort((a,b)=>a[3]-b[3])}
+function x52Pair(a,b){const i=X52_ORD.indexOf(a),j=X52_ORD.indexOf(b);const[x,y]=i<=j?[a,b]:[b,a];return X52PR[`${x}|${y}`]||`tu ${x} y tu ${y}`}
+function x52AspHTML(a,full){const[A,B,t,o]=a;const N_=X52AN[t]||['',''];const th=x52Pair(A,B);
+ const head=`${X52_GLY[A]||''} ${A} en ${t} con ${B} ${X52_GLY[B]||''}`;
+ let txt=`Aquí se encuentran ${th}. ${N_[0]}, con un orbe de ${o.toFixed(1)}°${o<1.5?', así que es un aspecto muy marcado en tu carta':o<4?', muy cerca del punto exacto':''}. ${N_[1]}`;
+ const LA=X52LS[A]||['',''],LB=X52LS[B]||['',''];
+ txt+={'conjunción':` En la práctica se nota como una mezcla de ${LA[0]} y ${LB[0]}, aunque en días difíciles puede aparecer ${LA[1]} junto con ${LB[1]}.`,'trígono':` En la práctica, tu ${LA[0]} y tu ${LB[0]} se alimentan mutuamente, y eso te da recursos que otras personas tienen que aprender con esfuerzo.`,'sextil':` En la práctica, cuando te mueves, tu ${LA[0]} encuentra apoyo en tu ${LB[0]}.`,'cuadratura':` En la práctica, bajo presión puede aparecer ${LA[1]} o ${LB[1]}. El antídoto es apoyarte a propósito en tu ${LA[0]} y en tu ${LB[0]}.`,'oposición':` En la práctica, puedes oscilar entre ${LA[1]} y ${LB[1]}, o verlos reflejados en otras personas. Cuando integras ambos lados, ganas ${LA[0]} y ${LB[0]} a la vez.`,'quincuncio':` En la práctica, conviene vigilar ${LA[1]} y ${LB[1]} con pequeños ajustes diarios.`}[t]||'';
+ if(full){const sa=x52sg(N[A]),sb=x52sg(N[B]);txt+=` En tu caso une la energía de ${sa} con la de ${sb}, ${sa===sb?'en un mismo signo que se intensifica':(X52_EL[SG_EL(sa)]||[]).includes(sb)?'dos signos del mismo elemento que se entienden bien':'dos maneras distintas de ser que aprenden a convivir'}.`}
+ return `<div class="x52asp"><h4>${esc(head)}</h4>${x52P(txt)}</div>`}
+function SG_EL(s){for(const k in X52_EL)if(X52_EL[k].includes(s))return k;return ''}
+function x52Point(k,opt){opt=opt||{};const l=N[k];if(l==null)return '';const s=x52sg(l),h=x52H(k);const o=[];
+ const gen=k==='Urano'||k==='Neptuno'||k==='Plutón';
+ o.push(`<h3 class="x52h">${X52_GLY[k]||''} ${esc(k)} en ${s}${h&&k!=='Ascendente'?`, casa ${h}`:''} <small>${x52deg(l)}</small></h3>`);
+ if(opt.intro!==false)o.push(x52P(X52P[k]||''));
+ if(gen){o.push(x52P(`${k} en ${s}. ${(X52G[k]||{})[s]||''} Como este planeta se mueve lento, su signo lo compartes con las personas que nacieron cerca de tu fecha. Lo personal está en la casa donde cae y en los aspectos que hace a tus planetas rápidos.`))}
+ else{const d=(X52D[k]||{})[s];if(d)o.push(x52P(d));
+  if(opt.sign){const S=X52S[s];o.push(x52P(S[0]));o.push(x52P(`${S[1]} ${S[2]}`))}}
+ if(h&&k!=='Ascendente'&&k!=='Medio Cielo'&&X52PH[k]){const C=X52C[h];o.push(x52P(`En tu casa ${h}, ${X52PH[k]} ${C[0]}. ${C[1]} ${X52HX[k]||''}`))}
+ if(k==='Ascendente'&&!PF.noTime){const r=X52_RULER[s];if(N[r]!=null){const rh=x52H(r);o.push(x52P(`El regente de tu Ascendente es ${r}, que está en ${x52sg(N[r])}${rh?` en tu casa ${rh}`:''}. Es como el capitán de tu carta, porque todo lo que muestras se apoya en él. Por eso conviene leer con atención lo que dice tu ${r} más abajo.`))}}
+ if(opt.asp!==false){const A=x52Asp(k).slice(0,opt.maxAsp||9);if(A.length){o.push(`<p class="x52sub">Cómo conversa tu ${esc(k)} con el resto de tu carta</p>`);for(const a of A)o.push(x52AspHTML(a,opt.full))}}
+ return `<article class="x52pt">${o.join('')}</article>`}
+function x52Chap(n,t,intro,body){return `<section class="x52ch"><h2><span>Capítulo ${n}</span>${esc(t)}</h2>${intro?`<p class="x52in">${esc(x52T(intro))}</p>`:''}${body}</section>`}
+function x52Tech(){const rows=[...X52_ORD,'Quirón'].filter(k=>N[k]!=null).map(k=>{const h=x52H(k);return `<tr><td>${X52_GLY[k]||''} ${k}</td><td>${x52sg(N[k])} ${x52deg(N[k])}</td><td>${k==='Ascendente'?'1':k==='Medio Cielo'?'10':h||'—'}</td></tr>`}).join('');
+ const nn=DATA.nodoN;const nodo=nn!=null?`<tr><td>☊ Nodo Norte</td><td>${x52sg(nn)} ${x52deg(nn)}</td><td>${PF.noTime?'—':(typeof houseOfL==='function'?houseOfL(nn):x52HouseOf(nn)||'—')}</td></tr>`:'';
+ const asp=(DATA.aspects||[]).slice().sort((a,b)=>a[3]-b[3]).map(a=>`<tr><td>${a[0]}</td><td>${a[2]}</td><td>${a[1]}</td><td>${a[3].toFixed(1)}°</td></tr>`).join('');
+ return `<details class="x52tech"><summary>Datos técnicos de tu carta</summary><p class="muted">Zodiaco tropical, casas Plácidus. Si no conoces tu hora exacta, las casas, el Ascendente y el Medio Cielo son aproximados.</p><div class="tbl"><table><thead><tr><th>Punto</th><th>Posición</th><th>Casa</th></tr></thead><tbody>${rows}${nodo}</tbody></table></div><div class="tbl"><table><thead><tr><th colspan="3">Aspecto</th><th>Orbe</th></tr></thead><tbody>${asp}</tbody></table></div></details>`}
+function x52HouseOf(l){const c=DATA.cusps;if(!c||PF.noTime)return null;for(let i=0;i<12;i++){const a=c[i],b=c[(i+1)%12];const d=x52n3(l-a),w=x52n3(b-a);if(d<w)return i+1}return null}
+function x52Balance(){const W={Sol:3,Luna:3,Ascendente:2,Mercurio:2,Venus:2,Marte:2,'Júpiter':1,Saturno:1,Urano:.5,Neptuno:.5,'Plutón':.5,'Medio Cielo':1};const el={Fuego:0,Tierra:0,Aire:0,Agua:0},mo={Cardinal:0,Fijo:0,Mutable:0};
+ const MO={Cardinal:['Aries','Cáncer','Libra','Capricornio'],Fijo:['Tauro','Leo','Escorpio','Acuario'],Mutable:['Géminis','Virgo','Sagitario','Piscis']};
+ for(const k in W){if(N[k]==null||(PF.noTime&&(k==='Ascendente'||k==='Medio Cielo')))continue;const s=x52sg(N[k]);el[SG_EL(s)]+=W[k];for(const m in MO)if(MO[m].includes(s))mo[m]+=W[k]}
+ const E=Object.entries(el).sort((a,b)=>b[1]-a[1]),M=Object.entries(mo).sort((a,b)=>b[1]-a[1]);const tot=E.reduce((a,b)=>a+b[1],0);
+ const ET={Fuego:'Fuego te da entusiasmo, iniciativa y fe en ti.',Tierra:'Tierra te da sentido práctico, paciencia y capacidad de concretar.',Aire:'Aire te da ideas, palabra, curiosidad y facilidad para relacionarte.',Agua:'Agua te da sensibilidad, intuición y profundidad emocional.'};
+ const EL={Fuego:'Te puede faltar chispa para arrancar. Rodéate de gente entusiasta y haz ejercicio que te active.',Tierra:'Te puede costar aterrizar las ideas. Te ayudan las rutinas, el contacto con la naturaleza y las metas concretas.',Aire:'Te puede costar tomar distancia y ver las cosas con objetividad. Te ayuda conversar, leer y escribir lo que sientes.',Agua:'Te puede costar conectar con tus emociones o expresarlas. Te ayuda el arte, la música y los vínculos de confianza.'};
+ const MT={Cardinal:'Lo cardinal te hace bueno para iniciar y tomar decisiones.',Fijo:'Lo fijo te da constancia y capacidad de sostener en el tiempo.',Mutable:'Lo mutable te da flexibilidad y capacidad de adaptarte.'};
+ const bar=E.map(([k,v])=>`<div class="x52bar"><span>${k}</span><i style="width:${Math.round(v/tot*100)}%"></i><b>${Math.round(v/tot*100)}%</b></div>`).join('');
+ return `<div class="x52bal">${bar}</div>`+x52P(`En tu carta predomina el elemento ${E[0][0]}, seguido de ${E[1][0]}. ${ET[E[0][0]]} ${ET[E[1][0]]} El elemento más débil es ${E[3][0]}. ${E[3][1]/tot<.12?EL[E[3][0]]:'Aun así está presente, y puedes desarrollarlo de forma consciente.'}`)+x52P(`En cuanto a la forma de actuar, predomina lo ${M[0][0].toLowerCase()}. ${MT[M[0][0]]} Lo ${M[2][0].toLowerCase()} es lo que menos tienes, así que conviene cultivarlo. ${MT[M[2][0]]}`)}
+function x52Nodes(){const nn=DATA.nodoN;if(nn==null)return '';const ns=x52n3(nn+180);const sn=x52sg(nn),ss=x52sg(ns);const hn=x52HouseOf(nn),hs=x52HouseOf(ns);
+ return `<article class="x52pt"><h3 class="x52h">☊ Nodo Norte en ${sn}${hn?`, casa ${hn}`:''} <small>${x52deg(nn)}</small></h3>${x52P(X52P.Nodo)}${x52P(`Tu Nodo Sur está en ${ss}${hs?` y en la casa ${hs}`:''}. Eso habla de lo que ya traes aprendido, ${x52lc(X52S[ss][1])} Pero si te quedas solo ahí, aparece la sombra. ${X52S[ss][2]}`)}${x52P(`Tu Nodo Norte en ${sn}${hn?`, en ${X52C[hn][0]}`:''} te invita a crecer hacia lo que propone ese signo. ${X52S[sn][5]} Al principio cuesta, porque es territorio nuevo, pero cada paso en esa dirección te da sentido y paz.`)}</article>`}
+/* ---------- informe completo por capítulos ---------- */
+function x52Completo(){const o=[];const asc=!PF.noTime;
+ o.push(v20Intro('completo'));
+ o.push(`<div class="x52note">${x52P('Este informe recorre tu carta en once capítulos. Está escrito en lenguaje simple, y al final de cada parte verás los aspectos, que son las conversaciones entre tus planetas. Si una lectura parece contradecir a otra, no es un error. Significa que tienes las dos cualidades y las muestras en distintos momentos de tu vida.')}</div>`);
+ o.push(x52Tech());
+ o.push(x52Chap(1,'Tu perspectiva ante la vida y cómo te ven','Este capítulo describe la forma en que te presentas, tu primera reacción ante lo nuevo y la impresión que dejas. Es tu estilo hacia afuera. En el capítulo 2 verás quién eres por dentro, y vale la pena comparar ambos.',asc?x52Point('Ascendente',{sign:true,full:true}):x52P('Como no tenemos tu hora exacta de nacimiento, no podemos calcular tu Ascendente con precisión. Puedes agregarla en tu perfil y este capítulo se completará.')));
+ o.push(x52Chap(2,'Tu yo íntimo y lo que de verdad te mueve','Aquí está tu Sol, el corazón de tu carta. Habla de lo que te hace sentir vivo y de la persona que llegas a ser cuando te atreves a ser tú.',x52Point('Sol',{sign:true,full:true})+x52P(`En el amor, lo que se dice de ${x52sg(N.Sol)} también habla de ti. ${X52S[x52sg(N.Sol)][3]}`)+x52P(`Y sobre tu camino de crecimiento, ${x52sg(N.Sol)} tiene una enseñanza clara. ${X52S[x52sg(N.Sol)][5]}`)));
+ o.push(x52Chap(3,'Tu mente, tus intereses y tu forma de comunicar','Mercurio muestra cómo piensas, cómo aprendes y cómo te expresas. Conocerlo te ayuda a estudiar mejor, a elegir trabajos que te acomoden y a comunicarte sin malentendidos.',x52Point('Mercurio',{full:true})));
+ o.push(x52Chap(4,'Tus emociones y tu manera de amar','La Luna muestra lo que necesitas para sentirte en casa, y Venus cómo das y recibes amor. Juntas hablan de tu corazón.',x52Point('Luna',{sign:true,full:true})+x52Point('Venus',{full:true})));
+ o.push(x52Chap(5,'Tu empuje y tu ambición','Marte es tu motor. Muestra cómo consigues lo que quieres, cómo enfrentas los conflictos y dónde pones tu energía.',x52Point('Marte',{full:true})));
+ o.push(x52Chap(6,'Dónde creces y lo que disfrutas','Júpiter muestra tus facilidades, tu fe y las áreas donde la vida te abre puertas.',x52Point('Júpiter',{full:true})));
+ o.push(x52Chap(7,'Tus desafíos y tu maestría','Saturno muestra lo que más te ha costado y, justamente por eso, lo que con los años dominarás mejor que nadie.',x52Point('Saturno',{full:true})));
+ o.push(x52Chap(8,'Tu originalidad, tus sueños y tu poder','Urano, Neptuno y Plutón son planetas lentos. Lo personal en ellos está en las casas donde caen y en los aspectos que hacen a tus planetas rápidos.',['Urano','Neptuno','Plutón'].map(k=>x52Point(k,{intro:true,maxAsp:5})).join('')));
+ const genA=(DATA.aspects||[]).filter(a=>['Urano','Neptuno','Plutón'].includes(a[0])&&['Urano','Neptuno','Plutón'].includes(a[1]));
+ o.push(x52Chap(9,'Tu generación','Algunas cualidades no son solo tuyas, sino de todas las personas que nacieron en tu época. Conocerlas te ayuda a entender por qué tu generación piensa y siente como lo hace.',['Urano','Neptuno','Plutón'].map(k=>x52P(`${X52_GLY[k]} ${k} en ${x52sg(N[k])}. ${(X52G[k]||{})[x52sg(N[k])]||''}`)).join('')+genA.map(a=>x52AspHTML(a)).join('')));
+ o.push(x52Chap(10,'Tu vocación y tu lugar en el mundo','El Medio Cielo y la casa 10 hablan de tu carrera y de cómo quieres ser reconocido.',(asc?x52Point('Medio Cielo',{maxAsp:5}):'')+x52Voc()));
+ o.push(x52Chap(11,'Tu equilibrio y el camino de tu alma','Para cerrar, miramos cómo se reparten los elementos en tu carta y hacia dónde te invita a crecer tu Nodo Norte.',x52Balance()+x52Nodes()+(N['Quirón']!=null?x52Point('Quirón',{maxAsp:3}):'')));
+ return `<div class="x52doc">${o.join('')}</div>`}
+function x52Voc(){const mc=PF.noTime?null:x52sg(N['Medio Cielo']);const in10=X52_ORD.filter(k=>x52H(k)===10&&k!=='Medio Cielo'),in6=X52_ORD.filter(k=>x52H(k)===6),in2=X52_ORD.filter(k=>x52H(k)===2);const o=[];
+ if(mc)o.push(x52P(`Con el Medio Cielo en ${mc}, tu realización profesional pasa por lo que ese signo sabe hacer. ${X52S[mc][4]}`));
+ o.push(x52P(`Tu Sol en ${x52sg(N.Sol)} suma su propio talento. ${X52S[x52sg(N.Sol)][4]}`));
+ if(!PF.noTime&&N.Ascendente!=null)o.push(x52P(`Y tu Ascendente en ${x52sg(N.Ascendente)} define tu estilo de trabajo y cómo te ven tus colegas.`));
+ if(in10.length)o.push(x52P(`Tienes ${in10.join(', ')} en la casa 10, lo que pone esa energía en el centro de tu vida pública. Tu carrera es un tema importante y visible en tu historia.`));
+ if(in6.length)o.push(x52P(`Con ${in6.join(', ')} en la casa 6, tu trabajo diario y tus rutinas se tiñen de esa energía. Cuida tus hábitos, porque influyen mucho en tu rendimiento.`));
+ if(in2.length)o.push(x52P(`Con ${in2.join(', ')} en la casa 2, tu manera de ganar dinero y de valorarte pasa por ahí.`));
+ o.push(x52P(`Tu Saturno en ${x52sg(N.Saturno)} muestra dónde está la disciplina que más te va a servir. ${X52D.Saturno[x52sg(N.Saturno)]} Y tu Marte en ${x52sg(N.Marte)} dice cómo trabajas mejor. ${X52D.Marte[x52sg(N.Marte)]}`));
+ return o.join('')}
+/* ---------- carta natal, planeta por planeta ---------- */
+function x52Natal(){const ks=['Sol','Ascendente','Luna','Mercurio','Venus','Marte','Júpiter','Saturno','Urano','Neptuno','Plutón','Medio Cielo'].filter(k=>!(PF.noTime&&(k==='Ascendente'||k==='Medio Cielo')));
+ return `<div class="x52doc">${v20Intro('natal')}${x52Tech()}${ks.map(k=>x52Point(k,{sign:['Sol','Luna','Ascendente'].includes(k),maxAsp:4})).join('')}${x52Nodes()}</div>`}
+/* ---------- vocacional ---------- */
+function x52Cusp(h){const c=DATA.cusps;return PF.noTime||!c?null:x52sg(c[h-1])}
+function x52Vocacional(){const c10=x52Cusp(10),c6=x52Cusp(6),c2=x52Cusp(2);let casas='';
+ if(c10)casas+=x52P(`Tu casa 10 empieza en ${c10}, regida por ${X52_RULER[c10]}. Ese planeta es la llave de tu carrera, y en tu carta está en ${x52sg(N[X52_RULER[c10]])}${x52H(X52_RULER[c10])?`, casa ${x52H(X52_RULER[c10])}`:''}. Por eso tu realización profesional se conecta con ${X52C[x52H(X52_RULER[c10])||10][0]}.`);
+ if(c6)casas+=x52P(`Tu casa 6, la del trabajo diario, empieza en ${c6}. Rindes mejor en ambientes que tienen algo de ${c6}, y tus rutinas funcionan cuando respetan su ritmo. ${X52S[c6][4]}`);
+ if(c2)casas+=x52P(`Tu casa 2, la del dinero, empieza en ${c2}. Tu manera natural de generar recursos se parece a ese signo, y tu autoestima crece cuando lo honras.`);
+ return `<div class="x52doc">${v20Intro('vocacional')}${x52Chap(1,'Tu cuadro vocacional','Tu vocación no es una sola profesión sino una forma de estar en el mundo. Aquí cruzamos los puntos de tu carta que hablan de trabajo, dinero y realización.',x52Voc())}${casas?x52Chap(2,'Tus casas de trabajo y dinero','La casa 10 es la carrera, la 6 el trabajo de cada día y la 2 el dinero que generas.',casas):''}${x52Chap(3,'Tus talentos según los elementos','',x52Balance())}${x52Chap(4,'Cómo trabajas y cómo te motivas','Marte muestra tu forma de actuar y Saturno tu disciplina. Juntos dicen cómo sostienes un proyecto.',x52Point('Marte',{intro:false,maxAsp:4})+x52Point('Saturno',{intro:false,maxAsp:4}))}${x52Chap(5,'Mercurio, tu forma de aprender','',x52Point('Mercurio',{intro:false,maxAsp:3}))}${x52Chap(6,'Venus, el dinero y lo que valoras','',x52Point('Venus',{intro:false,maxAsp:3}))}</div>`}
+/* ---------- lectura espiritual: zodiaco sideral, decanatos y aspectos con práctica ---------- */
+function x52Espiritual(){const o=[v20Intro('espiritual')];const yr=(PF.by||1990)+((PF.bm0||0)/12);const ay=24.74+(yr-2000)*0.01397;
+ o.push(x52P('Esta lectura mira tu carta como un mapa del alma. No busca predecir, sino ayudarte a conocerte y a trabajar con tus energías. No creas nada solo porque está escrito. Compáralo con tu vida, y si algo te sirve, llévalo a la práctica.'));
+ const sid=k=>x52sg(N[k]-ay);
+ let b='';for(const k of ['Sol','Luna']){const t=x52sg(N[k]),s=sid(k);b+=`<article class="x52pt"><h3 class="x52h">${X52_GLY[k]} ${k} tropical en ${t}${s!==t?` · sideral en ${s}`:''}</h3>${x52P(X52S[t][0])}${s!==t?x52P(`En el zodiaco sideral, que mide las constelaciones tal como se ven hoy en el cielo, tu ${k} cae en ${s}. Muchas tradiciones espirituales leen esta posición como la tarea del alma, más allá de la personalidad. ${X52S[s][0]} Puedes leerla como un matiz que se suma a tu ${k} en ${t}.`):x52P(`Tu ${k} cae en el mismo signo en el zodiaco tropical y en el sideral, lo que refuerza mucho sus cualidades en ti.`)}</article>`}
+ o.push(x52Chap(1,'Tu Sol y tu Luna en dos zodiacos',`El zodiaco tropical se basa en las estaciones y el sideral en las estrellas fijas. Entre ambos hay hoy una diferencia de unos ${ay.toFixed(0)} grados, así que muchas personas tienen un signo distinto en cada uno.`,b));
+ let d='';for(const k of ['Sol','Luna','Ascendente']){if(N[k]==null||(PF.noTime&&k==='Ascendente'))continue;const l=x52n3(N[k]),s=x52sg(l),dn=Math.floor((l%30)/10);const el=SG_EL(s),list=X52_EL[el],i=list.indexOf(s);const sub=list[(i+dn)%3];
+  d+=`<article class="x52pt"><h3 class="x52h">${X52_GLY[k]} ${k} en el ${['primer','segundo','tercer'][dn]} decanato de ${s}</h3>${x52P(`${X52DEC[dn]} ${dn?`En tu caso, ${s} se mezcla con ${sub}, regido por ${X52_RULER[sub]}. ${X52S[sub][1]}`:`En tu caso, ${s} se expresa con toda su fuerza, regido por ${X52_RULER[s]}.`}`)}</article>`}
+ o.push(x52Chap(2,'Tus decanatos','Cada signo se divide en tres tramos de diez grados. Cada tramo suma el matiz de un signo de su mismo elemento, y eso explica por qué dos personas del mismo signo pueden ser tan distintas.',d));
+ const A=(DATA.aspects||[]).filter(a=>a[3]<=7).sort((a,b)=>a[3]-b[3]).slice(0,12);
+ o.push(x52Chap(3,'Tus aspectos más destacados y cómo trabajarlos','Los aspectos son los diálogos entre tus planetas. Los armónicos son dones, y los tensos son puntos de roce que, trabajados con conciencia, se convierten en tu mayor fuerza. Para cada uno te dejo una práctica.',A.map(a=>x52AspHTML(a,true)+`<p class="x52prac"><b>Práctica.</b> ${esc(X52ESP[a[2]]||'')}</p>`).join('')));
+ o.push(x52Chap(4,'El camino de tu alma','',x52Nodes()+(N['Quirón']!=null?x52Point('Quirón',{maxAsp:3}):'')));
+ return `<div class="x52doc">${o.join('')}</div>`}
+/* ---------- pronóstico de 18 meses con planetas lentos ---------- */
+const X52_TP=['Júpiter','Saturno','Urano','Neptuno','Plutón'];
+const X52_AS=[['conjunción',0,'con'],['sextil',60,'arm'],['cuadratura',90,'ten'],['trígono',120,'arm'],['oposición',180,'ten']];
+function x52Scan(d0,days){const pts=['Sol','Luna','Mercurio','Venus','Marte','Júpiter','Saturno','Urano','Neptuno','Plutón','Ascendente','Medio Cielo'].filter(k=>N[k]!=null&&!(PF.noTime&&(k==='Ascendente'||k==='Medio Cielo'||k==='Luna')));if(DATA.nodoN!=null)pts.push('Nodo');
+ const NL=k=>k==='Nodo'?DATA.nodoN:N[k];const open={},ev=[],ing=[],lastH={};
+ for(let i=0;i<=days;i++){const d=new Date(d0.getTime()+i*864e5);let P;try{P=planets(d)}catch(e){return{ev,ing}}
+  for(const tp of X52_TP){const tl=P[tp];if(tl==null)continue;
+   if(!PF.noTime){const h=x52HouseOf(tl);if(h&&lastH[tp]!==h){if(lastH[tp]!==undefined&&!ing.some(x=>x.tp===tp&&x.h===h))ing.push({tp,h,d});if(lastH[tp]===undefined)ing.push({tp,h,d,start:1});lastH[tp]=h}}
+   for(const np of pts){if(tp===np&&tp!=='Júpiter'&&tp!=='Saturno')continue;const sep=Math.abs(((tl-NL(np))%360+540)%360-180);
+    for(const[an,ang,cl]of X52_AS){const orb=Math.abs(sep-ang);const key=tp+'|'+np+'|'+an;
+     if(orb<=1){if(!open[key])open[key]={tp,np,an,cl,a:d,min:orb,peak:d,b:d};const e=open[key];e.b=d;if(orb<e.min){e.min=orb;e.peak=d}}
+     else if(open[key]){ev.push(open[key]);delete open[key]}}}}}
+ for(const k in open){open[k].open=1;ev.push(open[k])}
+ ev.sort((a,b)=>a.peak-b.peak);return{ev,ing}}
+function x52Pron(){const d0=typeof v20Now==='function'?v20Now():new Date();const days=548;const{ev,ing}=x52Scan(d0,days);const end=new Date(d0.getTime()+days*864e5);
+ const M=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];const fd=d=>`${d.getDate()} ${M[d.getMonth()]} ${d.getFullYear()}`;
+ const ASN={conjunción:'conjunción',sextil:'sextil',cuadratura:'cuadratura',trígono:'trígono',oposición:'oposición'};
+ const tag=e=>{const s=[];if(['Venus','Luna','Marte'].includes(e.np)||e.np==='Nodo')s.push('amor y afectos');if(['Saturno','Plutón','Nodo'].includes(e.np)||['Saturno','Plutón'].includes(e.tp))s.push('camino profundo');if(['Medio Cielo','Saturno','Sol'].includes(e.np))s.push('trabajo y metas');return s};
+ const o=[v20Intro('pron18')];
+ o.push(x52P(`Este pronóstico cubre desde el ${fd(d0)} hasta el ${fd(end)}. Mira los planetas lentos, de Júpiter a Plutón, porque son los que marcan los grandes temas de tu vida. Cada influencia tiene una fecha de inicio, un momento de mayor fuerza y un cierre. Si un tránsito tiene varias pasadas por el movimiento retrógrado, aparece más de una vez.`));
+ if(PF.noTime)o.push(x52P('Como no tenemos tu hora exacta, dejé fuera las casas, el Ascendente, el Medio Cielo y la Luna, que dependen de ella.'));
+ const tbl=ev.map(e=>`<tr><td>${fd(e.peak)}</td><td>${X52_GLY[e.tp]} ${e.tp} ${ASN[e.an]} ${e.np==='Nodo'?'Nodo Norte':e.np}</td><td class="muted">${fd(e.a)} – ${e.open?'sigue':fd(e.b)}</td></tr>`).join('');
+ const it=ing.map(x=>`<tr><td>${x.start?'ahora':fd(x.d)}</td><td>${X52_GLY[x.tp]} ${x.tp} ${x.start?'está en':'entra en'} tu casa ${x.h}</td><td class="muted">${esc(X52C[x.h][0])}</td></tr>`).join('');
+ const rows=[...ing.filter(x=>x.start).map(x=>[0,`<tr><td>ahora</td><td>${X52_GLY[x.tp]} ${x.tp} está en tu casa ${x.h}</td><td class="muted">${esc(X52C[x.h][0])}</td></tr>`]),...ing.filter(x=>!x.start).map(x=>[x.d.getTime(),`<tr><td>${fd(x.d)}</td><td>${X52_GLY[x.tp]} ${x.tp} entra en tu casa ${x.h}</td><td class="muted">${esc(X52C[x.h][0])}</td></tr>`]),...ev.map(e=>[e.peak.getTime(),`<tr><td>${fd(e.peak)}</td><td>${X52_GLY[e.tp]} ${e.tp} ${ASN[e.an]} ${e.np==='Nodo'?'Nodo Norte':e.np}</td><td class="muted">${e.a.getTime()===d0.getTime()?'antes':fd(e.a)} – ${e.open?'sigue':fd(e.b)}</td></tr>`])].sort((a,b)=>a[0]-b[0]).map(x=>x[1]).join('');
+ o.push(`<details class="x52tech" open><summary>Calendario de influencias</summary><div class="tbl"><table><thead><tr><th>Fecha clave</th><th>Influencia</th><th>Desde – hasta</th></tr></thead><tbody>${rows}</tbody></table></div></details>`);
+ if(ing.length){o.push(`<h2 class="x52h2">Las áreas que se activan</h2>`);for(const x of ing){o.push(`<article class="x52pt"><h3 class="x52h">${X52_GLY[x.tp]} ${x.tp} ${x.start?'en':'entra en'} tu casa ${x.h} <small>${x.start?'desde antes':fd(x.d)}</small></h3>${x52P(X52TH[x.tp].replace('{H}',X52C[x.h][0])+' '+X52C[x.h][1])}</article>`)}}
+ o.push(`<h2 class="x52h2">Cada influencia, paso a paso</h2>`);
+ for(const e of ev){const A=X52TA[e.np]||[e.np,''];const T=X52T[e.tp];let t=T[e.cl].replace('{P}',A[0]).replace('{A}',A[1]);
+  const tg=tag(e);
+  o.push(`<article class="x52pt"><h3 class="x52h">${X52_GLY[e.tp]} ${e.tp} en ${e.an} con ${e.np==='Nodo'?'tu Nodo Norte':'tu '+e.np} <small>${fd(e.peak)}</small></h3><p class="x52dates">Se siente desde ${e.a.getTime()===d0.getTime()?'antes de hoy':'el '+fd(e.a)} hasta ${e.open?'después del período estudiado':'el '+fd(e.b)}. Su efecto suele durar ${T.dur}.${tg.length?` Toca sobre todo ${tg.join(' y ')}.`:''}</p>${x52P(t)}${x52P((X52TQ[e.tp]||{})[e.cl]||'')}${e.np!=='Nodo'&&X52P[e.np]?x52P(`Recuerda que ${x52lc(X52P[e.np].split('. ')[0])}.`):''}</article>`)}
+ if(!ev.length)o.push(x52P('En este período los planetas lentos no forman aspectos exactos con tu carta. Es un tiempo más tranquilo, ideal para consolidar.'));
+ o.push(x52P('Las fechas dependen de que tu hora de nacimiento sea exacta. Usa este pronóstico como un mapa del clima, no como un destino. Tú decides cómo navegar cada etapa.'));
+ return `<div class="x52doc">${o.join('')}</div>`}
+/* ---------- conectar con los informes ---------- */
+(function(){try{
+ Object.assign(V20_INTRO,{completo:'este es tu informe completo, en once capítulos, como una consulta larga. Léelo con calma, de a un capítulo por vez.',natal:'vamos a recorrer tu carta planeta por planeta. Para cada uno verás qué significa, cómo se vive en tu signo y en tu casa, y cómo conversa con el resto de tu carta.',espiritual:'esta es tu lectura espiritual. Mira tu Sol y tu Luna en dos zodiacos, tus decanatos y los aspectos que más te desafían, con una práctica para cada uno.',vocacional:'este informe cruza los puntos de tu carta que hablan de vocación, talento y dinero.',pron18:'este es tu pronóstico de los próximos 18 meses, con los planetas lentos y las fechas de cada influencia.'});
+ const set=(id,f,s)=>{const r=REPORTS.find(x=>x.id===id);if(r){r.v20=f;if(s)r.s=s}};
+ set('completo',x52Completo,'Once capítulos, con todos tus aspectos');set('natal',x52Natal,'Planeta por planeta, con signos, casas y aspectos');set('espiritual',x52Espiritual,'Zodiaco sideral, decanatos y prácticas');set('vocacional',x52Vocacional);
+ const ci=REPORTS.findIndex(x=>x.id==='predicciones');const P={id:'pron18',g:'♄',t:'Pronóstico de 18 meses',s:'Júpiter a Plutón, con fechas de cada influencia',n:18,v20:x52Pron};
+ if(!REPORTS.some(x=>x.id==='pron18')){if(ci>=0)REPORTS.splice(ci,0,P);else REPORTS.push(P)}
+ const c=REPORTS.find(x=>x.id==='completo');if(c)c.n=11;
+ if(typeof CS_FOCUS!=='undefined')CS_FOCUS.pron18=['Júpiter','Saturno','Plutón'];
+}catch(e){console.warn('v52',e)}})();
 
 /* ---------- RESPALDO DE DATOS LOCALES ---------- */
 const BKP=PF.key.startsWith('cc-')?'cc-':PF.key+'-';
