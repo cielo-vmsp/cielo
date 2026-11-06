@@ -10045,7 +10045,7 @@ document.addEventListener('click',async e=>{const t=e.target;
 function confirmSwap(o){return o.prefix!=='cc-'&&BKP!=='cc-'?false:false}
 
 /* ===== v40 · 5 nov 2026: primera vez más corta, menú ordenado, palabras en simple, respaldo visible y compartir tu día ===== */
-const V40_LINK='https://claude.ai/artifact/L8WMWpHCdRqzM5bxXqei18';
+const V40_LINK='https://cielo-vmsp.github.io/cielo/';
 let V40_FIRST=false;
 function v40Born(){const k=PF.key+'-born';let b=store.get(k,null);if(!b){b=store.get(PF.key+'-tour',0)?'2000-01-01':dayKey(new Date());store.set(k,b)}return b}
 function v40Day(){const b=v40Born().split('-').map(Number),t=new Date();return Math.round((new Date(t.getFullYear(),t.getMonth(),t.getDate())-new Date(b[0],b[1]-1,b[2]))/864e5)}
