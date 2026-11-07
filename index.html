@@ -2754,6 +2754,46 @@ html.x49nogd #gd{display:none!important}
 .cxdlst ol{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:10px}
 .cxdlst li{display:flex;gap:12px;align-items:flex-start}.cxdlst li small{display:block;color:var(--mut);margin-top:2px}
 .cxdli{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--violet) 16%,var(--panel));font-size:1.2rem;flex:none}
+.cxbring{font-weight:700;border:1.5px solid color-mix(in srgb,var(--violet) 55%,var(--line))!important}
+
+/* v53 respaldo y cambio de teléfono */
+html.x53on body{overflow:hidden}
+#x53{position:fixed;inset:0;z-index:100000;display:grid;place-items:end center;background:rgba(6,8,24,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);overflow-y:auto;animation:x53f .2s ease}
+@keyframes x53f{from{opacity:0}}@keyframes x53u{from{transform:translateY(30px);opacity:.4}}
+.x53box{width:min(560px,100%);background:var(--panel);color:var(--fg);border-radius:26px 26px 0 0;padding:18px 16px max(22px,env(safe-area-inset-bottom,0px));box-shadow:0 -20px 50px -20px rgba(0,0,0,.5);animation:x53u .25s ease;max-height:100dvh;overflow-y:auto;box-sizing:border-box}
+@media(min-width:640px){#x53{place-items:center;padding:20px}.x53box{border-radius:26px}}
+.x53hd{display:flex;gap:12px;align-items:center;margin-bottom:14px}.x53hd>div{flex:1;min-width:0}.x53hd b{display:block;font-size:1.12rem}.x53hd small{color:var(--mut);font-size:.84rem;line-height:1.3;display:block}
+.x53ic{width:44px;height:44px;flex:none;border-radius:14px;display:grid;place-items:center;font-size:1.4rem;color:#fff;background:linear-gradient(135deg,var(--violet),var(--sky))}
+.x53x{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);background:var(--panel2);color:var(--fg);font-size:1.4rem;line-height:1;cursor:pointer}
+.x53seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;border-radius:18px;background:var(--panel2);border:1px solid var(--line);margin-bottom:14px}
+.x53seg button{border:0;border-radius:14px;padding:10px 6px;background:transparent;color:var(--fg);font:inherit;cursor:pointer;text-align:center}
+.x53seg button b{display:block;font-size:.95rem}.x53seg button small{color:var(--mut);font-size:.74rem}
+.x53seg button[aria-selected="true"]{background:var(--panel);box-shadow:0 4px 14px -6px rgba(0,0,0,.35);outline:2px solid color-mix(in srgb,var(--violet) 60%,transparent)}
+.x53card{border:1px solid var(--line);border-radius:18px;padding:12px 14px;background:var(--panel2);margin-bottom:12px}.x53card p{margin:4px 0 0;font-size:.9rem}
+.x53sum{display:flex;flex-direction:column;gap:6px}.x53sum small{color:var(--mut);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em}.x53sum b{display:block}.x53sum span{font-size:.86rem;color:var(--mut)}
+.x53sum em{font-style:normal;font-size:.8rem;font-weight:600;align-self:flex-start;padding:3px 10px;border-radius:99px}.x53sum em.ok{background:color-mix(in srgb,#3fae6a 18%,transparent);color:color-mix(in srgb,#3fae6a 80%,var(--fg))}.x53sum em.no{background:color-mix(in srgb,#e2a33b 22%,transparent);color:color-mix(in srgb,#c47f12 85%,var(--fg))}
+.x53steps{counter-reset:s;list-style:none;padding:0;margin:0 0 14px;display:grid;gap:8px}
+.x53steps li{counter-increment:s;position:relative;padding:2px 0 2px 40px;font-size:.92rem;line-height:1.4}
+.x53steps li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:.9rem;color:#fff;background:linear-gradient(135deg,var(--violet),var(--sky))}
+.x53big{display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px;border:0;border-radius:18px;cursor:pointer;text-align:left;font:inherit;color:#fff;background:linear-gradient(120deg,#b48cf0,#7f9ff0);box-shadow:0 12px 26px -12px rgba(100,80,210,.7);margin-bottom:10px;box-sizing:border-box}
+.x53big>span:first-child{width:42px;height:42px;flex:none;border-radius:13px;display:grid;place-items:center;background:rgba(255,255,255,.25);font-size:1.3rem}
+.x53big b{display:block;font-size:1.06rem}.x53big small{opacity:.92;font-size:.8rem}.x53big[disabled]{opacity:.6;cursor:wait}
+.x53big.sm{padding:10px 12px;margin:0}.x53big.sm>span:first-child{width:34px;height:34px;font-size:1.1rem}.x53big.sm b{font-size:.98rem}
+.x53big.alt{background:var(--panel2);color:var(--fg);border:1px solid var(--line);box-shadow:none}.x53big.alt>span:first-child{background:color-mix(in srgb,var(--violet) 18%,transparent)}
+.x53row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+#x53in,#x53code{width:100%;box-sizing:border-box;border-radius:14px;border:1.5px dashed var(--line);background:var(--panel2);color:var(--fg);padding:10px 12px;font:16px/1.35 var(--f-mono,ui-monospace,monospace);resize:vertical;word-break:break-all}
+#x53in:focus{outline:2px solid var(--violet);border-style:solid}#x53code{font-size:.72rem;margin-top:6px}
+.x53chk{font-size:.9rem;line-height:1.4;margin:8px 0;border-radius:14px}.x53chk:empty{display:none}.x53chk.good,.x53chk.bad,.x53chk.hint{padding:10px 12px}
+.x53chk.good{background:color-mix(in srgb,#3fae6a 16%,transparent);border:1px solid color-mix(in srgb,#3fae6a 45%,transparent)}
+.x53chk.bad{background:color-mix(in srgb,#e2553b 14%,transparent);border:1px solid color-mix(in srgb,#e2553b 45%,transparent);font-weight:600}
+.x53chk.hint{background:var(--panel2);border:1px solid var(--line)}
+.x53go{width:100%;padding:14px;font-size:1.05rem;border-radius:16px;margin:4px 0 10px}.x53go[disabled]{opacity:.45}
+.x53note{min-height:1.2em;font-size:.9rem;font-weight:600;margin:0 0 8px;color:var(--fg)}
+.x53tiny{font-size:.78rem;color:var(--mut);line-height:1.4;margin:8px 0 0}
+.x53more{margin:6px 0 4px;font-size:.88rem}.x53more summary{cursor:pointer;color:var(--mut)}
+.x53done{text-align:center;padding:20px 6px}.x53done span{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 10px;border-radius:50%;font-size:2rem;color:#fff;background:#3fae6a}.x53done b{display:block;font-size:1.2rem}.x53done p{color:var(--mut)}
+.x53warn{border-color:color-mix(in srgb,#e2a33b 55%,transparent)}
+.iconbtn.x53hb{position:relative}.iconbtn.x53hb.due::after{content:"";position:absolute;top:5px;right:5px;width:8px;height:8px;border-radius:50%;background:#e2a33b;box-shadow:0 0 0 2px var(--bg)}
 
 </style>
 
@@ -6318,7 +6358,7 @@ const V9_MAN=[
 ['🐾','Tu animal de poder',`<ul><li>Al entrar, Cielo te <b>propone un animal según tu sello maya</b>. Puedes aceptarlo, elegir otro entre más de 70 o decir “ahora no”.</li><li>En <b>Más → Tu animal de poder</b> cambias el animal, su nombre, su color, su aura, su tono (tierno, sabio o pícaro) y cada cuánto habla.</li><li>Tiene vida propia: respira, parpadea, se duerme de noche, se alegra en los días que fluyen, se inquieta en los días con roce y a veces pasea por la pantalla. Cada familia tiene su sonido.</li><li>Sus consejos cambian cada día y salen de tu fecha, tu carta y cómo usas la app.</li><li><b>Arrástralo</b> donde quieras. Si no lo usas se achica a un <b>punto</b>; tócalo para abrir su burbuja.</li><li><b>Modo solo burbuja:</b> esconde al animal; queda solo el punto y su burbuja de vidrio.</li><li><b>Apagar:</b> en Personalizar, cuando quieras.</li></ul>`],
 ['⚡','Lectura express',`<p>El botón <b>✦</b> del centro abre tu día en cuatro láminas, como historias: tu día en una palabra, qué hacer y qué evitar, tu ritual de un minuto y tu decreto. Toca a la derecha para avanzar, a la izquierda para volver y mantén apretado para pausar.</p>`],
 ['◐','Personalizar',`<ul><li><b>Estilo:</b> nueve temas. Holo hippie, Terracota, Perla y Lavanda (femeninos), Champán, Salvia y Blanco (unisex), Grafito y Océano (masculinos).</li><li><b>Para ella (opcional):</b> si activas “Soy mujer”, aparece <b>Mi ciclo</b> en Hoy.</li><li><b>Día y noche:</b> el interruptor cambia entre claro y oscuro; “Auto” sigue a tu teléfono.</li><li><b>Sonido:</b> apagado, efectos o ambiente.</li><li><b>Al abrir la app:</b> pantalla de inicio, lectura express o directo a Hoy.</li><li><b>Código:</b> 4 números para que nadie más abra tu app. Puedes pedir que <b>este teléfono lo recuerde</b> y entrar solo. Si lo olvidas, no se puede recuperar: solo borrar los datos de ese perfil y empezar de nuevo.</li><li><b>Menos texto:</b> muestra solo lo esencial.</li></ul>`],
-['💾','Guardar tus datos',`<p>Tu diario, rituales, la Abue, animal y ajustes viven solo en este teléfono. Para no perderlos:</p><ol><li>Ve a <b>Más → Guardar mis datos</b>.</li><li>Copia el texto del respaldo y guárdalo (por ejemplo, mándatelo por correo).</li><li>En otro teléfono, usa <b>Restaurar respaldo</b> y pega ese texto.</li></ol><p>Hazlo una vez al mes o antes de cambiar de teléfono.</p>`],
+['⇄','Respaldo y cambio de teléfono',`<p>Tu diario, rituales, tiradas, “Mi vida”, agenda y ajustes viven solo en este teléfono. Con el respaldo no pierdes nada y te los llevas a otro celular en un minuto.</p><p><b>En el teléfono que tiene tus datos</b></p><ol><li>Toca el botón de la nube con flecha, arriba (o Más → <b>Respaldo y cambio de teléfono</b>).</li><li>Toca <b>Enviar mis datos</b> y mándatelo a ti: WhatsApp (el chat contigo), tu correo o tus Notas.</li></ol><p><b>En el teléfono nuevo</b></p><ol><li>Abre el mensaje y toca el enlace: Cielo se abre con tus datos listos para traer.</li><li>Si no, abre Cielo, toca <b>Ya uso Cielo: traer mis datos</b>, luego <b>Pegar</b> (pega el mensaje entero, Cielo encuentra el código solo) y <b>Traer mis datos</b>.</li></ol><p>También puedes usar <b>Guardar archivo</b> y, en el otro teléfono, <b>Elegir archivo</b>. Si instalaste Cielo en la pantalla de inicio, haz el traspaso abriendo Cielo desde ese ícono. Hazlo una vez al mes: el punto naranjo en la nube te avisa cuando toca.</p>`],
 ['📲','Instalar en tu celular',`<p>En <b>Más → Instalar en tu celular</b> están los pasos para tu equipo:</p><ul><li><b>iPhone (Safari):</b> Compartir → “Agregar a inicio”.</li><li><b>Android (Chrome):</b> menú ⋮ → “Instalar app” o “Agregar a la pantalla principal”.</li><li><b>Computador:</b> el ícono de instalar en la barra de direcciones.</li></ul><p>Así entras con un toque, sin buscar el link ni el código. Combínalo con “Al abrir: lectura express” para leer tu día en un minuto.</p>`],
 ['☺','Varios perfiles (consultas)',`<p>En la versión de consultas puedes tener varios perfiles en el mismo teléfono. En la pantalla de inicio tocas el círculo de cada persona para cambiar, o <b>＋ Agregar</b> para crear uno nuevo. El <b>código CIELO1</b> sirve para pasar los datos de nacimiento de un perfil a otro teléfono: solo lleva la fecha, hora y lugar, nada de lo que escribes.</p>`],
 ['§','Términos y privacidad',`<p>Cielo está en <b>marcha blanca</b>: un prototipo gratuito, con todo desbloqueado, para hacer ajustes. En diciembre llega la app oficial con suscripción. La primera vez que la abres te pide aceptar los <b>Términos de uso</b> y la <b>Política de privacidad</b> marcando dos casillas: sin aceptar no se puede entrar.</p><ul><li><b>Derechos reservados:</b> Cielo es obra protegida por la Ley 17.336. El permiso es personal: está prohibido compartir el archivo o el link, copiar el código o replicar la app.</li><li><b>Tus datos son tuyos:</b> quedan solo en tu teléfono. No se ven, no se venden, no se publican ni se usan con fines de lucro.</li><li>Puedes releerlos cuando quieras en <b>Más → Términos y privacidad</b> o al pie de cada pantalla.</li></ul>`],
@@ -6685,7 +6725,7 @@ function tour(){ctStart()}
 /* Más: “¿Cómo funciona Cielo?” arriba de todo */
 function v8MoreHTML(){const row=(go,ic,t,sub,extra='')=>`<button class="mrow" ${go}><span class="mic">${ic}</span><span><b>${t}${extra}</b><small>${sub}</small></span><i>›</i></button>`;
  return `<div class="mlist ctmore">${row('data-go="__tour"','?','¿Cómo funciona Cielo?',`${gdName()} te muestra la app paso a paso`)}</div>
- <div class="mlist">${row('data-go="perfil"','◉','Perfil y método','Tus datos de nacimiento y cómo se calcula')}${row('data-go="__life"','❀','Mi vida','Lo que hoy te importa: ajusta tus lecturas')}${row('data-go="vinculos"','⚭','Vínculos','Cruza tu carta con la de otra persona')}${row('data-go="__bk"','💾','Guardar mis datos','Respaldo para no perder nada')}</div>
+ <div class="mlist">${row('data-go="perfil"','◉','Perfil y método','Tus datos de nacimiento y cómo se calcula')}${row('data-go="__life"','❀','Mi vida','Lo que hoy te importa: ajusta tus lecturas')}${row('data-go="vinculos"','⚭','Vínculos','Cruza tu carta con la de otra persona')}${row('data-go="__bk"','⇄','Respaldo y cambio de teléfono','Guarda tus datos o pásalos a otro celular')}</div>
  <div class="mlist">${row('data-gdopen',gdOrb(null,30),'Tu animal de poder','Guía, colores y aura')}${row('data-go="__look"','◐','Personalizar','Estilo, día y noche, sonido, código')}${v9Standalone()?'':row('data-go="__inst"','📲','Instalar en tu celular','Un ícono en tu pantalla, entra con un toque')}</div>
  <div class="mlist">${row('data-go="__man"','📖','Guía de uso','Cada sección explicada, para leer con calma')}${row('data-express','✦','Lectura express','Tu día en un minuto')}${row('data-legal','§','Términos y privacidad','Derechos reservados y cómo cuidamos tus datos')}</div>`}
 /* saludo cercano arriba de Hoy */
@@ -10163,14 +10203,14 @@ function welcome(){const ins=cxStandalone();show(`<div class="cxapp">${APPICON}<
  ${ins?'':`<button class="cxdl" id="cxDl"><span class="cxdlic">📲</span><span><b>Descargar Cielo en mi celular</b><small>Queda como app en tu pantalla de inicio</small></span><i>›</i></button>`}
  <div class="cxfeat2"><div><b>☉</b>Tu carta y tu día</div><div><b>✧</b>La Abue y el tarot</div><div><b>☽</b>Rituales y Luna</div><div><b>⚭</b>Vínculos</div></div>
  <p class="cxlbl">¿Cómo prefieres verla?</p><div class="seg2 cxmode">${[['light','☀︎ Claro'],['dark','☾ Oscuro']].map(([k,t])=>`<button data-cxmode="${k}" aria-pressed="${k===cxMode()}">${t}</button>`).join('')}</div>
- <div class="cxbtns col"><button class="btn cxbig" id="cxNew">Crear mi perfil</button><button class="btn ghost" id="cxImp">Tengo un código</button></div>
+ <div class="cxbtns col"><button class="btn cxbig" id="cxNew">Crear mi perfil</button><button class="btn ghost cxbring" id="cxImp">📥 Ya uso Cielo: traer mis datos</button></div>
  <p class="muted cxsmall">🔒 Tus datos quedan guardados solo en este teléfono, protegidos con tu clave. No necesitas cuenta ni correo. Prototipo en marcha blanca: en diciembre llega la app oficial con suscripción.</p>`,false)}
 function manager(){const L=profiles(),a=active()||(L[0]&&L[0].id);
  show(`<h2>Perfiles</h2><p class="muted" style="margin:4px 0 12px;font-size:.9rem">Cambia de persona, agrega consultantes o comparte un perfil con un código.</p>
  <div class="cxlist">${L.map(p=>`<div class="cxrow${p.id===a?' on':''}"><div class="cxav">${esc((p.short||p.name)[0]||'?')}</div><div style="min-width:0"><b>${esc(p.short||p.name)}</b><small>${esc(p.date.split('-').reverse().join('/'))} · ${esc(p.place.name)}</small><small class="mono">${summary(p)}</small></div>
   <div class="cxacts">${p.id===a?'<span class="pill good">Abierto</span>':`<button class="btn sm" data-open="${p.id}">Abrir</button>`}<button class="btn ghost sm" data-edit="${p.id}">Editar</button><button class="btn ghost sm" data-code="${p.id}">Código</button><button class="btn ghost sm danger" data-del="${p.id}">Borrar</button></div></div>`).join('')}</div>
- <div class="cxbtns"><button class="btn" id="cxNew">＋ Nuevo perfil</button><button class="btn ghost" id="cxImp">Importar código</button></div>
-  <div class="cxsave"><b>Guardados en este dispositivo</b><p class="muted">${L.length} ${L.length===1?'perfil':'perfiles'} con sus diarios, tiradas y ajustes. Se mantienen al cerrar la app. Para pasarlos a otro teléfono o guardarlos aparte, descarga una copia.</p><div class="cxbtns" style="margin-top:6px"><button class="btn ghost sm" id="cxBkDl">Descargar copia de todos</button><button class="btn ghost sm" id="cxBkIn">Restaurar copia</button></div><p class="muted" id="cxBkNote" style="font-size:.8rem;margin:4px 0 0"></p></div>`)}
+ <div class="cxbtns"><button class="btn" id="cxNew">＋ Nuevo perfil</button><button class="btn ghost" id="cxImp">Agregar con código</button></div>
+  <div class="cxsave"><b>Guardados en este dispositivo</b><p class="muted">${L.length} ${L.length===1?'perfil':'perfiles'} con sus diarios, tiradas y ajustes. Se mantienen al cerrar la app. Para pasarlos a otro teléfono o guardarlos aparte, envíate un respaldo.</p><div class="cxbtns" style="margin-top:6px"><button class="btn sm" id="cxBkDl">📤 Enviar mis datos</button><button class="btn ghost sm" id="cxBkIn">📥 Traer mis datos</button></div><p class="muted" id="cxBkNote" style="font-size:.8rem;margin:4px 0 0"></p></div>`)}
 function allData(){const data={};try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('cc-'))data[k]=localStorage.getItem(k)}}catch(e){}return JSON.stringify({app:'cielo-de-cabecera',v:1,fecha:new Date().toISOString(),data})}
 function form(p){const e=!!p;p=p||{name:'',short:'',g:'f',date:'',time:'',unknownTime:false,place:{name:'Concepción',lat:-36.83,lon:-73.05,tz:'America/Santiago'}};
  const known=CITIES.find(c=>c[0]===p.place.name&&Math.abs(c[2]-p.place.lat)<.05);const tzs=(Intl.supportedValuesOf?Intl.supportedValuesOf('timeZone'):[p.place.tz]);
@@ -10219,12 +10259,147 @@ ov.addEventListener('click',async e=>{const t=e.target;
  const b=t.closest('[data-open],[data-edit],[data-code],[data-del],#cxCopy');if(!b)return;
  if(b.dataset.open)go(b.dataset.open);
  if(b.dataset.edit)form(profiles().find(x=>x.id===b.dataset.edit));
- if(b.dataset.code){const p=profiles().find(x=>x.id===b.dataset.code);show(`<h2>Código de ${esc(p.short||p.name)}</h2><p class="muted" style="font-size:.9rem">Mándale este código a quien quieras. En su teléfono abre la app, toca “Tengo un código” y lo pega. Solo incluye los datos de nacimiento: nada de diario, “Mi vida” ni mascotas.</p><textarea id="cxCodeOut" rows="4" readonly>${code(p)}</textarea><div class="cxbtns"><button class="btn" id="cxCopy">Copiar código</button><button class="btn ghost" id="cxBack">Volver</button></div>`)}
+ if(b.dataset.code){const p=profiles().find(x=>x.id===b.dataset.code);show(`<h2>Código de ${esc(p.short||p.name)}</h2><p class="muted" style="font-size:.9rem">Mándale este código a quien quieras. En su teléfono abre la app, toca “Ya uso Cielo: traer mis datos” y lo pega. Solo incluye los datos de nacimiento: nada de diario, “Mi vida” ni mascotas.</p><textarea id="cxCodeOut" rows="4" readonly>${code(p)}</textarea><div class="cxbtns"><button class="btn" id="cxCopy">Copiar código</button><button class="btn ghost" id="cxBack">Volver</button></div>`)}
  if(b.id==='cxCopy'){const ta=$('#cxCodeOut');ta.select();let ok=false;try{await navigator.clipboard.writeText(ta.value);ok=true}catch(x){try{ok=document.execCommand('copy')}catch(y){}}b.textContent=ok?'Copiado ✓':'Selecciónalo y cópialo'}
  if(b.dataset.del){if(!b.dataset.sure){b.dataset.sure=1;b.textContent='¿Seguro?';return}const id=b.dataset.del;const L=profiles().filter(x=>x.id!==id);st.set('cc-profiles',L);
   try{Object.keys(localStorage).filter(k=>k.startsWith('cc-'+id+'-')).forEach(k=>localStorage.removeItem(k))}catch(x){}
   if(active()===id||!L.length){st.set('cc-active',L[0]?L[0].id:null);location.reload()}else manager()}});
 if(!window.DATA){document.body.classList.add('cx-empty');if(window.__CCERR){show(`<h2>No pude abrir este perfil</h2><p class="muted">${esc(window.__CCERR)}</p><div class="cxbtns"><button class="btn" id="cxBack">Ver perfiles</button></div>`,false)}else{welcome();try{legalGate();v9Cine()}catch(e){}}}
+})();
+
+</script>
+<script>
+/* ===== v53 · 7 nov 2026: respaldo y cambio de teléfono en un solo lugar ===== */
+(()=>{
+const LINK='https://cielo-vmsp.github.io/cielo/';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const jget=(k,d)=>{try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+const jset=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
+const MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const fday=d=>{d=new Date(d);return isNaN(d)?'':`${d.getDate()} ${MES[d.getMonth()]} ${d.getFullYear()}`};
+
+/* ---------- datos ---------- */
+function snap(){const data={};try{for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('cc-')&&k!=='cc-x53last')data[k]=localStorage.getItem(k)}}catch(e){}return data}
+function names(data){let L=[];try{L=JSON.parse(data['cc-profiles']||'[]')}catch(e){}return L.map(p=>p.short||p.name||'Sin nombre')}
+function kb(n){return n<1024?n+' bytes':(n/1024).toFixed(n<10240?1:0).replace('.',',')+' KB'}
+function fnv(s){let h=0x811c9dc5;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)>>>0}return h.toString(36).padStart(7,'0').slice(-7)}
+const b64u=u8=>{let s='';for(let i=0;i<u8.length;i+=0x8000)s+=String.fromCharCode.apply(null,u8.subarray(i,i+0x8000));return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')};
+const ub64=s=>{s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u};
+async function pipe(u8,T){return new Uint8Array(await new Response(new Blob([u8]).stream().pipeThrough(T)).arrayBuffer())}
+async function encode(data){const json=JSON.stringify({app:'cielo',v:2,fecha:new Date().toISOString(),data});let u=new TextEncoder().encode(json),tag='u';
+ if(window.CompressionStream){try{u=await pipe(u,new CompressionStream('deflate-raw'));tag='z'}catch(e){u=new TextEncoder().encode(json);tag='u'}}
+ const body=b64u(u);return `CIELO2.${tag}${fnv(body)}.${body}!`}
+
+/* lee cualquier cosa: el mensaje entero, el enlace, el código solo, el código de un perfil o el archivo .json */
+async function parse(raw){const t=String(raw||'');if(!t.trim())return{err:''};
+ const flat=t.replace(/[\s​-‍⁠﻿]+/g,'');
+ const i=flat.search(/CIELO2\./i);
+ if(i>=0){const m=flat.slice(i).match(/^CIELO2\.([zu])([0-9a-z]{7})\.([A-Za-z0-9_-]*)(!?)/i);
+  if(!m||!m[3])return{err:'El código está incompleto. Copia el mensaje entero, desde “CIELO2” hasta el signo ! del final.'};
+  if(fnv(m[3])!==m[2].toLowerCase())return{err:m[4]?'El código cambió al copiarlo (falta o sobra una parte). Vuelve a copiar el mensaje entero, sin cortarlo.':'El código llegó cortado: falta el final. Copia el mensaje entero, hasta el signo ! del final.'};
+  let u;try{u=ub64(m[3])}catch(e){return{err:'El código tiene letras que no corresponden. Vuelve a copiarlo.'}}
+  if(m[1].toLowerCase()==='z'){if(!window.DecompressionStream)return{err:'Este navegador es muy antiguo para leer el código. Usa el archivo de respaldo o actualiza el navegador.'};try{u=await pipe(u,new DecompressionStream('deflate-raw'))}catch(e){return{err:'El código está dañado. Vuelve a copiarlo desde el mensaje original.'}}}
+  let o;try{o=JSON.parse(new TextDecoder().decode(u))}catch(e){return{err:'El código está dañado. Vuelve a copiarlo desde el mensaje original.'}}
+  return ok(o)}
+ const j=flat.search(/CIELO1\./);
+ if(j>=0){const dec=s=>JSON.parse(decodeURIComponent(escape(atob(s))));try{let m;const t1=t.match(/CIELO1\.([A-Za-z0-9+/=]+)/);try{m=dec(t1[1])}catch(e){m=dec(flat.slice(j+7).match(/^[A-Za-z0-9+/=]+/)[0])}
+   const p={id:'p'+Date.now().toString(36),name:m.n,short:m.s,g:m.g||'x',date:m.d,time:m.t||'',unknownTime:!!m.u,place:{name:m.p[0],lat:+m.p[1],lon:+m.p[2],tz:m.p[3]},chiron:m.c??null,created:Date.now()};
+   if(window.GEN)GEN.build(p);return{one:p}}catch(e){return{err:'Ese código de perfil está incompleto. Pide que te lo manden de nuevo y cópialo entero.'}}}
+ const a=t.indexOf('{'),b=t.lastIndexOf('}');
+ if(a>=0&&b>a){const s=t.slice(a,b+1);let o=null;try{o=JSON.parse(s)}catch(e){try{o=JSON.parse(s.replace(/[“”„‟″«»]/g,'"').replace(/[‘’]/g,"'"))}catch(x){}}
+  if(o)return ok(o);return{err:'Ese respaldo está incompleto o cambió al copiarlo. Usa mejor “Enviar mis datos”: genera un código que no se rompe.'}}
+ return{err:'No encontré un respaldo en ese texto. Pega el mensaje que te mandaste desde Cielo (empieza con “Mi respaldo de Cielo” o con CIELO2).'}}
+function ok(o){const D=o&&o.data;if(!D||typeof D!=='object')return{err:'Ese texto no es un respaldo de Cielo.'};
+ if(o.prefix&&o.prefix!=='cc-')return{err:'Ese respaldo es de otra versión de Cielo (una app personal) y no se puede traer aquí.'};
+ const data={};for(const[k,v]of Object.entries(D))if(k.startsWith('cc-')&&typeof v==='string')data[k]=v;
+ if(!data['cc-profiles'])return{err:'Ese respaldo no trae ningún perfil.'};return{data,fecha:o.fecha}}
+
+function apply(r){
+ if(r.one){const L=jget('cc-profiles',[]);L.push(r.one);if(!jset('cc-profiles',L))throw 0;jset('cc-active',r.one.id);return 1}
+ const D=r.data,cur=jget('cc-profiles',[]);let inc=[];try{inc=JSON.parse(D['cc-profiles'])}catch(e){}
+ const same=(a,b)=>a.id===b.id||(a.date===b.date&&(a.time||'')===(b.time||'')&&String(a.name||'').trim().toLowerCase()===String(b.name||'').trim().toLowerCase());
+ const out=cur.filter(x=>!inc.some(p=>same(x,p))).concat(inc);
+ for(const[k,v]of Object.entries(D)){if(k==='cc-profiles'||k==='cc-active')continue;localStorage.setItem(k,v)}
+ if(!jset('cc-profiles',out))throw 0;let a=null;try{a=JSON.parse(D['cc-active']||'null')}catch(e){}
+ jset('cc-active',out.some(p=>p.id===a)?a:(inc[0]||out[0]||{}).id||null);jset('cc-x53last',new Date().toISOString());return inc.length}
+
+/* ---------- pantalla ---------- */
+let host=null,tab='send',CODE='',READ=null,busy=0;
+function close(){if(host){host.remove();host=null}document.documentElement.classList.remove('x53on')}
+function open(which){tab=which||'send';READ=null;CODE='';if(!host){host=document.createElement('div');host.id='x53';host.setAttribute('role','dialog');host.setAttribute('aria-modal','true');host.setAttribute('aria-label','Respaldo y cambio de teléfono');document.body.append(host);host.addEventListener('click',onClick);host.addEventListener('input',onInput);host.addEventListener('change',onFile)}
+ document.documentElement.classList.add('x53on');render();if(tab==='send')prep()}
+function hasData(){return jget('cc-profiles',[]).length>0}
+function render(){const send=tab==='send';
+ host.innerHTML=`<div class="x53box"><header class="x53hd"><span class="x53ic">⇄</span><div><b>Respaldo y cambio de teléfono</b><small>Tus datos viven solo en tu teléfono. Aquí los guardas o los pasas a otro.</small></div><button class="x53x" data-x53="close" aria-label="Cerrar">×</button></header>
+ <div class="x53seg" role="tablist"><button role="tab" data-x53="send" aria-selected="${send}"><b>📤 Enviar mis datos</b><small>Desde este teléfono</small></button><button role="tab" data-x53="get" aria-selected="${!send}"><b>📥 Traer mis datos</b><small>Al teléfono nuevo</small></button></div>
+ <div class="x53body">${send?sendHTML():getHTML()}</div></div>`;
+ if(!send){const ta=host.querySelector('#x53in');if(ta&&PRE){ta.value=PRE;PRE='';check()}}}
+function sendHTML(){if(!hasData())return`<div class="x53card x53warn"><b>Todavía no hay nada que enviar</b><p>En este teléfono aún no tienes un perfil. Si tus datos están en otro teléfono, toca <b>📥 Traer mis datos</b>.</p></div>`;
+ const D=snap(),N=names(D),last=jget('cc-x53last',null);
+ return`<div class="x53card x53sum"><div><small>En este teléfono</small><b>${N.length} ${N.length===1?'perfil':'perfiles'}: ${esc(N.join(', '))}</b><span>Con tu diario, tiradas, rituales, “Mi vida”, agenda y ajustes.</span></div><em class="${last?'ok':'no'}">${last?'Último respaldo: '+fday(last):'Aún no haces un respaldo'}</em></div>
+ <ol class="x53steps"><li><b>Toca “Enviar mis datos”</b> y elige dónde mandarlo: <b>WhatsApp a ti mismo</b>, tu correo o tus Notas.</li><li>En el teléfono nuevo abre Cielo en <b>cielo-vmsp.github.io/cielo</b>. Si te lo mandaste por WhatsApp o correo, basta con tocar el enlace del mensaje.</li><li>Si Cielo no se abre solo con tus datos, toca <b>“Ya uso Cielo: traer mis datos”</b>, pega el mensaje entero y toca <b>Traer mis datos</b>. Listo.</li></ol>
+ <button class="x53big" data-x53="share" ${CODE?'':'disabled'}><span>📤</span><span><b>Enviar mis datos</b><small id="x53sz">${CODE?'Código listo · '+kb(CODE.length):'Preparando tu código…'}</small></span></button>
+ <div class="x53row"><button class="btn ghost sm" data-x53="copy" ${CODE?'':'disabled'}>📋 Copiar código</button><button class="btn ghost sm" data-x53="file" ${CODE?'':'disabled'}>💾 Guardar archivo</button></div>
+ <p class="x53note" id="x53note" aria-live="polite"></p>
+ <details class="x53more"><summary>Ver el código</summary><textarea id="x53code" rows="4" readonly>${esc(CODE)}</textarea><p class="x53tiny">Si no se copia con el botón: mantén el dedo sobre el código, elige <b>Seleccionar todo</b> y luego <b>Copiar</b>.</p></details>
+ <p class="x53tiny">🔒 El código lleva tus datos personales: mándatelo solo a ti y no lo publiques. Nada pasa por un servidor: el enlace guarda tus datos después del signo #, y esa parte nunca sale de tu teléfono. Hazlo una vez al mes o antes de cambiar de teléfono o de navegador.</p>`}
+function getHTML(){return`<ol class="x53steps"><li>En tu otro teléfono toca <b>📤 Enviar mis datos</b> (en Cielo: Más → Respaldo y cambio de teléfono) y mándatelo.</li><li>Aquí, abre ese mensaje, mantén el dedo encima y elige <b>Copiar</b>. Copia el mensaje entero: Cielo encuentra el código solo.</li><li>Toca <b>Pegar</b> y luego <b>Traer mis datos</b>.</li></ol>
+ <div class="x53row"><button class="x53big sm" data-x53="paste"><span>📋</span><span><b>Pegar</b><small>Lo que copiaste</small></span></button><label class="x53big sm alt"><span>📁</span><span><b>Elegir archivo</b><small>El .json que guardaste</small></span><input type="file" id="x53f" hidden></label></div>
+ <textarea id="x53in" rows="4" placeholder="O mantén el dedo aquí y elige Pegar"></textarea>
+ <div id="x53chk" class="x53chk" aria-live="polite"></div>
+ <button class="btn x53go" data-x53="do" disabled>Traer mis datos</button>
+ <p class="x53tiny">Lo que traes se suma a lo que ya hay en este teléfono. Si la misma persona ya estaba aquí, queda la versión del respaldo. También sirve el código de un perfil que alguien te compartió.</p>`}
+async function prep(){if(!hasData()||CODE&&busy)return;busy=1;try{CODE=await encode(snap())}catch(e){CODE=''}busy=0;if(host&&tab==='send')render()}
+function note(s){const n=host&&host.querySelector('#x53note');if(n)n.textContent=s}
+function done(){jset('cc-x53last',new Date().toISOString());try{if(window.PF&&PF.key)localStorage.setItem(PF.key+'-v40bk',JSON.stringify(new Date().toISOString()))}catch(e){}}
+function msg(){const N=names(snap());return`Mi respaldo de Cielo (${fday(new Date())}, ${N.join(', ')}).\nPara traerlo: abre este enlace en el teléfono nuevo. O abre Cielo, toca “Ya uso Cielo: traer mis datos” y pega este mensaje entero.\n\n${LINK}#traer=${CODE}`}
+async function copy(txt){try{await navigator.clipboard.writeText(txt);return true}catch(e){}
+ try{const ta=document.createElement('textarea');ta.value=txt;ta.setAttribute('readonly','');ta.style.cssText='position:fixed;top:0;left:0;opacity:0;font-size:16px';document.body.append(ta);ta.focus();ta.select();ta.setSelectionRange(0,ta.value.length);const r=document.execCommand('copy');ta.remove();return r}catch(e){return false}}
+async function saveFile(){const fn=`cielo-respaldo-${new Date().toISOString().slice(0,10)}.json`;const txt=JSON.stringify({app:'cielo-de-cabecera',v:2,fecha:new Date().toISOString(),data:snap()});
+ try{const f=new File([txt],fn,{type:'application/json'});if(navigator.canShare&&navigator.canShare({files:[f]})&&/Android|iPhone|iPad|iPod/.test(navigator.userAgent)){await navigator.share({files:[f],title:'Respaldo de Cielo'});done();return'Archivo listo. En el teléfono nuevo usa “Elegir archivo”.'}}catch(e){if(e&&e.name==='AbortError')return'Cancelado.'}
+ let dl=null;try{dl=window.claude&&window.claude.use?await window.claude.use('downloads'):null}catch(e){}
+ if(dl){try{await dl.save({filename:fn,data:txt});done();return'Archivo guardado en Descargas.'}catch(e){return'No se guardó el archivo. Usa “Enviar mis datos”.'}}
+ try{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt],{type:'application/json'}));a.download=fn;document.body.append(a);a.click();a.remove();done();return'Archivo guardado en Descargas ('+fn+').'}catch(e){return'Este navegador no deja guardar archivos. Usa “Enviar mis datos”.'}}
+async function onClick(e){const b=e.target.closest('[data-x53]');if(!b){if(e.target===host)close();return}const a=b.dataset.x53;
+ if(a==='close'){close();return}if(a==='send'||a==='get'){tab=a;render();if(a==='send')prep();return}
+ if(a==='share'){const m=msg();let sent=false;try{if(navigator.share){await navigator.share({title:'Mi respaldo de Cielo',text:m});sent=true}}catch(x){if(x&&x.name==='AbortError'){note('Cancelado. Puedes intentarlo de nuevo.');return}}
+  if(sent){done();note('Enviado ✓ En el teléfono nuevo abre ese mensaje y toca el enlace.');return}
+  const c=await copy(m);if(c){done();note('Copiado ✓ Ahora pégalo en WhatsApp (chat contigo), en un correo para ti o en tus Notas.')}else{host.querySelector('.x53more').open=true;note('Este navegador no deja copiar solo. Abajo está el código: mantén el dedo encima, Seleccionar todo y Copiar.')}return}
+ if(a==='copy'){const c=await copy(msg());if(c){done();note('Copiado ✓ Pégalo en WhatsApp (chat contigo), en tu correo o en tus Notas.')}else{host.querySelector('.x53more').open=true;note('Mantén el dedo sobre el código de abajo, Seleccionar todo y Copiar.')}return}
+ if(a==='file'){note('Preparando…');note(await saveFile());return}
+ if(a==='paste'){const ta=host.querySelector('#x53in');try{const t=await navigator.clipboard.readText();if(t){ta.value=t;check();return}}catch(x){}ta.focus();setChk('hint','Mantén el dedo en el recuadro y elige <b>Pegar</b>.');return}
+ if(a==='do'){if(!READ||READ.err)return;try{const n=apply(READ);history.replaceState(null,'',location.pathname+location.search);
+   host.querySelector('.x53body').innerHTML=`<div class="x53done"><span>✓</span><b>¡Listo! Tus datos llegaron</b><p>${READ.one?'Se agregó el perfil de '+esc(READ.one.short||READ.one.name):n+' '+(n===1?'perfil':'perfiles')+' con todo lo que tenían'}. Cielo se abre de nuevo en un momento.</p><button class="btn" data-x53="reload">Abrir Cielo</button></div>`;setTimeout(()=>location.reload(),2200)}
+  catch(x){setChk('bad','No quedó espacio en este navegador para guardar todo. Libera espacio o prueba con otro navegador.')}return}
+ if(a==='reload')location.reload()}
+function setChk(k,h){const c=host&&host.querySelector('#x53chk');if(c){c.className='x53chk '+k;c.innerHTML=h}}
+let tmr=0;function onInput(e){if(e.target.id==='x53in'){clearTimeout(tmr);tmr=setTimeout(check,250)}}
+async function onFile(e){if(e.target.id!=='x53f')return;const f=e.target.files&&e.target.files[0];if(!f)return;try{host.querySelector('#x53in').value=await f.text();check()}catch(x){setChk('bad','No pude leer ese archivo.')}}
+async function check(){const ta=host&&host.querySelector('#x53in'),go=host&&host.querySelector('.x53go');if(!ta)return;const r=await parse(ta.value);READ=r;
+ if(r.err===''){setChk('','');go.disabled=true;return}
+ if(r.err){setChk('bad','⚠️ '+esc(r.err));go.disabled=true;return}
+ if(r.one){setChk('good',`✓ Código de perfil: <b>${esc(r.one.short||r.one.name)}</b> (${esc(r.one.date.split('-').reverse().join('/'))}). Trae solo los datos de nacimiento.`);go.disabled=false;go.textContent='Agregar este perfil';return}
+ const N=names(r.data);setChk('good',`✓ Respaldo${r.fecha?' del '+fday(r.fecha):''}: <b>${N.length} ${N.length===1?'perfil':'perfiles'}</b> (${esc(N.join(', '))}) y ${Object.keys(r.data).length} datos guardados.`);go.disabled=false;go.textContent='Traer mis datos'}
+let PRE='';
+
+/* ---------- puertas de entrada ---------- */
+const MAP={bkOut:'send',bkIn:'get',cxImp:'get',cxBkDl:'send',cxBkIn:'get',x53Btn:null};
+window.addEventListener('click',e=>{const t=e.target;if(!t||!t.closest)return;
+ const el=t.closest('#bkOut,#bkIn,#cxImp,#cxBkDl,#cxBkIn,#x53Btn,[data-v40="bk"],[data-x53open]');if(!el)return;
+ if(el.matches('[data-v40="bk"]')){try{localStorage.setItem(PF.key+'-v40bk',JSON.stringify(new Date().toISOString()));window.v40Cards&&v40Cards()}catch(x){}}
+ e.preventDefault();e.stopPropagation();const s=document.getElementById('sheet');if(s&&!el.closest('#cx'))s.hidden=true;
+ open(el.dataset.x53open||MAP[el.id]||(hasData()?'send':'get'))},true);
+window.X53={open,parse,encode,snap,apply};
+/* botón fijo en la barra de arriba */
+function mountBtn(){const pb=document.getElementById('profBtn');if(!pb||document.getElementById('x53Btn'))return;const b=document.createElement('button');b.className='iconbtn x53hb';b.id='x53Btn';b.setAttribute('aria-label','Respaldo y cambio de teléfono');b.title='Respaldo y cambio de teléfono';
+ b.innerHTML='<svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-9A6 6 0 0 1 18 8.5a4 4 0 0 1-.5 9.5"/><path d="M12 11v9M9 17l3 3 3-3"/></svg>';
+ const old=jget('cc-x53last',null);if(hasData()&&(!old||Date.now()-new Date(old)>30*864e5))b.classList.add('due');pb.before(b)}
+/* enlace con datos: …/cielo/#traer=CIELO2… */
+function fromHash(){const h=decodeURIComponent(location.hash||'');const i=h.indexOf('traer=');if(i<0)return;PRE=h.slice(i+6);open('get')}
+function boot(){mountBtn();fromHash()}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else setTimeout(boot,0);
+window.addEventListener('hashchange',fromHash);
 })();
 
 </script>
