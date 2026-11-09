@@ -10403,3 +10403,104 @@ window.addEventListener('hashchange',fromHash);
 })();
 
 </script>
+<style id="x54css">
+/* ===== v54 · 9 nov 2026: diseño suave en relieve, más compacto y limpio, controles grandes ===== */
+:root{--nm-bg:#1b1730;--nm-hi:rgba(255,255,255,.07);--nm-lo:rgba(0,0,0,.6);--nm-ink:var(--fg);--nm-acc1:#b48cf0;--nm-acc2:#7f9ff0;--nm-r:22px;
+ --nm-out:7px 7px 16px var(--nm-lo),-6px -6px 14px var(--nm-hi);--nm-sm:4px 4px 9px var(--nm-lo),-3px -3px 8px var(--nm-hi);--nm-in:inset 4px 4px 9px var(--nm-lo),inset -4px -4px 9px var(--nm-hi);
+ --nm-acc:linear-gradient(135deg,var(--nm-acc1),var(--nm-acc2))}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--nm-bg:color-mix(in srgb,var(--panel2) 55%,#ebe7f6);--nm-hi:#ffffff;--nm-lo:color-mix(in srgb,var(--brass) 18%,#bdb6d3)}}
+:root[data-theme="light"]{--nm-bg:color-mix(in srgb,var(--panel2) 55%,#ebe7f6);--nm-hi:#ffffff;--nm-lo:color-mix(in srgb,var(--brass) 18%,#bdb6d3)}
+:root[data-theme="dark"]{--nm-bg:color-mix(in srgb,var(--panel) 75%,#141126);--nm-hi:rgba(255,255,255,.07);--nm-lo:rgba(0,0,0,.6)}
+
+/* fondo limpio: sin nubes; estrellas muy suaves solo de noche */
+html,body{background:var(--nm-bg)!important}
+html body #skyBg,html body #skyL,html body #cloudCv,html body .nebula{display:none!important}
+html body #cosmos,html body #v9astro{opacity:.35!important}
+:root[data-theme="light"] #cosmos,:root[data-theme="light"] #v9astro{display:none!important}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) #cosmos,:root:not([data-theme="dark"]) #v9astro{display:none!important}}
+
+/* cabecera */
+html body header.top{background:color-mix(in srgb,var(--nm-bg) 88%,transparent)!important;border:0!important;box-shadow:none!important;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+html body header.top .wrap{gap:8px!important}
+html body .iconbtn{border:0!important;border-radius:50%!important;background:var(--nm-bg)!important;box-shadow:var(--nm-sm)!important;color:var(--nm-ink)}
+html body .iconbtn:active{box-shadow:var(--nm-in)!important}
+
+/* menos aire */
+html body main.wrap{padding-top:6px!important}
+html body .stack{gap:12px!important}
+html body .card{background:var(--nm-bg)!important;border:0!important;border-radius:var(--nm-r)!important;box-shadow:var(--nm-out)!important;padding:14px 14px!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html body .card .card{box-shadow:var(--nm-in)!important}
+html body .eyebrow{letter-spacing:.1em!important}
+
+/* menú de cada sección: baldosas grandes en grilla */
+html body .v9tl{background:var(--nm-bg)!important;border:0!important;border-radius:26px!important;box-shadow:var(--nm-out)!important;padding:12px 12px 8px!important;margin:4px 0 14px!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html body .v9tl .v40head{margin:0 2px 8px!important}
+html body .v9tl .v40head b{font-size:1.35rem!important}
+html body #v9tl .tltools.v40tools{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important;overflow:visible!important;padding:2px 2px 6px!important;flex-wrap:wrap}
+html body .v9tl .v40sep{grid-column:1/-1;margin:4px 2px 0!important;font-size:.68rem!important}
+html body #v9tl .tltools .tlt{flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:6px!important;min-height:84px!important;padding:10px 6px!important;border-radius:20px!important;border:0!important;background:var(--nm-bg)!important;color:var(--nm-ink)!important;box-shadow:var(--nm-sm)!important;font-size:.84rem!important;line-height:1.15;text-align:center;white-space:normal!important;transform:none!important}
+html body #v9tl .tltools .tlt .tli{width:38px!important;height:38px!important;flex:none;border-radius:50%!important;display:grid!important;place-items:center;font-size:1.15rem!important;background:var(--nm-bg)!important;box-shadow:var(--nm-in)!important;color:var(--brass)!important;margin:0!important}
+html body #v9tl .tltools .tlt:active{box-shadow:var(--nm-in)!important}
+html body #v9tl .tltools .tlt.on{background:var(--nm-acc)!important;color:#fff!important;box-shadow:0 10px 22px -10px color-mix(in srgb,var(--nm-acc1) 80%,transparent),var(--nm-sm)!important}
+html body #v9tl .tltools .tlt.on .tli{background:rgba(255,255,255,.22)!important;box-shadow:none!important;color:#fff!important}
+html body #v9tl .tltools .tlt em{display:none!important}
+html body .v9tl .tlctx{margin:4px 2px 2px!important;font-size:.76rem!important}
+
+/* botones grandes tipo píldora */
+html body .btn{min-height:46px;border-radius:999px!important;border:0!important;font-weight:700!important;padding:0 20px!important;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+html body .btn:not(.ghost){background:var(--nm-acc)!important;color:#fff!important;box-shadow:0 10px 20px -10px color-mix(in srgb,var(--nm-acc1) 85%,transparent),var(--nm-sm)!important}
+html body .btn.ghost{background:var(--nm-bg)!important;color:var(--nm-ink)!important;box-shadow:var(--nm-sm)!important}
+html body .btn.ghost.danger{color:var(--bad)!important}
+html body .btn:active{box-shadow:var(--nm-in)!important;transform:translateY(1px)}
+html body .btn.sm{min-height:40px;padding:0 16px!important;font-size:.88rem!important}
+html body .chip{min-height:42px;min-width:42px;border-radius:999px!important;border:0!important;background:var(--nm-bg)!important;color:var(--nm-ink)!important;box-shadow:var(--nm-sm)!important;font-weight:600}
+html body .chip:active,html body .chip[aria-pressed="true"],html body .chip.on{box-shadow:var(--nm-in)!important}
+html body .v18step button,html body .v18step .now{min-height:38px;min-width:38px;border:0!important;border-radius:999px!important;background:var(--nm-bg)!important;box-shadow:var(--nm-sm)!important;color:var(--nm-ink)!important}
+html body button.info{border:0!important;background:var(--nm-bg)!important;box-shadow:var(--nm-sm)!important}
+
+/* campos hundidos */
+html body input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),html body select,html body textarea{border:0!important;border-radius:16px!important;background:var(--nm-bg)!important;box-shadow:var(--nm-in)!important;color:var(--nm-ink)!important;min-height:46px}
+html body textarea{min-height:90px}
+html body input:focus,html body select,html body textarea:focus{outline:2px solid color-mix(in srgb,var(--nm-acc1) 70%,transparent)!important;outline-offset:1px}
+
+/* segmentos y pestañas internas */
+html body .seg,html body .seg2,html body [role=tablist]{background:var(--nm-bg)!important;border:0!important;box-shadow:var(--nm-in)!important;border-radius:999px!important;padding:5px!important}
+html body .seg button,html body .seg2 button,html body [role=tablist]>button,html body [role=tablist]>[role=tab]{border:0!important;border-radius:999px!important;min-height:40px;background:transparent!important;box-shadow:none!important;color:var(--nm-ink)!important}
+html body .seg button[aria-pressed="true"],html body .seg2 button[aria-pressed="true"],html body [role=tablist]>[aria-selected="true"],html body .seg button.on{background:var(--nm-bg)!important;box-shadow:var(--nm-sm)!important;outline:0!important}
+
+/* barra de abajo flotante */
+html body nav.tabs.v9{bottom:calc(10px + env(safe-area-inset-bottom,0px))!important;border-radius:28px!important;border:0!important;background:var(--nm-bg)!important;box-shadow:var(--nm-out)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;padding-bottom:0!important;max-width:560px;margin:0 auto}
+html body nav.tabs.v9 .in{padding:6px 6px!important}
+html body nav.tabs.v9 button{border-radius:20px!important;min-height:56px;padding:6px 0 4px!important;font-size:.7rem!important}
+html body nav.tabs.v9 button[aria-current="page"],html body nav.tabs.v9 button.on,html body nav.tabs.v9 button[aria-selected="true"]{box-shadow:var(--nm-in)!important;background:var(--nm-bg)!important;color:var(--brass)!important}
+html body main.wrap{padding-bottom:calc(110px + env(safe-area-inset-bottom,0px))!important}
+
+/* hojas (Más, ajustes, etc.) */
+html body .sheetbox{background:var(--nm-bg)!important;border:0!important;border-radius:28px 28px 0 0!important;box-shadow:0 -14px 40px -16px var(--nm-lo)!important}
+html body .mlist{background:transparent!important;border:0!important;box-shadow:none!important;display:grid!important;gap:10px!important;padding:0!important;margin:0 0 14px!important;overflow:visible!important}
+html body .mrow{background:var(--nm-bg)!important;border:0!important;border-radius:20px!important;box-shadow:var(--nm-sm)!important;min-height:64px;padding:10px 14px!important;margin:0!important}
+html body .mrow::after,html body .mrow::before{display:none!important}
+html body .mrow:active{box-shadow:var(--nm-in)!important}
+html body .mrow .mic{width:42px!important;height:42px!important;border-radius:50%!important;background:var(--nm-bg)!important;box-shadow:var(--nm-in)!important;color:var(--brass)!important;font-size:1.1rem!important}
+html body .mrow small{font-size:.8rem!important}
+html body details>summary{cursor:pointer}
+
+/* pantallas de bienvenida y perfiles */
+html body .cx{background:var(--nm-bg)!important}
+html body .cx .cxbox{background:var(--nm-bg)!important;box-shadow:var(--nm-out)!important;border:0!important;border-radius:28px!important}
+html body .cxfeat2>div,html body .cxrow,html body .cxsave{background:var(--nm-bg)!important;border:0!important;box-shadow:var(--nm-sm)!important;border-radius:20px!important}
+html body .cxdl{box-shadow:0 12px 24px -12px color-mix(in srgb,var(--nm-acc1) 85%,transparent),var(--nm-sm)!important}
+
+/* respaldo */
+html body .x53box{background:var(--nm-bg)!important}
+html body .x53card,html body .x53big.alt{background:var(--nm-bg)!important;border:0!important;box-shadow:var(--nm-sm)!important}
+html body #x53in,html body #x53code{border:0!important;box-shadow:var(--nm-in)!important;background:var(--nm-bg)!important}
+
+/* tarjetas de aviso más bajas */
+html body .v40c{padding:12px 14px!important;gap:12px!important}
+html body .v40c small{font-size:.82rem!important}
+html body #ctHi{padding:4px 6px!important}
+@media (min-width:700px){html body #v9tl .tltools.v40tools{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+html body #ctHi{background:transparent!important;border:0!important;box-shadow:none!important}
+
+</style>
