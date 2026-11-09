@@ -10436,7 +10436,7 @@ html body .eyebrow{letter-spacing:.1em!important}
 html body .v9tl{background:var(--nm-bg)!important;border:0!important;border-radius:26px!important;box-shadow:var(--nm-out)!important;padding:12px 12px 8px!important;margin:4px 0 14px!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
 html body .v9tl .v40head{margin:0 2px 8px!important}
 html body .v9tl .v40head b{font-size:1.35rem!important}
-html body #v9tl .tltools.v40tools{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px!important;overflow:visible!important;padding:2px 2px 6px!important;flex-wrap:wrap}
+html body #v9tl .tltools.v40tools{display:flex!important;flex-wrap:wrap!important;gap:10px!important;overflow:visible!important;padding:2px 2px 6px!important;flex-wrap:wrap}
 html body .v9tl .v40sep{grid-column:1/-1;margin:4px 2px 0!important;font-size:.68rem!important}
 html body #v9tl .tltools .tlt{flex-direction:column!important;justify-content:center!important;align-items:center!important;gap:6px!important;min-height:84px!important;padding:10px 6px!important;border-radius:20px!important;border:0!important;background:var(--nm-bg)!important;color:var(--nm-ink)!important;box-shadow:var(--nm-sm)!important;font-size:.84rem!important;line-height:1.15;text-align:center;white-space:normal!important;transform:none!important}
 html body #v9tl .tltools .tlt .tli{width:38px!important;height:38px!important;flex:none;border-radius:50%!important;display:grid!important;place-items:center;font-size:1.15rem!important;background:var(--nm-bg)!important;box-shadow:var(--nm-in)!important;color:var(--brass)!important;margin:0!important}
@@ -10500,7 +10500,9 @@ html body #x53in,html body #x53code{border:0!important;box-shadow:var(--nm-in)!i
 html body .v40c{padding:12px 14px!important;gap:12px!important}
 html body .v40c small{font-size:.82rem!important}
 html body #ctHi{padding:4px 6px!important}
-@media (min-width:700px){html body #v9tl .tltools.v40tools{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}}
+html body #v9tl .tltools.v40tools>.tlt{flex:1 1 calc(33.333% - 10px)!important;min-width:0}
+html body #v9tl .tltools.v40tools>.v40sep{flex:1 0 100%}
+@media (min-width:700px){html body #v9tl .tltools.v40tools>.tlt{flex-basis:140px!important}}
 html body #ctHi{background:transparent!important;border:0!important;box-shadow:none!important}
 
 </style>
