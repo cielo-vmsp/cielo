@@ -2835,6 +2835,24 @@ html.x53on body{overflow:hidden}
 .x53done{text-align:center;padding:20px 6px}.x53done span{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 10px;border-radius:50%;font-size:2rem;color:#fff;background:#3fae6a}.x53done b{display:block;font-size:1.2rem}.x53done p{color:var(--mut)}
 .x53warn{border-color:color-mix(in srgb,#e2a33b 55%,transparent)}
 .iconbtn.x53hb{position:relative}.iconbtn.x53hb.due::after{content:"";position:absolute;top:5px;right:5px;width:8px;height:8px;border-radius:50%;background:#e2a33b;box-shadow:0 0 0 2px var(--bg)}
+/* v53 · paso a paso simple */
+#x53 .x53hd{align-items:center}#x53 .x53hd b{font-size:1.15rem}
+#x53 .x53seg button{padding:9px 10px;font-weight:600;font-size:.92rem}
+.x53who{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:2px 2px 12px;font-size:.88rem;color:var(--mut)}
+.x53who em{font-style:normal;font-size:.74rem;font-weight:600;padding:2px 9px;border-radius:99px;background:var(--panel2);white-space:nowrap}.x53who em.ok{color:#1f8a52;background:color-mix(in srgb,#2fb36a 15%,transparent)}
+.x53path{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.x53st{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:8px 0;position:relative}
+.x53st:not(:last-child)::after{content:"";position:absolute;left:14px;top:40px;bottom:-6px;width:2px;background:var(--line)}
+.x53st>i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-size:.85rem;background:var(--panel2);color:var(--mut);border:1px solid var(--line)}
+.x53st.now>i{background:var(--brass);color:var(--onbrass);border-color:transparent}
+.x53st.done>i{background:#2fb36a;color:#fff;border-color:transparent}
+.x53st>div>b{display:block;font-size:.98rem;line-height:30px}.x53st:not(.now)>div>b{color:var(--mut);font-weight:600}.x53st p b{color:var(--fg)}
+.x53st p{margin:0 0 8px;font-size:.85rem;color:var(--mut);line-height:1.4}
+.x53st .x53big{margin:4px 0 6px;padding:10px 12px}.x53st .x53big>span:first-child{width:34px;height:34px}
+.x53st textarea{width:100%;box-sizing:border-box;margin:2px 0 4px;font-size:16px}
+.x53st .x53go{width:100%;margin-top:4px}
+.x53link{all:unset;cursor:pointer;font-size:.86rem;font-weight:600;color:var(--brass);padding:6px 2px}
+#x53 .x53more{margin-top:10px}#x53 .x53more label,#x53 .x53more .btn{margin:8px 0}
 
 </style>
 
@@ -7496,7 +7514,9 @@ const V17_SC=[['clasico','Clásico','Nubes y constelaciones','linear-gradient(16
  ['galaxia','Galaxia','La Vía Láctea en el desierto','linear-gradient(135deg,#03020a 0%,#2a1a4a 38%,#f4d8b0 50%,#3a2a5a 62%,#05030d 100%)'],
  ['nebulosa','Nebulosa','Nubes de gas y estrellas que nacen','radial-gradient(circle at 30% 40%,#ff6fb5,transparent 45%),radial-gradient(circle at 70% 60%,#4fd1e8,transparent 45%),linear-gradient(#0a0518,#1a0b2e)'],
  ['lluvia','Lluvia de estrellas','Estrellas fugaces sobre Atacama','linear-gradient(180deg,#01030a,#16204a 70%,#3b2a4a 85%,#05060c 86%)'],
+ ['tierra','Amanecer orbital','La Tierra vista desde una estación','#03081a'],['saturno','Anillos','Un planeta gigante con sus anillos','#0b0920'],['lunamar','Luna sobre el mar','Un camino de luz en el agua','#0b1636'],['patagonia','Torres del sur','Montañas de granito reflejadas en el lago','#2c2b55'],['campo','Campo profundo','Miles de galaxias lejanas','#03030c'],
  ['eclipse','Eclipse','La corona del Sol detrás de la Luna','radial-gradient(circle,#05030a 26%,#ffd27a 29%,#ff8a5c 34%,transparent 52%),#05030a']];
+const V17SEED={aurora:7,galaxia:11,nebulosa:23,lluvia:31,eclipse:43,tierra:5,saturno:17,lunamar:29,patagonia:13,campo:37};
 const V17=(()=>{let cv,cx,base,W,H,DPR,raf,last=0,scene='clasico',dk=true,tw=[],met=[],nextM=0,strips={},seed=1;const red=matchMedia('(prefers-reduced-motion: reduce)').matches;
  const R=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646};
  const isDark=()=>getComputedStyle(document.documentElement).colorScheme.includes('dark');
@@ -7504,7 +7524,8 @@ const V17=(()=>{let cv,cx,base,W,H,DPR,raf,last=0,scene='clasico',dk=true,tw=[],
  function glow(c,x,y,r,col,a){const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,col);g.addColorStop(1,'rgba(0,0,0,0)');c.globalAlpha=a;c.fillStyle=g;c.fillRect(x-r,y-r,r*2,r*2);c.globalAlpha=1}
  function stars(c,n,col,mx=1.3,band=null){for(let i=0;i<n;i++){let x=R()*W,y=R()*H;if(band){const u=R(),off=(R()+R()+R()-1.5)*band.w;x=band.x0+(band.x1-band.x0)*u+off*band.nx;y=band.y0+(band.y1-band.y0)*u+off*band.ny}
   const s=Math.pow(R(),3)*mx+.25;c.globalAlpha=.35+R()*.65;c.fillStyle=col;c.beginPath();c.arc(x,y,s,0,6.3);c.fill()}c.globalAlpha=1}
- function bright(c,x,y,s,col){glow(c,x,y,s*7,col,.55);c.globalAlpha=.7;c.strokeStyle=col;c.lineWidth=.6;c.beginPath();c.moveTo(x-s*9,y);c.lineTo(x+s*9,y);c.moveTo(x,y-s*9);c.lineTo(x,y+s*9);c.stroke();c.globalAlpha=1;c.fillStyle='#fff';c.beginPath();c.arc(x,y,s*.9,0,6.3);c.fill()}
+ let BK=1;
+ function bright(c,x,y,s,col){s*=BK;glow(c,x,y,s*7,col,.55);c.globalAlpha=.7;c.strokeStyle=col;c.lineWidth=.6;c.beginPath();c.moveTo(x-s*9,y);c.lineTo(x+s*9,y);c.moveTo(x,y-s*9);c.lineTo(x,y+s*9);c.stroke();c.globalAlpha=1;c.fillStyle='#fff';c.beginPath();c.arc(x,y,s*.9,0,6.3);c.fill()}
  function ridge(c,yb,amp,col,rough=.55){let pts=[[0,yb],[W,yb]];for(let d=0;d<8;d++){const np=[];for(let i=0;i<pts.length-1;i++){const[a,b]=[pts[i],pts[i+1]];np.push(a,[(a[0]+b[0])/2,(a[1]+b[1])/2+(R()-.5)*amp*Math.pow(rough,d)])}np.push(pts[pts.length-1]);pts=np}
   c.fillStyle=col;c.beginPath();c.moveTo(0,H);pts.forEach(p=>c.lineTo(p[0],p[1]));c.lineTo(W,H);c.closePath();c.fill()}
  function strip(key,cols){if(strips[key])return strips[key];const s=document.createElement('canvas');s.width=1;s.height=256;const g=s.getContext('2d'),gr=g.createLinearGradient(0,0,0,256);cols.forEach(([o,c])=>gr.addColorStop(o,c));g.fillStyle=gr;g.fillRect(0,0,1,256);return strips[key]=s}
@@ -7536,7 +7557,56 @@ const V17=(()=>{let cv,cx,base,W,H,DPR,raf,last=0,scene='clasico',dk=true,tw=[],
   eclipse(c){if(dk)grad(c,['#000004','#06030c','#0b0613']);else grad(c,['#f1ecfa','#f8f1f3','#fdf4ea']);
    stars(c,Math.round(W*H/(dk?1600:6000)),dk?'#fff':'#9a86d0',1.1);const x=W*.5,y=H*.34,r=Math.min(W,H)*.16;
    c.globalCompositeOperation=dk?'lighter':'source-over';glow(c,x,y,r*4.2,dk?'#ff9a5c':'#ffb98a',dk?.25:.35);glow(c,x,y,r*2.1,dk?'#ffe2a8':'#ffd59a',dk?.55:.6);c.globalCompositeOperation='source-over';
-   c.fillStyle=dk?'#030106':'#2a1d3d';c.beginPath();c.arc(x,y,r,0,6.3);c.fill();c.strokeStyle=dk?'rgba(255,235,190,.9)':'rgba(255,200,120,.95)';c.lineWidth=1.6;c.stroke()}};
+   c.fillStyle=dk?'#030106':'#2a1d3d';c.beginPath();c.arc(x,y,r,0,6.3);c.fill();c.strokeStyle=dk?'rgba(255,235,190,.9)':'rgba(255,200,120,.95)';c.lineWidth=1.6;c.stroke()},
+  tierra(c){const L=!dk;if(dk)grad(c,['#000003','#01020a','#040817']);else grad(c,['#dfe3f6','#ece8f8','#f6f1fa']);
+   stars(c,Math.round(W*H/(dk?600:3200)),dk?'#fff':'#8d82c4',1.2);if(dk)for(let i=0;i<5;i++)bright(c,R()*W,R()*H*.5,.8+R()*.8,'#d6e4ff');
+   const r=Math.max(W,H)*1.05,x=W*.42,y=H*.74+r;
+   c.save();c.beginPath();c.arc(x,y,r,0,6.3);c.clip();
+   let g=c.createRadialGradient(x+r*.25,y-r*.9,r*.05,x,y,r);g.addColorStop(0,L?'#8fc3f0':'#2a6cb0');g.addColorStop(.12,L?'#4f8fd0':'#123d70');g.addColorStop(.3,L?'#2c63a8':'#061a35');g.addColorStop(1,L?'#173a6e':'#01060f');c.fillStyle=g;c.fillRect(0,0,W,H);
+   for(let i=0;i<70;i++){const a=-Math.PI/2+(R()-.5)*1.3,d=r*(1-.02-Math.pow(R(),2)*.2),cx0=x+Math.cos(a)*d,cy0=y+Math.sin(a)*d;c.save();c.translate(cx0,cy0);c.rotate(a+Math.PI/2);c.scale(1,.28);glow(c,0,0,W*(.03+R()*.09),'#ffffff',(L?.32:.16)*(.4+R()*.6));c.restore()}
+   if(dk)for(let i=0;i<260;i++){const a=-Math.PI/2+(R()-.5)*1.1,d=r*(1-.03-Math.pow(R(),1.4)*.22),px=x+Math.cos(a)*d,py=y+Math.sin(a)*d;if(px<W*.62){c.globalAlpha=.25+R()*.6;c.fillStyle=R()<.7?'#ffc56b':'#ffe9b0';c.fillRect(px,py,R()*1.3+.4,R()*1.3+.4)}}
+   c.globalAlpha=1;c.restore();
+   for(let k=0;k<14;k++){c.beginPath();c.arc(x,y,r+k*1.6,Math.PI*1.05,Math.PI*1.95);c.strokeStyle=`rgba(${L?'90,150,235':'90,175,255'},${(.5-k*.034).toFixed(3)})`;c.lineWidth=2.2;c.stroke()}
+   c.beginPath();c.arc(x,y,r+.8,Math.PI*1.05,Math.PI*1.95);c.strokeStyle=L?'rgba(255,255,255,.95)':'rgba(190,230,255,.9)';c.lineWidth=1.1;c.stroke();
+   const sa=-Math.PI/2+.42,sx=x+Math.cos(sa)*r,sy=y+Math.sin(sa)*r;c.globalCompositeOperation=dk?'lighter':'source-over';glow(c,sx,sy,W*.55,'#ff9b54',dk?.35:.4);glow(c,sx,sy,W*.18,'#fff1d0',.9);c.globalCompositeOperation='source-over';bright(c,sx,sy,2.6,'#fff4dc')},
+  saturno(c){if(dk)grad(c,['#020107','#07051a','#0d0a24']);else grad(c,['#efe8f8','#f6eff6','#fbf2e9']);
+   stars(c,Math.round(W*H/(dk?700:3500)),dk?'#fff':'#8d7cc4',1.2);if(dk)for(let i=0;i<6;i++)bright(c,R()*W,R()*H,.8+R(),'#e6eaff');
+   const r=Math.min(W,H)*.2,x=W*.7,y=H*.27,tilt=-.38,rx=r*2.25,ry=rx*.26;
+   const ring=(a0,a1)=>{c.save();c.translate(x,y);c.rotate(tilt);for(let k=0;k<26;k++){const f=1.18+k*.04,gap=k>=15&&k<=16;if(gap)continue;c.beginPath();c.ellipse(0,0,r*f*rx/r/1.95,r*f*ry/r/1.95,0,a0,a1);
+     const tone=k<6?'210,190,160':k<15?'236,214,170':'190,170,140';c.strokeStyle=`rgba(${tone},${(dk?.55:.7)*(.55+.45*Math.sin(k*1.9))})`;c.lineWidth=r*.045;c.stroke()}c.restore()};
+   ring(Math.PI,Math.PI*2);
+   c.save();c.beginPath();c.arc(x,y,r,0,6.3);c.clip();c.translate(x,y);c.rotate(tilt);
+   const bands=['#e9d2a5','#d9b47c','#f0dcb4','#c99d68','#e6c99a','#d2a874','#efd9ae','#b98c5a','#e2c391'];const bh=r*2/bands.length;bands.forEach((b,i)=>{c.fillStyle=b;c.fillRect(-r,-r+i*bh,r*2,bh+1)});
+   for(let i=0;i<40;i++){c.globalAlpha=.08;c.fillStyle=R()<.5?'#fff':'#7a5530';c.fillRect(-r,-r+R()*r*2,r*2,R()*r*.06)}c.globalAlpha=1;c.rotate(-tilt);
+   let g=c.createRadialGradient(r*.45,-r*.4,r*.1,0,0,r*1.25);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(.55,'rgba(0,0,0,.15)');g.addColorStop(1,dk?'rgba(2,1,8,.96)':'rgba(40,25,60,.75)');c.fillStyle=g;c.fillRect(-r,-r,r*2,r*2);c.restore();
+   ring(0,Math.PI);glow(c,x,y,r*1.6,'#ffd9a0',dk?.08:.12)},
+  lunamar(c){const L=!dk,hz=H*.6;if(dk)grad(c,['#02030b','#081333','#14244e','#22325e'],0,hz);else grad(c,['#cfd3ef','#e3dcf2','#f6e3e6','#fde9de'],0,hz);
+   stars(c,Math.round(W*H/(dk?900:5000)),dk?'#fff':'#8d7cc4',1.1);
+   const mr=Math.min(W,H)*.085,mx=W*.62,my=H*.2;glow(c,mx,my,mr*7,dk?'#c9d8ff':'#ffffff',dk?.28:.6);glow(c,mx,my,mr*2.4,'#fffbea',dk?.5:.7);
+   c.save();c.beginPath();c.arc(mx,my,mr,0,6.3);c.clip();let g=c.createRadialGradient(mx-mr*.3,my-mr*.3,mr*.1,mx,my,mr);g.addColorStop(0,'#fffef6');g.addColorStop(1,'#ddd7c4');c.fillStyle=g;c.fillRect(mx-mr,my-mr,mr*2,mr*2);
+   for(let i=0;i<7;i++)glow(c,mx+(R()-.5)*mr*1.2,my+(R()-.5)*mr*1.2,mr*(.25+R()*.35),'#9b9686',.32);for(let i=0;i<22;i++){c.globalAlpha=.25;c.strokeStyle='#a8a291';c.lineWidth=.6;c.beginPath();c.arc(mx+(R()-.5)*mr*1.7,my+(R()-.5)*mr*1.7,R()*mr*.12+.6,0,6.3);c.stroke()}c.globalAlpha=1;c.restore();
+   ridge(c,hz-1,H*.03,dk?'#0b1430':'#a9a2cc',.45);
+   const sg=c.createLinearGradient(0,hz,0,H);sg.addColorStop(0,dk?'#0d1a3c':'#c6c3e3');sg.addColorStop(1,dk?'#01040d':'#8f8ab8');c.fillStyle=sg;c.fillRect(0,hz,W,H-hz);
+   for(let i=0;i<520;i++){const t=Math.pow(R(),1.2),yy=hz+3+t*(H-hz),spread=W*(.04+t*.22),xx=mx+(R()+R()-1)*spread,w=2+R()*(8+t*26);c.globalAlpha=(dk?.75:.85)*(1-Math.abs(xx-mx)/spread/1.1)*(.4+R()*.6);c.fillStyle=dk?'#fff7e0':'#ffffff';c.fillRect(xx-w/2,yy,w,.9+t*1.4)}
+   c.globalAlpha=1;for(let i=0;i<70;i++){c.globalAlpha=.12;c.fillStyle=dk?'#9fb6ff':'#ffffff';const yy=hz+R()*(H-hz);c.fillRect(R()*W,yy,10+R()*60,.8)}c.globalAlpha=1},
+  patagonia(c){const L=!dk,hz=H*.6;if(dk)grad(c,['#03050f','#0d1433','#2c2b55','#7a4766','#e08a6c'],0,hz);else grad(c,['#c9d6f2','#dcd6f2','#f2d6e0','#fbd3bf','#ffd9b8'],0,hz);
+   stars(c,Math.round(W*H/(dk?1300:6000)),dk?'#fff':'#8d7cc4',1.1);
+   const peaks=[[0,.47],[.08,.42],[.14,.44],[.22,.3],[.25,.16],[.28,.3],[.33,.22],[.36,.1],[.395,.24],[.43,.2],[.46,.07],[.5,.24],[.56,.32],[.62,.28],[.7,.36],[.8,.33],[.9,.4],[1,.38]];
+   const path=(flip)=>{c.beginPath();c.moveTo(0,hz);peaks.forEach(([px,py])=>{const yy=hz-(hz-H*py)*(1-.0)*.9;c.lineTo(px*W,flip?hz+(hz-yy)*.75:yy)});c.lineTo(W,hz);c.closePath()};
+   path(false);let g=c.createLinearGradient(0,H*.07,0,hz);g.addColorStop(0,dk?'#f3a08a':'#ffd7c2');g.addColorStop(.12,dk?'#3a2a44':'#9c8ab8');g.addColorStop(1,dk?'#0b0d1c':'#6f6898');c.fillStyle=g;c.fill();
+   for(let i=0;i<60;i++){c.globalAlpha=.10;c.strokeStyle=dk?'#000':'#4a4470';c.lineWidth=.8;const xx=W*(.2+R()*.35);c.beginPath();c.moveTo(xx,hz-H*(.12+R()*.3));c.lineTo(xx+(R()-.5)*8,hz);c.stroke()}c.globalAlpha=1;
+   ridge(c,hz-H*.02,H*.03,dk?'#070912':'#5d5788',.5);
+   const lg=c.createLinearGradient(0,hz,0,H);lg.addColorStop(0,dk?'#d98a73':'#ffd2b8');lg.addColorStop(.25,dk?'#3c2d4e':'#c5b9de');lg.addColorStop(1,dk?'#03050f':'#9fa6d6');c.fillStyle=lg;c.fillRect(0,hz,W,H-hz);
+   c.globalAlpha=.55;path(true);c.fillStyle=dk?'#0b0d1c':'#6f6898';c.fill();c.globalAlpha=1;
+   for(let i=0;i<120;i++){const yy=hz+Math.pow(R(),1.5)*(H-hz);c.globalAlpha=.10+R()*.12;c.fillStyle=dk?'#ffd6c4':'#ffffff';c.fillRect(R()*W,yy,12+R()*70,.8)}c.globalAlpha=1;
+   ridge(c,H*.94,H*.05,dk?'#020309':'#4c4677',.6)},
+  campo(c){if(dk)grad(c,['#010104','#03030c','#06051a']);else grad(c,['#f3f0fa','#eef0fb','#f8f1f6']);
+   const pal=dk?[['#ffe2b0','#ff9a5c'],['#cfe0ff','#6f8dff'],['#ffd0e6','#c85fa8'],['#fff','#9fb8ff']]:[['#e8a05c','#c9783c'],['#6f8dd6','#3d5cb8'],['#c46fb0','#8a3f80'],['#8c7bc6','#5a4a9c']];
+   for(let i=0;i<190;i++){const x=R()*W,y=R()*H,s=Math.pow(R(),2.6)*W*.05+1.4,p=pal[Math.floor(R()*pal.length)];c.save();c.translate(x,y);c.rotate(R()*3.14);c.scale(1,.3+R()*.7);
+    c.globalCompositeOperation=dk?'lighter':'source-over';glow(c,0,0,s*1.6,p[1],dk?.35:.3);glow(c,0,0,s*.55,p[0],dk?.9:.7);c.restore()}
+   for(let k=0;k<3;k++){const x=W*(.2+R()*.6),y=H*(.15+R()*.7),s=Math.min(W,H)*(.05+R()*.05);c.save();c.translate(x,y);c.rotate(R()*3);c.scale(1,.45);c.globalCompositeOperation=dk?'lighter':'source-over';
+    for(let i=0;i<160;i++){const t=i/160,a=t*9.5,rr=s*t;glow(c,Math.cos(a)*rr+(R()-.5)*s*.15,Math.sin(a)*rr+(R()-.5)*s*.15,s*.18,dk?'#a9c4ff':'#6f8dd6',.12*(1-t))}glow(c,0,0,s*.35,dk?'#fff0d0':'#d9944f',.9);c.restore()}
+   c.globalCompositeOperation='source-over';stars(c,Math.round(W*H/(dk?2500:8000)),dk?'#fff':'#8d7cc4',1);for(let i=0;i<6;i++)bright(c,R()*W,R()*H,1+R()*1.2,dk?'#ffffff':'#8d7cc4')}};
  /* ---- capa animada ---- */
  let au,ax;
  function aurora(t){const q=4;if(!au||au.width!==Math.ceil(W/q)||au.height!==Math.ceil(H/q)){au=document.createElement('canvas');au.width=Math.ceil(W/q);au.height=Math.ceil(H/q);ax=au.getContext('2d')}
@@ -7555,7 +7625,7 @@ const V17=(()=>{let cv,cx,base,W,H,DPR,raf,last=0,scene='clasico',dk=true,tw=[],
    const g=cx.createLinearGradient(hx,hy,tx,ty);g.addColorStop(0,dk?'rgba(255,255,255,.95)':'rgba(120,90,200,.9)');g.addColorStop(1,'rgba(255,255,255,0)');cx.globalAlpha=Math.sin(e*Math.PI);cx.strokeStyle=g;cx.lineWidth=1.6;cx.beginPath();cx.moveTo(hx,hy);cx.lineTo(tx,ty);cx.stroke()}cx.globalAlpha=1}
  function twinkle(t){for(const s of tw){cx.globalAlpha=.25+.75*Math.abs(Math.sin(t/s.p+s.o));cx.fillStyle=dk?'#fff':'#8c78cf';cx.beginPath();cx.arc(s.x,s.y,s.r,0,6.3);cx.fill()}cx.globalAlpha=1}
  function build(){if(!cv)return;DPR=Math.min(3,devicePixelRatio||1);W=innerWidth;H=innerHeight;dk=isDark();cv.width=Math.round(W*DPR);cv.height=Math.round(H*DPR);cx.setTransform(DPR,0,0,DPR,0,0);
-  base=document.createElement('canvas');base.width=cv.width;base.height=cv.height;const b=base.getContext('2d');b.setTransform(DPR,0,0,DPR,0,0);seed=({aurora:7,galaxia:11,nebulosa:23,lluvia:31,eclipse:43})[scene]||5;
+  base=document.createElement('canvas');base.width=cv.width;base.height=cv.height;const b=base.getContext('2d');b.setTransform(DPR,0,0,DPR,0,0);seed=V17SEED[scene]||5;
   (BASE[scene]||BASE.aurora)(b);tw=Array.from({length:Math.min(90,Math.round(W*H/7000))},()=>({x:Math.random()*W,y:Math.random()*H*(scene==='aurora'||scene==='lluvia'?.7:1),r:.5+Math.random()*1.1,p:700+Math.random()*1800,o:Math.random()*6}));draw(performance.now())}
  function draw(t){cx.setTransform(1,0,0,1,0,0);cx.drawImage(base,0,0);cx.setTransform(DPR,0,0,DPR,0,0);twinkle(t);
   if(scene==='aurora')aurora(t);if(scene==='eclipse')corona(t);if(!red)meteors(t,scene==='lluvia'?[500,1300]:[7000,9000])}
@@ -7567,7 +7637,10 @@ const V17=(()=>{let cv,cx,base,W,H,DPR,raf,last=0,scene='clasico',dk=true,tw=[],
    new MutationObserver(()=>{if(scene!=='clasico'&&isDark()!==dk)build()}).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme','data-skin','style']});
    matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>scene!=='clasico'&&build())}
   cv.hidden=false;build();if(!red)raf=requestAnimationFrame(frame)}
- return{set}})();
+ function thumb(k,tc,dark){if(!BASE[k])return;const sv=[W,H,dk,cx,seed,au];const q=2;W=tc.width/q;H=tc.height/q;dk=dark;const t=tc.getContext('2d');t.setTransform(q,0,0,q,0,0);seed=V17SEED[k]||5;
+  BK=.4;try{cx=t;BASE[k](t);if(k==='aurora'){au=null;aurora(4200)}if(k==='eclipse')corona(0)}catch(e){}BK=1;[W,H,dk,cx,seed]=sv;au=null}
+ return{set,thumb,isDark}})();
+window.V17=V17;
 function v17ScnHTML(){const k=store.get(V17_KEY,'clasico');return `<h3 class="seth">Fondo <small class="muted">escenas de cine, se adaptan a claro y oscuro</small></h3><div class="v17scn">${V17_SC.map(([id,n,d,g])=>`<button data-v17scn="${id}" aria-pressed="${id===k}"><i style="background:${g}"></i><b>${n}</b><small>${d}</small></button>`).join('')}</div>`}
 document.addEventListener('click',e=>{const t=e.target.closest('[data-v17scn]');if(!t)return;store.set(V17_KEY,t.dataset.v17scn);V17.set(t.dataset.v17scn);FX.play('glass');document.querySelectorAll('[data-v17scn]').forEach(b=>b.setAttribute('aria-pressed',b===t))});
 (function v17Init(){const go=()=>V17.set(store.get(V17_KEY,'clasico'));document.readyState==='loading'?document.addEventListener('DOMContentLoaded',go):setTimeout(go,0)})();
@@ -10439,29 +10512,32 @@ function apply(r){
 /* ---------- pantalla ---------- */
 let host=null,tab='send',CODE='',READ=null,busy=0;
 function close(){if(host){host.remove();host=null}document.documentElement.classList.remove('x53on')}
-function open(which){tab=which||'send';READ=null;CODE='';if(!host){host=document.createElement('div');host.id='x53';host.setAttribute('role','dialog');host.setAttribute('aria-modal','true');host.setAttribute('aria-label','Respaldo y cambio de teléfono');document.body.append(host);host.addEventListener('click',onClick);host.addEventListener('input',onInput);host.addEventListener('change',onFile)}
+function open(which){tab=which||'send';STEP=0;READ=null;CODE='';if(!host){host=document.createElement('div');host.id='x53';host.setAttribute('role','dialog');host.setAttribute('aria-modal','true');host.setAttribute('aria-label','Respaldo y cambio de teléfono');document.body.append(host);host.addEventListener('click',onClick);host.addEventListener('input',onInput);host.addEventListener('change',onFile)}
  document.documentElement.classList.add('x53on');render();if(tab==='send')prep()}
 function hasData(){return jget('cc-profiles',[]).length>0}
+let STEP=0;
 function render(){const send=tab==='send';
- host.innerHTML=`<div class="x53box"><header class="x53hd"><span class="x53ic">⇄</span><div><b>Respaldo y cambio de teléfono</b><small>Tus datos viven solo en tu teléfono. Aquí los guardas o los pasas a otro.</small></div><button class="x53x" data-x53="close" aria-label="Cerrar">×</button></header>
- <div class="x53seg" role="tablist"><button role="tab" data-x53="send" aria-selected="${send}"><b>📤 Enviar mis datos</b><small>Desde este teléfono</small></button><button role="tab" data-x53="get" aria-selected="${!send}"><b>📥 Traer mis datos</b><small>Al teléfono nuevo</small></button></div>
+ host.innerHTML=`<div class="x53box"><header class="x53hd"><div><b>${send?'Guardar mis datos':'Traer mis datos'}</b><small>${send?'3 pasos, menos de un minuto':'Pega el respaldo y listo'}</small></div><button class="x53x" data-x53="close" aria-label="Cerrar">×</button></header>
+ <div class="x53seg" role="tablist"><button role="tab" data-x53="send" aria-selected="${send}">Guardar</button><button role="tab" data-x53="get" aria-selected="${!send}">Traer</button></div>
  <div class="x53body">${send?sendHTML():getHTML()}</div></div>`;
  if(!send){const ta=host.querySelector('#x53in');if(ta&&PRE){ta.value=PRE;PRE='';check()}}}
-function sendHTML(){if(!hasData())return`<div class="x53card x53warn"><b>Todavía no hay nada que enviar</b><p>En este teléfono aún no tienes un perfil. Si tus datos están en otro teléfono, toca <b>📥 Traer mis datos</b>.</p></div>`;
- const D=snap(),N=names(D),last=jget('cc-x53last',null);
- return`<div class="x53card x53sum"><div><small>En este teléfono</small><b>${N.length} ${N.length===1?'perfil':'perfiles'}: ${esc(N.join(', '))}</b><span>Con tu diario, tiradas, rituales, “Mi vida”, agenda y ajustes.</span></div><em class="${last?'ok':'no'}">${last?'Último respaldo: '+fday(last):'Aún no haces un respaldo'}</em></div>
- <ol class="x53steps"><li><b>Toca “Enviar mis datos”</b> y elige dónde mandarlo: <b>WhatsApp a ti mismo</b>, tu correo o tus Notas.</li><li>En el teléfono nuevo abre Cielo en <b>cielo-vmsp.github.io/cielo</b>. Si te lo mandaste por WhatsApp o correo, basta con tocar el enlace del mensaje.</li><li>Si Cielo no se abre solo con tus datos, toca <b>“Ya uso Cielo: traer mis datos”</b>, pega el mensaje entero y toca <b>Traer mis datos</b>. Listo.</li></ol>
- <button class="x53big" data-x53="share" ${CODE?'':'disabled'}><span>📤</span><span><b>Enviar mis datos</b><small id="x53sz">${CODE?'Código listo · '+kb(CODE.length):'Preparando tu código…'}</small></span></button>
- <div class="x53row"><button class="btn ghost sm" data-x53="copy" ${CODE?'':'disabled'}>📋 Copiar código</button><button class="btn ghost sm" data-x53="file" ${CODE?'':'disabled'}>💾 Guardar archivo</button></div>
+const stp=(n,cur,t,body)=>`<li class="x53st ${n<cur?'done':n===cur?'now':''}"><i>${n<cur?'✓':n}</i><div><b>${t}</b>${n===cur&&body?body:''}</div></li>`;
+function sendHTML(){if(!hasData())return`<div class="x53card x53warn"><b>Aún no hay nada que guardar</b><p>Si tus datos están en otro teléfono, toca <b>Traer</b>.</p></div>`;
+ const N=names(snap()),last=jget('cc-x53last',null),c=STEP;
+ return`<p class="x53who">${esc(N.join(' · '))}<em class="${last?'ok':'no'}">${last?'Último: '+fday(last):'Sin respaldo'}</em></p>
+ <ol class="x53path">
+ ${stp(1,c+1,'Copia tu respaldo',`<button class="x53big" data-x53="copy" ${CODE?'':'disabled'}><span>📋</span><span><b>Copiar</b><small id="x53sz">${CODE?'Listo · '+kb(CODE.length):'Preparando…'}</small></span></button>`)}
+ ${stp(2,c+1,'Pégalo en un chat contigo',`<p>WhatsApp, correo o Notas. Mantén el dedo y elige <b>Pegar</b>.</p><button class="x53big alt" data-x53="share" ${CODE?'':'disabled'}><span>↗</span><span><b>Abrir para enviar</b><small>O ábrelo tú y pega</small></span></button><button class="x53link" data-x53="next">Ya lo pegué</button>`)}
+ ${stp(3,c+1,'En el teléfono nuevo, toca el enlace',`<p>Cielo se abre con todo. Si no, toca <b>Traer</b> y pega el mensaje.</p><button class="x53link" data-x53="close">Terminar</button>`)}
+ </ol>
  <p class="x53note" id="x53note" aria-live="polite"></p>
- <details class="x53more"><summary>Ver el código</summary><textarea id="x53code" rows="4" readonly>${esc(CODE)}</textarea><p class="x53tiny">Si no se copia con el botón: mantén el dedo sobre el código, elige <b>Seleccionar todo</b> y luego <b>Copiar</b>.</p></details>
- <p class="x53tiny">🔒 El código lleva tus datos personales: mándatelo solo a ti y no lo publiques. Nada pasa por un servidor: el enlace guarda tus datos después del signo #, y esa parte nunca sale de tu teléfono. Hazlo una vez al mes o antes de cambiar de teléfono o de navegador.</p>`}
-function getHTML(){return`<ol class="x53steps"><li>En tu otro teléfono toca <b>📤 Enviar mis datos</b> (en Cielo: Más → Respaldo y cambio de teléfono) y mándatelo.</li><li>Aquí, abre ese mensaje, mantén el dedo encima y elige <b>Copiar</b>. Copia el mensaje entero: Cielo encuentra el código solo.</li><li>Toca <b>Pegar</b> y luego <b>Traer mis datos</b>.</li></ol>
- <div class="x53row"><button class="x53big sm" data-x53="paste"><span>📋</span><span><b>Pegar</b><small>Lo que copiaste</small></span></button><label class="x53big sm alt"><span>📁</span><span><b>Elegir archivo</b><small>El .json que guardaste</small></span><input type="file" id="x53f" hidden></label></div>
- <textarea id="x53in" rows="4" placeholder="O mantén el dedo aquí y elige Pegar"></textarea>
- <div id="x53chk" class="x53chk" aria-live="polite"></div>
- <button class="btn x53go" data-x53="do" disabled>Traer mis datos</button>
- <p class="x53tiny">Lo que traes se suma a lo que ya hay en este teléfono. Si la misma persona ya estaba aquí, queda la versión del respaldo. También sirve el código de un perfil que alguien te compartió.</p>`}
+ <details class="x53more"><summary>Más opciones</summary><button class="btn ghost sm" data-x53="file" ${CODE?'':'disabled'}>💾 Guardar como archivo</button><textarea id="x53code" rows="3" readonly>${esc(CODE)}</textarea><p class="x53tiny">🔒 Lleva tus datos personales: mándatelo solo a ti. Nada pasa por un servidor.</p></details>`}
+function getHTML(){return`<ol class="x53path">
+ <li class="x53st now"><i>1</i><div><b>Copia el mensaje del respaldo</b><p>En el chat donde te lo mandaste, mantén el dedo y elige <b>Copiar</b>.</p></div></li>
+ <li class="x53st now"><i>2</i><div><b>Pégalo aquí</b><button class="x53big" data-x53="paste"><span>📋</span><span><b>Pegar</b><small>Lo que copiaste</small></span></button>
+ <textarea id="x53in" rows="2" placeholder="O mantén el dedo aquí y elige Pegar"></textarea><div id="x53chk" class="x53chk" aria-live="polite"></div></div></li>
+ <li class="x53st now"><i>3</i><div><b>Confirma</b><button class="btn x53go" data-x53="do" disabled>Traer mis datos</button></div></li></ol>
+ <details class="x53more"><summary>Más opciones</summary><label class="btn ghost sm">📁 Elegir archivo .json<input type="file" id="x53f" hidden></label><p class="x53tiny">Lo que traes se suma a lo que ya hay. Si la misma persona ya estaba, queda la versión del respaldo.</p></details>`}
 async function prep(){if(!hasData()||CODE&&busy)return;busy=1;try{CODE=await encode(snap())}catch(e){CODE=''}busy=0;if(host&&tab==='send')render()}
 function note(s){const n=host&&host.querySelector('#x53note');if(n)n.textContent=s}
 function done(){jset('cc-x53last',new Date().toISOString());try{if(window.PF&&PF.key)localStorage.setItem(PF.key+'-v40bk',JSON.stringify(new Date().toISOString()))}catch(e){}}
@@ -10476,9 +10552,10 @@ async function saveFile(){const fn=`cielo-respaldo-${new Date().toISOString().sl
 async function onClick(e){const b=e.target.closest('[data-x53]');if(!b){if(e.target===host)close();return}const a=b.dataset.x53;
  if(a==='close'){close();return}if(a==='send'||a==='get'){tab=a;render();if(a==='send')prep();return}
  if(a==='share'){const m=msg();let sent=false;try{if(navigator.share){await navigator.share({title:'Mi respaldo de Cielo',text:m});sent=true}}catch(x){if(x&&x.name==='AbortError'){note('Cancelado. Puedes intentarlo de nuevo.');return}}
-  if(sent){done();note('Enviado ✓ En el teléfono nuevo abre ese mensaje y toca el enlace.');return}
-  const c=await copy(m);if(c){done();note('Copiado ✓ Ahora pégalo en WhatsApp (chat contigo), en un correo para ti o en tus Notas.')}else{host.querySelector('.x53more').open=true;note('Este navegador no deja copiar solo. Abajo está el código: mantén el dedo encima, Seleccionar todo y Copiar.')}return}
- if(a==='copy'){const c=await copy(msg());if(c){done();note('Copiado ✓ Pégalo en WhatsApp (chat contigo), en tu correo o en tus Notas.')}else{host.querySelector('.x53more').open=true;note('Mantén el dedo sobre el código de abajo, Seleccionar todo y Copiar.')}return}
+  if(sent){done();STEP=2;render();note('Enviado ✓');return}
+  const c=await copy(m);if(c){done();note('Copiado ✓ Ábrelo tú y pega.')}else{host.querySelector('.x53more').open=true;note('Este navegador no deja copiar solo. Abajo está el código: mantén el dedo encima, Seleccionar todo y Copiar.')}return}
+ if(a==='copy'){const c=await copy(msg());if(c){done();STEP=Math.max(STEP,1);render();note('Copiado ✓')}else{host.querySelector('.x53more').open=true;note('Mantén el dedo sobre el código de abajo, Seleccionar todo y Copiar.')}return}
+ if(a==='next'){STEP=2;render();return}
  if(a==='file'){note('Preparando…');note(await saveFile());return}
  if(a==='paste'){const ta=host.querySelector('#x53in');try{const t=await navigator.clipboard.readText();if(t){ta.value=t;check();return}}catch(x){}ta.focus();setChk('hint','Mantén el dedo en el recuadro y elige <b>Pegar</b>.');return}
  if(a==='do'){if(!READ||READ.err)return;try{const n=apply(READ);history.replaceState(null,'',location.pathname+location.search);
@@ -10612,7 +10689,7 @@ html[data-btn="suave"] body #ctHi{background:transparent!important;border:0!impo
 
 /* ===== v55 · 9 nov 2026: diseño a elección (botones, estilo, letra, bordes, tamaño, fondo) ===== */
 /* tamaño de botones */
-html[data-size="chico"]{--t-h:56px;--t-ic:26px;--t-fs:.74rem;--b-h:34px;--b-hs:30px;--n-h:46px}
+html[data-size="chico"]{--t-h:50px;--t-ic:22px;--t-fs:.7rem;--b-h:30px;--b-hs:26px;--n-h:44px}
 html[data-size="grande"]{--t-h:84px;--t-ic:38px;--t-fs:.86rem;--b-h:46px;--b-hs:40px;--n-h:56px}
 /* bordes */
 html[data-rad="medio"]{--x-br:14px;--nm-r:16px}
@@ -10721,6 +10798,49 @@ html body .x55seg{background:color-mix(in srgb,var(--fg) 6%,transparent)!importa
 html body .x55seg button{min-height:34px!important;border-radius:10px!important;background:transparent!important}
 html body .x55seg button[aria-pressed="true"]{background:var(--panel)!important;box-shadow:0 2px 8px -3px rgba(0,0,0,.35)!important}
 
+/* v57 · Personalizar minimalista */
+html[data-size="normal"]{--t-h:58px;--t-ic:26px;--t-fs:.76rem;--b-h:36px;--b-hs:30px;--n-h:48px}
+.x55.x57flat,.setgrid.x57flat{display:contents}
+.x57{display:flex;flex-direction:column;gap:8px;margin:2px 0 14px}
+.x57g{border-radius:18px;background:color-mix(in srgb,var(--panel) 88%,transparent);border:1px solid color-mix(in srgb,var(--fg) 8%,transparent);overflow:hidden;transition:box-shadow .2s}
+.x57g.on{box-shadow:0 8px 24px -14px rgba(0,0,0,.35)}
+.x57h{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;cursor:pointer;color:var(--fg)}
+.x57h b{display:block;font-size:.98rem;font-weight:650;letter-spacing:.01em}.x57h small{display:block;font-size:.76rem;color:var(--mut);margin-top:1px}
+.x57h svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--mut);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s}
+.x57h[aria-expanded="true"] svg{transform:rotate(180deg)}
+.x57h:focus-visible{outline:2px solid var(--brass);outline-offset:-2px;border-radius:18px}
+.x57b{padding:0 14px 14px}.x57b[hidden]{display:none!important}
+.x57b>:first-child{margin-top:0}
+.x57 h3.x57hide{display:none!important}
+.x57 h3.x57sub{margin:14px 0 8px!important;font-size:.68rem!important;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)!important;font-weight:700}
+.x57 h3.x57sub small{display:none}
+.x57 .muted.sethint{font-size:.8rem}
+.x57sep{margin:14px 4px 0;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700}
+.x57 .x55reset{all:unset;cursor:pointer;align-self:center;margin-top:10px;font-size:.84rem;font-weight:600;color:var(--mut);text-decoration:underline;text-underline-offset:3px}
+/* colores: chicos y por tono */
+.x57 .x14hues{grid-template-columns:repeat(auto-fill,minmax(44px,1fr))!important;gap:4px 2px!important}
+.x57 .x14hues button{padding:3px 0!important;gap:3px!important}
+.x57 .x14hues i{width:26px!important;height:26px!important}
+.x57 .x14hues button[aria-pressed="true"] i{outline-width:2px!important;outline-offset:2px!important}
+.x57 .x14hues small{font-size:.6rem!important;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:48px}
+.x57 .x28free{padding:10px 12px!important;margin:8px 0 2px!important}
+/* combinaciones y fondos como tarjetas de vista previa */
+.x57 .x32combos{grid-template-columns:repeat(4,1fr)!important;gap:8px!important}
+.x57 .v17scn{grid-template-columns:repeat(3,1fr)!important;gap:10px 8px!important}
+.x57 .v17scn button{padding:0!important;border:0!important;background:none!important;box-shadow:none!important;align-items:center;gap:5px!important;text-align:center}
+.x57 .v17scn i{width:100%;height:auto!important;aspect-ratio:3/4;margin:0!important;border-radius:16px!important;overflow:hidden;position:relative;background-size:cover!important;box-shadow:0 6px 16px -8px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.1)!important}
+.x57 .v17scn i canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.x57 .v17scn b{font-size:.78rem!important;font-weight:600}.x57 .v17scn small{display:none!important}
+.x57 .v17scn button[aria-pressed="true"] i{outline:2.5px solid var(--brass);outline-offset:2px}
+/* letra y estilos más compactos */
+.x57 .x32fonts{grid-template-columns:repeat(3,1fr)!important;gap:6px!important}
+.x57 .x32fonts button{padding:8px 4px!important;border-radius:12px!important}
+.x57 .x32fonts button span{font-size:1.08rem!important}.x57 .x32fonts button small{font-size:.66rem!important}
+.x57 .x55looks{gap:6px!important}.x57 .x55look{padding:8px!important}.x57 .x55look small{display:none}
+.x57 .x55bt{padding:8px 10px!important}
+.x57 .seg2 button,.x57 .x55seg button{min-height:30px!important;padding:5px 8px!important;font-size:.82rem!important}
+.x57 .setrow{gap:6px}
+
 </style>
 <script>
 /* ===== v55 · 9 nov 2026: diseño a elección en Personalizar ===== */
@@ -10734,23 +10854,64 @@ function apply(o){o=o||get();R.dataset.btn=o.btn;R.dataset.size=o.size;
  for(const[k,v]of[['look',o.look],['font',o.font],['rad',o.rad],['bg',bg]]){if(v)R.dataset[k]=v;else delete R.dataset[k]}}
 apply();
 const LOOKS=[['','Cielo','Lavanda de siempre','#efe8fb','#8457d6'],['orbita','Órbita','Negro espacial y blanco','#000','#f4f4f5'],['electrico','Eléctrico','Blanco limpio y azul','#f4f4f4','#3e6ae1'],['explorador','Explorador','Negro y amarillo de marco','#111','#ffcf00'],['cupertino','Cupertino','Grises de teléfono y azul','#f2f2f7','#007aff'],['grafito','Grafito','Gris cálido y cobre','#1f1e1c','#d29b6c']];
-const BTNS=[['suave','Suave','En relieve, como ahora'],['clasico','Clásico','Como estaba antes'],['cristal','Cristal','Translúcido y fino'],['linea','Línea','Plano, técnico, mínimo']];
+const BTNS=[['suave','Suave','En relieve'],['clasico','Clásico','Como antes'],['cristal','Cristal','Translúcido'],['linea','Línea','Mínimo']];
 const seg=(k,opts,o)=>`<div class="x55seg" role="group">${opts.map(([v,t])=>`<button type="button" data-x55="${k}" data-v="${v}" aria-pressed="${o[k]===v}">${t}</button>`).join('')}</div>`;
 function html(){const o=get();
  return `<div class="x55"><h3>Estilo</h3><div class="x55looks">${LOOKS.map(([v,t,s,b,a])=>`<button type="button" class="x55look" data-x55="look" data-v="${v}" aria-pressed="${o.look===v}"><i style="background:${b};--a:${a}"></i><b>${t}</b><small>${s}</small></button>`).join('')}</div>
  <h3>Botones</h3><div class="x55btns">${BTNS.map(([v,t,s])=>`<button type="button" class="x55bt" data-x55="btn" data-v="${v}" aria-pressed="${o.btn===v}"><b>${t}</b><small>${s}</small></button>`).join('')}</div>
  <h3>Tamaño de botones</h3>${seg('size',[['chico','Chico'],['normal','Normal'],['grande','Grande']],o)}
  <h3>Bordes</h3>${seg('rad',[['','Redondos'],['medio','Suaves'],['recto','Rectos']],o)}
- <h3>Letra</h3>${seg('font',[['','Cielo'],['moderna','Moderna'],['tecnica','Técnica'],['editorial','Editorial']],o)}
- <h3>Fondo</h3>${seg('bg',[['auto','Según estilo'],['','Nubes'],['estrellas','Estrellas'],['liso','Liso']],o)}
  <button type="button" class="x55reset" data-x55="reset">Volver al diseño de fábrica</button></div>`}
 function mount(){const t=document.getElementById('sheetT');const box=document.querySelector('#sheet .sheetbox');if(!t||!box||document.getElementById('sheet').hidden)return;
  if(t.textContent.trim()!=='Personalizar'||box.querySelector('.x55'))return;const h=box.querySelector('.sheethead');const d=document.createElement('div');d.innerHTML=html();(h?h.nextElementSibling:null)?h.nextElementSibling.prepend(d.firstElementChild):box.append(d.firstElementChild)}
 new MutationObserver(()=>{try{mount()}catch(e){}}).observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['hidden']});
 document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-x55]');if(!b)return;e.preventDefault();e.stopPropagation();
  let o=get();if(b.dataset.x55==='reset')o=Object.assign({},D);else o[b.dataset.x55]=b.dataset.v;put(o);apply(o);
- const x=b.closest('.x55');if(x){const n=document.createElement('div');n.innerHTML=html();x.replaceWith(n.firstElementChild)}},true);
-window.X55={apply,get};
+ document.querySelectorAll('[data-x55]').forEach(q=>{const k=q.dataset.x55;if(k!=='reset')q.setAttribute('aria-pressed',String(o[k]===q.dataset.v))})},true);
+document.addEventListener('click',e=>{if(!(e.target.closest&&e.target.closest('[data-v17scn],[data-x32bg],[data-x32combo]')))return;const o=get();if(o.bg!==''){o.bg='';put(o);apply(o)}});
+window.X55={apply,get,put};
+})();
+
+/* ===== v57 · 9 nov 2026: Personalizar ordenado en secciones que se despliegan ===== */
+(()=>{
+const G=[['combi','Combinaciones','Color, letra y fondo de una vez',['Combinaciones']],
+ ['color','Color','Modo claro u oscuro y tu tono',['Modo','Tu color','Intensidad del color','Colores']],
+ ['estilo','Estilo','La apariencia de la app',['Estilo','Estilos']],
+ ['fondo','Fondo','Escenas del cielo',['Fondo','Fondo y nubes']],
+ ['letra','Letra','Títulos y textos',['Letra']],
+ ['botones','Botones','Forma y tamaño',['Botones','Tamaño de botones','Bordes']]];
+const SUB={'Estilos':'Combinación de colores','Fondo y nubes':'Nubes','Colores':'Más colores'};
+const ttl=h=>{const n=[...h.childNodes].find(x=>x.nodeType===3&&x.textContent.trim());return (n?n.textContent:h.textContent).trim()};
+const chev='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>';
+let OPEN=null;try{OPEN=sessionStorage.getItem('x57open')}catch(e){}
+function organize(){const t=document.getElementById('sheetT'),s=document.getElementById('sheet');if(!t||!s||s.hidden||t.textContent.trim()!=='Personalizar')return;
+ const box=s.querySelector('.sheetbox'),hd=box&&box.querySelector('.sheethead'),ct=hd&&hd.nextElementSibling;if(!ct||ct.dataset.x57)return;
+ if(!ct.querySelector('.x14hues')||!ct.querySelector('.x32fonts'))return;
+ ct.dataset.x57='1';
+ const x55=ct.querySelector(':scope > .x55'),reset=x55&&x55.querySelector('.x55reset');if(x55){x55.classList.add('x57flat');[...x55.children].forEach(c=>{if(c!==reset)x55.before(c)});}
+ ct.querySelectorAll(':scope > .setgrid').forEach(sg=>{sg.classList.add('x57flat');[...sg.children].forEach(c=>sg.before(c))});
+ const secs=[];let cur=null;[...ct.children].forEach(el=>{if(el.classList.contains('x57flat'))return;if(el===x55)return;if(el.tagName==='H3'){cur={t:ttl(el),h:el,els:[el]};secs.push(cur)}else if(cur)cur.els.push(el)});
+ const used=new Set(),groups=[];
+ G.forEach(([id,name,sub,keys])=>{const ss=secs.filter(x=>keys.includes(x.t)&&!used.has(x));if(!ss.length)return;ss.forEach(x=>used.add(x));groups.push({id,name,sub,ss})});
+ secs.filter(x=>!used.has(x)).forEach((x,i)=>{const prev=x.t==='Sonido e inicio'&&groups.find(g=>g.name==='Sonido');if(prev){prev.ss.push(x);return}const sm=x.h.querySelector('small');groups.push({id:'o'+i,name:x.t,sub:sm?sm.textContent.trim():'',ss:[x]})});
+ const wrap=document.createElement('div');wrap.className='x57';
+ groups.forEach((g,gi)=>{const sec=document.createElement('section');sec.className='x57g';sec.dataset.g=g.id;
+  sec.innerHTML=`<button type="button" class="x57h" aria-expanded="false"><span><b>${g.name}</b>${g.sub?`<small>${g.sub}</small>`:''}</span>${chev}</button><div class="x57b" hidden></div>`;
+  const body=sec.querySelector('.x57b');g.ss.forEach((x,i)=>{if(g.ss.length===1||i===0&&x.t===g.name)x.h.classList.add('x57hide');else{x.h.classList.add('x57sub');if(SUB[x.t]){const sm=x.h.querySelector('small');x.h.firstChild.textContent=SUB[x.t]+' ';if(sm)sm.remove()}}x.els.forEach(e=>body.append(e))});
+  wrap.append(sec);if(gi===5)wrap.insertAdjacentHTML('beforeend','<p class="x57sep">Más ajustes</p>')});
+ if(reset){reset.textContent='Volver al diseño de fábrica';wrap.append(reset)}
+ ct.prepend(wrap);if(x55)x55.hidden=true;
+ sortHues(ct);if(OPEN){const o=wrap.querySelector(`.x57g[data-g="${OPEN}"]`);if(o)toggle(o,true)}}
+function sortHues(ct){const h=ct.querySelector('.x14hues');if(!h)return;const bs=[...h.querySelectorAll('[data-x14hue]')];bs.sort((a,b)=>((+a.dataset.x14hue+15)%360)-((+b.dataset.x14hue+15)%360));bs.forEach(b=>h.append(b))}
+function toggle(sec,on){const b=sec.querySelector('.x57h'),body=sec.querySelector('.x57b');if(on==null)on=b.getAttribute('aria-expanded')!=='true';
+ if(on)sec.parentNode.querySelectorAll('.x57g').forEach(o=>{if(o!==sec){o.querySelector('.x57h').setAttribute('aria-expanded','false');o.querySelector('.x57b').hidden=true;o.classList.remove('on')}});
+ b.setAttribute('aria-expanded',String(on));body.hidden=!on;sec.classList.toggle('on',on);OPEN=on?sec.dataset.g:null;try{on?sessionStorage.setItem('x57open',OPEN):sessionStorage.removeItem('x57open')}catch(e){}
+ if(on){if(sec.dataset.g==='fondo')thumbs(sec);setTimeout(()=>{const r=sec.getBoundingClientRect();if(r.top<70||r.top>innerHeight*.5)sec.scrollIntoView({block:'start',behavior:'smooth'})},30)}}
+function thumbs(sec){const V=window.V17;if(!V||!V.thumb)return;const dark=V.isDark?V.isDark():true;
+ sec.querySelectorAll('[data-v17scn]').forEach(b=>{const id=b.dataset.v17scn,i=b.querySelector('i');if(!i||id==='clasico')return;if(i.dataset.d===String(dark))return;
+  const w=i.clientWidth||110,h=i.clientHeight||146,c=document.createElement('canvas');c.width=Math.round(w*2);c.height=Math.round(h*2);try{V.thumb(id,c,dark);i.innerHTML='';i.append(c);i.dataset.d=String(dark)}catch(e){}})}
+let tm=0;new MutationObserver(()=>{clearTimeout(tm);tm=setTimeout(()=>{try{organize()}catch(e){console.warn(e)}},60)}).observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['hidden']});
+document.addEventListener('click',e=>{const h=e.target.closest&&e.target.closest('.x57h');if(!h)return;e.preventDefault();toggle(h.closest('.x57g'))});
 })();
 
 </script>
